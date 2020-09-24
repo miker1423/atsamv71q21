@@ -1,0 +1,19 @@
+[package]
+name = "atsamv71q21"
+version = "0.1.0"
+authors = ["miguel"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bare-metal = "0.2.5"
+cortex-m = "0.6.3"
+vcell = "0.1.2"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.13"
+
+[features]
+rt = ["cortex-m-rt/device"]
