@@ -1,6 +1,24 @@
-#[doc = "Writer for register PMC_PCDR1"]
-pub type W = crate::W<u32, super::PMC_PCDR1>;
-#[doc = "Write proxy for field `PID32`"]
+#[doc = "Register `PMC_PCDR1` writer"]
+pub struct W(crate::W<PMC_PCDR1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<PMC_PCDR1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<PMC_PCDR1_SPEC>> for W {
+    fn from(writer: crate::W<PMC_PCDR1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `PID32` writer - Peripheral Clock 32 Disable"]
 pub struct PID32_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +36,11 @@ impl<'a> PID32_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID33`"]
+#[doc = "Field `PID33` writer - Peripheral Clock 33 Disable"]
 pub struct PID33_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +58,11 @@ impl<'a> PID33_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID34`"]
+#[doc = "Field `PID34` writer - Peripheral Clock 34 Disable"]
 pub struct PID34_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +80,11 @@ impl<'a> PID34_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID35`"]
+#[doc = "Field `PID35` writer - Peripheral Clock 35 Disable"]
 pub struct PID35_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +102,11 @@ impl<'a> PID35_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID37`"]
+#[doc = "Field `PID37` writer - Peripheral Clock 37 Disable"]
 pub struct PID37_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +124,11 @@ impl<'a> PID37_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID39`"]
+#[doc = "Field `PID39` writer - Peripheral Clock 39 Disable"]
 pub struct PID39_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +146,11 @@ impl<'a> PID39_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID40`"]
+#[doc = "Field `PID40` writer - Peripheral Clock 40 Disable"]
 pub struct PID40_W<'a> {
     w: &'a mut W,
 }
@@ -150,11 +168,11 @@ impl<'a> PID40_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID41`"]
+#[doc = "Field `PID41` writer - Peripheral Clock 41 Disable"]
 pub struct PID41_W<'a> {
     w: &'a mut W,
 }
@@ -172,11 +190,11 @@ impl<'a> PID41_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID42`"]
+#[doc = "Field `PID42` writer - Peripheral Clock 42 Disable"]
 pub struct PID42_W<'a> {
     w: &'a mut W,
 }
@@ -194,11 +212,11 @@ impl<'a> PID42_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID43`"]
+#[doc = "Field `PID43` writer - Peripheral Clock 43 Disable"]
 pub struct PID43_W<'a> {
     w: &'a mut W,
 }
@@ -216,11 +234,11 @@ impl<'a> PID43_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID44`"]
+#[doc = "Field `PID44` writer - Peripheral Clock 44 Disable"]
 pub struct PID44_W<'a> {
     w: &'a mut W,
 }
@@ -238,11 +256,11 @@ impl<'a> PID44_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID45`"]
+#[doc = "Field `PID45` writer - Peripheral Clock 45 Disable"]
 pub struct PID45_W<'a> {
     w: &'a mut W,
 }
@@ -260,11 +278,11 @@ impl<'a> PID45_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID46`"]
+#[doc = "Field `PID46` writer - Peripheral Clock 46 Disable"]
 pub struct PID46_W<'a> {
     w: &'a mut W,
 }
@@ -282,11 +300,11 @@ impl<'a> PID46_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID47`"]
+#[doc = "Field `PID47` writer - Peripheral Clock 47 Disable"]
 pub struct PID47_W<'a> {
     w: &'a mut W,
 }
@@ -304,11 +322,11 @@ impl<'a> PID47_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID48`"]
+#[doc = "Field `PID48` writer - Peripheral Clock 48 Disable"]
 pub struct PID48_W<'a> {
     w: &'a mut W,
 }
@@ -326,11 +344,11 @@ impl<'a> PID48_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID49`"]
+#[doc = "Field `PID49` writer - Peripheral Clock 49 Disable"]
 pub struct PID49_W<'a> {
     w: &'a mut W,
 }
@@ -348,11 +366,11 @@ impl<'a> PID49_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID50`"]
+#[doc = "Field `PID50` writer - Peripheral Clock 50 Disable"]
 pub struct PID50_W<'a> {
     w: &'a mut W,
 }
@@ -370,11 +388,11 @@ impl<'a> PID50_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID51`"]
+#[doc = "Field `PID51` writer - Peripheral Clock 51 Disable"]
 pub struct PID51_W<'a> {
     w: &'a mut W,
 }
@@ -392,11 +410,11 @@ impl<'a> PID51_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID52`"]
+#[doc = "Field `PID52` writer - Peripheral Clock 52 Disable"]
 pub struct PID52_W<'a> {
     w: &'a mut W,
 }
@@ -414,11 +432,11 @@ impl<'a> PID52_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID53`"]
+#[doc = "Field `PID53` writer - Peripheral Clock 53 Disable"]
 pub struct PID53_W<'a> {
     w: &'a mut W,
 }
@@ -436,11 +454,11 @@ impl<'a> PID53_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID56`"]
+#[doc = "Field `PID56` writer - Peripheral Clock 56 Disable"]
 pub struct PID56_W<'a> {
     w: &'a mut W,
 }
@@ -458,11 +476,11 @@ impl<'a> PID56_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID57`"]
+#[doc = "Field `PID57` writer - Peripheral Clock 57 Disable"]
 pub struct PID57_W<'a> {
     w: &'a mut W,
 }
@@ -480,11 +498,11 @@ impl<'a> PID57_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID58`"]
+#[doc = "Field `PID58` writer - Peripheral Clock 58 Disable"]
 pub struct PID58_W<'a> {
     w: &'a mut W,
 }
@@ -502,11 +520,11 @@ impl<'a> PID58_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID59`"]
+#[doc = "Field `PID59` writer - Peripheral Clock 59 Disable"]
 pub struct PID59_W<'a> {
     w: &'a mut W,
 }
@@ -524,11 +542,11 @@ impl<'a> PID59_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
         self.w
     }
 }
-#[doc = "Write proxy for field `PID60`"]
+#[doc = "Field `PID60` writer - Peripheral Clock 60 Disable"]
 pub struct PID60_W<'a> {
     w: &'a mut W,
 }
@@ -546,7 +564,7 @@ impl<'a> PID60_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
@@ -676,4 +694,18 @@ impl W {
     pub fn pid60(&mut self) -> PID60_W {
         PID60_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Peripheral Clock Disable Register 1\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pmc_pcdr1](index.html) module"]
+pub struct PMC_PCDR1_SPEC;
+impl crate::RegisterSpec for PMC_PCDR1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [pmc_pcdr1::W](W) writer structure"]
+impl crate::Writable for PMC_PCDR1_SPEC {
+    type Writer = W;
 }

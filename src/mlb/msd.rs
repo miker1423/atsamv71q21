@@ -1,13 +1,73 @@
-#[doc = "Reader of register MSD"]
-pub type R = crate::R<u32, super::MSD>;
-#[doc = "Reader of field `SD0`"]
-pub type SD0_R = crate::R<u8, u8>;
-#[doc = "Reader of field `SD1`"]
-pub type SD1_R = crate::R<u8, u8>;
-#[doc = "Reader of field `SD2`"]
-pub type SD2_R = crate::R<u8, u8>;
-#[doc = "Reader of field `SD3`"]
-pub type SD3_R = crate::R<u8, u8>;
+#[doc = "Register `MSD` reader"]
+pub struct R(crate::R<MSD_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MSD_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::convert::From<crate::R<MSD_SPEC>> for R {
+    fn from(reader: crate::R<MSD_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `SD0` reader - System Data (Byte 0)"]
+pub struct SD0_R(crate::FieldReader<u8, u8>);
+impl SD0_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SD0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SD0_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SD1` reader - System Data (Byte 1)"]
+pub struct SD1_R(crate::FieldReader<u8, u8>);
+impl SD1_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SD1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SD1_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SD2` reader - System Data (Byte 2)"]
+pub struct SD2_R(crate::FieldReader<u8, u8>);
+impl SD2_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SD2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SD2_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SD3` reader - System Data (Byte 3)"]
+pub struct SD3_R(crate::FieldReader<u8, u8>);
+impl SD3_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SD3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SD3_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bits 0:7 - System Data (Byte 0)"]
     #[inline(always)]
@@ -28,5 +88,21 @@ impl R {
     #[inline(always)]
     pub fn sd3(&self) -> SD3_R {
         SD3_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[doc = "MediaLB System Data Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [msd](index.html) module"]
+pub struct MSD_SPEC;
+impl crate::RegisterSpec for MSD_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [msd::R](R) reader structure"]
+impl crate::Readable for MSD_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets MSD to value 0"]
+impl crate::Resettable for MSD_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

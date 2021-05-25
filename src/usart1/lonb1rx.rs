@@ -1,18 +1,52 @@
-#[doc = "Reader of register LONB1RX"]
-pub type R = crate::R<u32, super::LONB1RX>;
-#[doc = "Writer for register LONB1RX"]
-pub type W = crate::W<u32, super::LONB1RX>;
-#[doc = "Register LONB1RX `reset()`'s with value 0"]
-impl crate::ResetValue for super::LONB1RX {
-    type Type = u32;
+#[doc = "Register `LONB1RX` reader"]
+pub struct R(crate::R<LONB1RX_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<LONB1RX_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `BETA1RX`"]
-pub type BETA1RX_R = crate::R<u32, u32>;
-#[doc = "Write proxy for field `BETA1RX`"]
+impl core::convert::From<crate::R<LONB1RX_SPEC>> for R {
+    fn from(reader: crate::R<LONB1RX_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `LONB1RX` writer"]
+pub struct W(crate::W<LONB1RX_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<LONB1RX_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<LONB1RX_SPEC>> for W {
+    fn from(writer: crate::W<LONB1RX_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `BETA1RX` reader - LON Beta1 Length after Reception"]
+pub struct BETA1RX_R(crate::FieldReader<u32, u32>);
+impl BETA1RX_R {
+    pub(crate) fn new(bits: u32) -> Self {
+        BETA1RX_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BETA1RX_R {
+    type Target = crate::FieldReader<u32, u32>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BETA1RX` writer - LON Beta1 Length after Reception"]
 pub struct BETA1RX_W<'a> {
     w: &'a mut W,
 }
@@ -20,7 +54,7 @@ impl<'a> BETA1RX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | ((value as u32) & 0x00ff_ffff);
+        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
         self.w
     }
 }
@@ -36,5 +70,30 @@ impl W {
     #[inline(always)]
     pub fn beta1rx(&mut self) -> BETA1RX_W {
         BETA1RX_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "LON Beta1 Rx Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lonb1rx](index.html) module"]
+pub struct LONB1RX_SPEC;
+impl crate::RegisterSpec for LONB1RX_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [lonb1rx::R](R) reader structure"]
+impl crate::Readable for LONB1RX_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [lonb1rx::W](W) writer structure"]
+impl crate::Writable for LONB1RX_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets LONB1RX to value 0"]
+impl crate::Resettable for LONB1RX_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

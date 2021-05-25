@@ -1,18 +1,52 @@
-#[doc = "Reader of register MATRIX_PRBS5"]
-pub type R = crate::R<u32, super::MATRIX_PRBS5>;
-#[doc = "Writer for register MATRIX_PRBS5"]
-pub type W = crate::W<u32, super::MATRIX_PRBS5>;
-#[doc = "Register MATRIX_PRBS5 `reset()`'s with value 0x3333"]
-impl crate::ResetValue for super::MATRIX_PRBS5 {
-    type Type = u32;
+#[doc = "Register `MATRIX_PRBS5` reader"]
+pub struct R(crate::R<MATRIX_PRBS5_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MATRIX_PRBS5_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x3333
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `M8PR`"]
-pub type M8PR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `M8PR`"]
+impl core::convert::From<crate::R<MATRIX_PRBS5_SPEC>> for R {
+    fn from(reader: crate::R<MATRIX_PRBS5_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `MATRIX_PRBS5` writer"]
+pub struct W(crate::W<MATRIX_PRBS5_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MATRIX_PRBS5_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<MATRIX_PRBS5_SPEC>> for W {
+    fn from(writer: crate::W<MATRIX_PRBS5_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `M8PR` reader - Master 8 Priority"]
+pub struct M8PR_R(crate::FieldReader<u8, u8>);
+impl M8PR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        M8PR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for M8PR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `M8PR` writer - Master 8 Priority"]
 pub struct M8PR_W<'a> {
     w: &'a mut W,
 }
@@ -20,13 +54,25 @@ impl<'a> M8PR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
+        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
         self.w
     }
 }
-#[doc = "Reader of field `M9PR`"]
-pub type M9PR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `M9PR`"]
+#[doc = "Field `M9PR` reader - Master 9 Priority"]
+pub struct M9PR_R(crate::FieldReader<u8, u8>);
+impl M9PR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        M9PR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for M9PR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `M9PR` writer - Master 9 Priority"]
 pub struct M9PR_W<'a> {
     w: &'a mut W,
 }
@@ -34,13 +80,25 @@ impl<'a> M9PR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `M10PR`"]
-pub type M10PR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `M10PR`"]
+#[doc = "Field `M10PR` reader - Master 10 Priority"]
+pub struct M10PR_R(crate::FieldReader<u8, u8>);
+impl M10PR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        M10PR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for M10PR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `M10PR` writer - Master 10 Priority"]
 pub struct M10PR_W<'a> {
     w: &'a mut W,
 }
@@ -48,13 +106,25 @@ impl<'a> M10PR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `M11PR`"]
-pub type M11PR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `M11PR`"]
+#[doc = "Field `M11PR` reader - Master 11 Priority"]
+pub struct M11PR_R(crate::FieldReader<u8, u8>);
+impl M11PR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        M11PR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for M11PR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `M11PR` writer - Master 11 Priority"]
 pub struct M11PR_W<'a> {
     w: &'a mut W,
 }
@@ -62,7 +132,7 @@ impl<'a> M11PR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
         self.w
     }
 }
@@ -108,5 +178,30 @@ impl W {
     #[inline(always)]
     pub fn m11pr(&mut self) -> M11PR_W {
         M11PR_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Priority Register B for Slave 5\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [matrix_prbs5](index.html) module"]
+pub struct MATRIX_PRBS5_SPEC;
+impl crate::RegisterSpec for MATRIX_PRBS5_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [matrix_prbs5::R](R) reader structure"]
+impl crate::Readable for MATRIX_PRBS5_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [matrix_prbs5::W](W) writer structure"]
+impl crate::Writable for MATRIX_PRBS5_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets MATRIX_PRBS5 to value 0x3333"]
+impl crate::Resettable for MATRIX_PRBS5_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x3333
     }
 }

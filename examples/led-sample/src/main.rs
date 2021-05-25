@@ -13,6 +13,7 @@ use atsamv71q21::Peripherals;
 #[entry]
 fn main() -> ! {
     let p = Peripherals::take().unwrap();
+
     let watchdog_timer = p.WDT;
     watchdog_timer.mr.write(|w| w.wddis().set_bit());
 

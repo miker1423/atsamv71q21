@@ -1,10 +1,52 @@
-#[doc = "Reader of register TBQBAPQ[%s]"]
-pub type R = crate::R<u32, super::TBQBAPQ>;
-#[doc = "Writer for register TBQBAPQ[%s]"]
-pub type W = crate::W<u32, super::TBQBAPQ>;
-#[doc = "Reader of field `TXBQBA`"]
-pub type TXBQBA_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TXBQBA`"]
+#[doc = "Register `TBQBAPQ[%s]` reader"]
+pub struct R(crate::R<TBQBAPQ_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TBQBAPQ_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::convert::From<crate::R<TBQBAPQ_SPEC>> for R {
+    fn from(reader: crate::R<TBQBAPQ_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `TBQBAPQ[%s]` writer"]
+pub struct W(crate::W<TBQBAPQ_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TBQBAPQ_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<TBQBAPQ_SPEC>> for W {
+    fn from(writer: crate::W<TBQBAPQ_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TXBQBA` reader - Transmit Buffer Queue Base Address"]
+pub struct TXBQBA_R(crate::FieldReader<u8, u8>);
+impl TXBQBA_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TXBQBA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXBQBA_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXBQBA` writer - Transmit Buffer Queue Base Address"]
 pub struct TXBQBA_W<'a> {
     w: &'a mut W,
 }
@@ -12,7 +54,7 @@ impl<'a> TXBQBA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 2)) | (((value as u32) & 0x3f) << 2);
+        self.w.bits = (self.w.bits & !(0x3f << 2)) | ((value as u32 & 0x3f) << 2);
         self.w
     }
 }
@@ -29,4 +71,22 @@ impl W {
     pub fn txbqba(&mut self) -> TXBQBA_W {
         TXBQBA_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Transmit Buffer Queue Base Address Register Priority Queue (index = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tbqbapq](index.html) module"]
+pub struct TBQBAPQ_SPEC;
+impl crate::RegisterSpec for TBQBAPQ_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tbqbapq::R](R) reader structure"]
+impl crate::Readable for TBQBAPQ_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tbqbapq::W](W) writer structure"]
+impl crate::Writable for TBQBAPQ_SPEC {
+    type Writer = W;
 }

@@ -1,18 +1,52 @@
-#[doc = "Reader of register MADR"]
-pub type R = crate::R<u32, super::MADR>;
-#[doc = "Writer for register MADR"]
-pub type W = crate::W<u32, super::MADR>;
-#[doc = "Register MADR `reset()`'s with value 0"]
-impl crate::ResetValue for super::MADR {
-    type Type = u32;
+#[doc = "Register `MADR` reader"]
+pub struct R(crate::R<MADR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MADR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADDR`"]
-pub type ADDR_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `ADDR`"]
+impl core::convert::From<crate::R<MADR_SPEC>> for R {
+    fn from(reader: crate::R<MADR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `MADR` writer"]
+pub struct W(crate::W<MADR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MADR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<MADR_SPEC>> for W {
+    fn from(writer: crate::W<MADR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ADDR` reader - CTR or DBR Address"]
+pub struct ADDR_R(crate::FieldReader<u16, u16>);
+impl ADDR_R {
+    pub(crate) fn new(bits: u16) -> Self {
+        ADDR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADDR_R {
+    type Target = crate::FieldReader<u16, u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADDR` writer - CTR or DBR Address"]
 pub struct ADDR_W<'a> {
     w: &'a mut W,
 }
@@ -20,7 +54,7 @@ impl<'a> ADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | ((value as u32) & 0x3fff);
+        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
         self.w
     }
 }
@@ -38,9 +72,12 @@ impl From<TB_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `TB`"]
-pub type TB_R = crate::R<bool, TB_A>;
+#[doc = "Field `TB` reader - Target Location Bit"]
+pub struct TB_R(crate::FieldReader<bool, TB_A>);
 impl TB_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TB_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TB_A {
@@ -52,15 +89,22 @@ impl TB_R {
     #[doc = "Checks if the value of the field is `CTR`"]
     #[inline(always)]
     pub fn is_ctr(&self) -> bool {
-        *self == TB_A::CTR
+        **self == TB_A::CTR
     }
     #[doc = "Checks if the value of the field is `DBR`"]
     #[inline(always)]
     pub fn is_dbr(&self) -> bool {
-        *self == TB_A::DBR
+        **self == TB_A::DBR
     }
 }
-#[doc = "Write proxy for field `TB`"]
+impl core::ops::Deref for TB_R {
+    type Target = crate::FieldReader<bool, TB_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TB` writer - Target Location Bit"]
 pub struct TB_W<'a> {
     w: &'a mut W,
 }
@@ -68,9 +112,7 @@ impl<'a> TB_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: TB_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Selects CTR"]
     #[inline(always)]
@@ -95,13 +137,25 @@ impl<'a> TB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
-#[doc = "Reader of field `WNR`"]
-pub type WNR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WNR`"]
+#[doc = "Field `WNR` reader - Write-Not-Read Selection"]
+pub struct WNR_R(crate::FieldReader<bool, bool>);
+impl WNR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WNR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WNR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WNR` writer - Write-Not-Read Selection"]
 pub struct WNR_W<'a> {
     w: &'a mut W,
 }
@@ -119,7 +173,7 @@ impl<'a> WNR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
@@ -155,5 +209,30 @@ impl W {
     #[inline(always)]
     pub fn wnr(&mut self) -> WNR_W {
         WNR_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "MIF Address Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [madr](index.html) module"]
+pub struct MADR_SPEC;
+impl crate::RegisterSpec for MADR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [madr::R](R) reader structure"]
+impl crate::Readable for MADR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [madr::W](W) writer structure"]
+impl crate::Writable for MADR_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets MADR to value 0"]
+impl crate::Resettable for MADR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

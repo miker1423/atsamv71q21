@@ -1,6 +1,24 @@
-#[doc = "Writer for register SKR"]
-pub type W = crate::W<u32, super::SKR>;
-#[doc = "Write proxy for field `USRK`"]
+#[doc = "Register `SKR` writer"]
+pub struct W(crate::W<SKR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SKR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<SKR_SPEC>> for W {
+    fn from(writer: crate::W<SKR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `USRK` writer - Scrambling User Key"]
 pub struct USRK_W<'a> {
     w: &'a mut W,
 }
@@ -8,7 +26,7 @@ impl<'a> USRK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
+        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
         self.w
     }
 }
@@ -18,4 +36,18 @@ impl W {
     pub fn usrk(&mut self) -> USRK_W {
         USRK_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Scrambling Key Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [skr](index.html) module"]
+pub struct SKR_SPEC;
+impl crate::RegisterSpec for SKR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [skr::W](W) writer structure"]
+impl crate::Writable for SKR_SPEC {
+    type Writer = W;
 }

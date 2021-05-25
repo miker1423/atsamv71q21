@@ -1,18 +1,52 @@
-#[doc = "Reader of register MLBC1"]
-pub type R = crate::R<u32, super::MLBC1>;
-#[doc = "Writer for register MLBC1"]
-pub type W = crate::W<u32, super::MLBC1>;
-#[doc = "Register MLBC1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::MLBC1 {
-    type Type = u32;
+#[doc = "Register `MLBC1` reader"]
+pub struct R(crate::R<MLBC1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MLBC1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `LOCK`"]
-pub type LOCK_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LOCK`"]
+impl core::convert::From<crate::R<MLBC1_SPEC>> for R {
+    fn from(reader: crate::R<MLBC1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `MLBC1` writer"]
+pub struct W(crate::W<MLBC1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MLBC1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<MLBC1_SPEC>> for W {
+    fn from(writer: crate::W<MLBC1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `LOCK` reader - MediaLB Lock Error Status (cleared by writing a 0)"]
+pub struct LOCK_R(crate::FieldReader<bool, bool>);
+impl LOCK_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LOCK_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LOCK_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LOCK` writer - MediaLB Lock Error Status (cleared by writing a 0)"]
 pub struct LOCK_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +64,25 @@ impl<'a> LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `CLKM`"]
-pub type CLKM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CLKM`"]
+#[doc = "Field `CLKM` reader - MediaLB Clock Missing Status (cleared by writing a 0)"]
+pub struct CLKM_R(crate::FieldReader<bool, bool>);
+impl CLKM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLKM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLKM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CLKM` writer - MediaLB Clock Missing Status (cleared by writing a 0)"]
 pub struct CLKM_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +100,25 @@ impl<'a> CLKM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Reader of field `NDA`"]
-pub type NDA_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `NDA`"]
+#[doc = "Field `NDA` reader - Node Device Address"]
+pub struct NDA_R(crate::FieldReader<u8, u8>);
+impl NDA_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        NDA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for NDA_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NDA` writer - Node Device Address"]
 pub struct NDA_W<'a> {
     w: &'a mut W,
 }
@@ -68,7 +126,7 @@ impl<'a> NDA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
 }
@@ -104,5 +162,30 @@ impl W {
     #[inline(always)]
     pub fn nda(&mut self) -> NDA_W {
         NDA_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "MediaLB Control 1 Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mlbc1](index.html) module"]
+pub struct MLBC1_SPEC;
+impl crate::RegisterSpec for MLBC1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [mlbc1::R](R) reader structure"]
+impl crate::Readable for MLBC1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [mlbc1::W](W) writer structure"]
+impl crate::Writable for MLBC1_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets MLBC1 to value 0"]
+impl crate::Resettable for MLBC1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

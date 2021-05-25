@@ -1,18 +1,52 @@
-#[doc = "Reader of register MSS"]
-pub type R = crate::R<u32, super::MSS>;
-#[doc = "Writer for register MSS"]
-pub type W = crate::W<u32, super::MSS>;
-#[doc = "Register MSS `reset()`'s with value 0"]
-impl crate::ResetValue for super::MSS {
-    type Type = u32;
+#[doc = "Register `MSS` reader"]
+pub struct R(crate::R<MSS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MSS_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RSTSYSCMD`"]
-pub type RSTSYSCMD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSTSYSCMD`"]
+impl core::convert::From<crate::R<MSS_SPEC>> for R {
+    fn from(reader: crate::R<MSS_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `MSS` writer"]
+pub struct W(crate::W<MSS_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MSS_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<MSS_SPEC>> for W {
+    fn from(writer: crate::W<MSS_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `RSTSYSCMD` reader - Reset System Command Detected in the System Quadlet (cleared by writing a 0)"]
+pub struct RSTSYSCMD_R(crate::FieldReader<bool, bool>);
+impl RSTSYSCMD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RSTSYSCMD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RSTSYSCMD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RSTSYSCMD` writer - Reset System Command Detected in the System Quadlet (cleared by writing a 0)"]
 pub struct RSTSYSCMD_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +64,25 @@ impl<'a> RSTSYSCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `LKSYSCMD`"]
-pub type LKSYSCMD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LKSYSCMD`"]
+#[doc = "Field `LKSYSCMD` reader - Network Lock System Command Detected in the System Quadlet (cleared by writing a 0)"]
+pub struct LKSYSCMD_R(crate::FieldReader<bool, bool>);
+impl LKSYSCMD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LKSYSCMD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LKSYSCMD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LKSYSCMD` writer - Network Lock System Command Detected in the System Quadlet (cleared by writing a 0)"]
 pub struct LKSYSCMD_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +100,25 @@ impl<'a> LKSYSCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `ULKSYSCMD`"]
-pub type ULKSYSCMD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ULKSYSCMD`"]
+#[doc = "Field `ULKSYSCMD` reader - Network Unlock System Command Detected in the System Quadlet (cleared by writing a 0)"]
+pub struct ULKSYSCMD_R(crate::FieldReader<bool, bool>);
+impl ULKSYSCMD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ULKSYSCMD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ULKSYSCMD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ULKSYSCMD` writer - Network Unlock System Command Detected in the System Quadlet (cleared by writing a 0)"]
 pub struct ULKSYSCMD_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +136,25 @@ impl<'a> ULKSYSCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `CSSYSCMD`"]
-pub type CSSYSCMD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CSSYSCMD`"]
+#[doc = "Field `CSSYSCMD` reader - Channel Scan System Command Detected in the System Quadlet (cleared by writing a 0)"]
+pub struct CSSYSCMD_R(crate::FieldReader<bool, bool>);
+impl CSSYSCMD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CSSYSCMD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CSSYSCMD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CSSYSCMD` writer - Channel Scan System Command Detected in the System Quadlet (cleared by writing a 0)"]
 pub struct CSSYSCMD_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +172,25 @@ impl<'a> CSSYSCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `SWSYSCMD`"]
-pub type SWSYSCMD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SWSYSCMD`"]
+#[doc = "Field `SWSYSCMD` reader - Software System Command Detected in the System Quadlet (cleared by writing a 0)"]
+pub struct SWSYSCMD_R(crate::FieldReader<bool, bool>);
+impl SWSYSCMD_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SWSYSCMD_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SWSYSCMD_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SWSYSCMD` writer - Software System Command Detected in the System Quadlet (cleared by writing a 0)"]
 pub struct SWSYSCMD_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +208,25 @@ impl<'a> SWSYSCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `SERVREQ`"]
-pub type SERVREQ_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SERVREQ`"]
+#[doc = "Field `SERVREQ` reader - Service Request Enabled"]
+pub struct SERVREQ_R(crate::FieldReader<bool, bool>);
+impl SERVREQ_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SERVREQ_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SERVREQ_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SERVREQ` writer - Service Request Enabled"]
 pub struct SERVREQ_W<'a> {
     w: &'a mut W,
 }
@@ -150,7 +244,7 @@ impl<'a> SERVREQ_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
@@ -216,5 +310,30 @@ impl W {
     #[inline(always)]
     pub fn servreq(&mut self) -> SERVREQ_W {
         SERVREQ_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "MediaLB System Status Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mss](index.html) module"]
+pub struct MSS_SPEC;
+impl crate::RegisterSpec for MSS_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [mss::R](R) reader structure"]
+impl crate::Readable for MSS_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [mss::W](W) writer structure"]
+impl crate::Writable for MSS_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets MSS to value 0"]
+impl crate::Resettable for MSS_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

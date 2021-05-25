@@ -1,21 +1,129 @@
-#[doc = "Reader of register KKRR"]
-pub type R = crate::R<u32, super::KKRR>;
-#[doc = "Reader of field `KEY0ROW`"]
-pub type KEY0ROW_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY0COL`"]
-pub type KEY0COL_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY1ROW`"]
-pub type KEY1ROW_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY1COL`"]
-pub type KEY1COL_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY2ROW`"]
-pub type KEY2ROW_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY2COL`"]
-pub type KEY2COL_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY3ROW`"]
-pub type KEY3ROW_R = crate::R<u8, u8>;
-#[doc = "Reader of field `KEY3COL`"]
-pub type KEY3COL_R = crate::R<u8, u8>;
+#[doc = "Register `KKRR` reader"]
+pub struct R(crate::R<KKRR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<KKRR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::convert::From<crate::R<KKRR_SPEC>> for R {
+    fn from(reader: crate::R<KKRR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `KEY0ROW` reader - Row Index of the First Detected Key Release"]
+pub struct KEY0ROW_R(crate::FieldReader<u8, u8>);
+impl KEY0ROW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY0ROW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY0ROW_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY0COL` reader - Column Index of the First Detected Key Release"]
+pub struct KEY0COL_R(crate::FieldReader<u8, u8>);
+impl KEY0COL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY0COL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY0COL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY1ROW` reader - Row Index of the Second Detected Key Release"]
+pub struct KEY1ROW_R(crate::FieldReader<u8, u8>);
+impl KEY1ROW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY1ROW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY1ROW_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY1COL` reader - Column Index of the Second Detected Key Release"]
+pub struct KEY1COL_R(crate::FieldReader<u8, u8>);
+impl KEY1COL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY1COL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY1COL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY2ROW` reader - Row Index of the Third Detected Key Release"]
+pub struct KEY2ROW_R(crate::FieldReader<u8, u8>);
+impl KEY2ROW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY2ROW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY2ROW_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY2COL` reader - Column Index of the Third Detected Key Release"]
+pub struct KEY2COL_R(crate::FieldReader<u8, u8>);
+impl KEY2COL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY2COL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY2COL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY3ROW` reader - Row Index of the Fourth Detected Key Release"]
+pub struct KEY3ROW_R(crate::FieldReader<u8, u8>);
+impl KEY3ROW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY3ROW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY3ROW_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `KEY3COL` reader - Column Index of the Fourth Detected Key Release"]
+pub struct KEY3COL_R(crate::FieldReader<u8, u8>);
+impl KEY3COL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        KEY3COL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for KEY3COL_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bits 0:2 - Row Index of the First Detected Key Release"]
     #[inline(always)]
@@ -56,5 +164,21 @@ impl R {
     #[inline(always)]
     pub fn key3col(&self) -> KEY3COL_R {
         KEY3COL_R::new(((self.bits >> 28) & 0x07) as u8)
+    }
+}
+#[doc = "Keypad Controller Key Release Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [kkrr](index.html) module"]
+pub struct KKRR_SPEC;
+impl crate::RegisterSpec for KKRR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [kkrr::R](R) reader structure"]
+impl crate::Readable for KKRR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets KKRR to value 0"]
+impl crate::Resettable for KKRR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

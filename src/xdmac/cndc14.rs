@@ -1,13 +1,35 @@
-#[doc = "Reader of register CNDC14"]
-pub type R = crate::R<u32, super::CNDC14>;
-#[doc = "Writer for register CNDC14"]
-pub type W = crate::W<u32, super::CNDC14>;
-#[doc = "Register CNDC14 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CNDC14 {
-    type Type = u32;
+#[doc = "Register `CNDC14` reader"]
+pub struct R(crate::R<CNDC14_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CNDC14_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::convert::From<crate::R<CNDC14_SPEC>> for R {
+    fn from(reader: crate::R<CNDC14_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `CNDC14` writer"]
+pub struct W(crate::W<CNDC14_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CNDC14_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<CNDC14_SPEC>> for W {
+    fn from(writer: crate::W<CNDC14_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "Channel x Next Descriptor Enable\n\nValue on reset: 0"]
@@ -24,9 +46,12 @@ impl From<NDE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `NDE`"]
-pub type NDE_R = crate::R<bool, NDE_A>;
+#[doc = "Field `NDE` reader - Channel x Next Descriptor Enable"]
+pub struct NDE_R(crate::FieldReader<bool, NDE_A>);
 impl NDE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        NDE_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NDE_A {
@@ -38,15 +63,22 @@ impl NDE_R {
     #[doc = "Checks if the value of the field is `DSCR_FETCH_DIS`"]
     #[inline(always)]
     pub fn is_dscr_fetch_dis(&self) -> bool {
-        *self == NDE_A::DSCR_FETCH_DIS
+        **self == NDE_A::DSCR_FETCH_DIS
     }
     #[doc = "Checks if the value of the field is `DSCR_FETCH_EN`"]
     #[inline(always)]
     pub fn is_dscr_fetch_en(&self) -> bool {
-        *self == NDE_A::DSCR_FETCH_EN
+        **self == NDE_A::DSCR_FETCH_EN
     }
 }
-#[doc = "Write proxy for field `NDE`"]
+impl core::ops::Deref for NDE_R {
+    type Target = crate::FieldReader<bool, NDE_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NDE` writer - Channel x Next Descriptor Enable"]
 pub struct NDE_W<'a> {
     w: &'a mut W,
 }
@@ -54,9 +86,7 @@ impl<'a> NDE_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: NDE_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Descriptor fetch is disabled"]
     #[inline(always)]
@@ -81,7 +111,7 @@ impl<'a> NDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -99,9 +129,12 @@ impl From<NDSUP_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `NDSUP`"]
-pub type NDSUP_R = crate::R<bool, NDSUP_A>;
+#[doc = "Field `NDSUP` reader - Channel x Next Descriptor Source Update"]
+pub struct NDSUP_R(crate::FieldReader<bool, NDSUP_A>);
 impl NDSUP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        NDSUP_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NDSUP_A {
@@ -113,15 +146,22 @@ impl NDSUP_R {
     #[doc = "Checks if the value of the field is `SRC_PARAMS_UNCHANGED`"]
     #[inline(always)]
     pub fn is_src_params_unchanged(&self) -> bool {
-        *self == NDSUP_A::SRC_PARAMS_UNCHANGED
+        **self == NDSUP_A::SRC_PARAMS_UNCHANGED
     }
     #[doc = "Checks if the value of the field is `SRC_PARAMS_UPDATED`"]
     #[inline(always)]
     pub fn is_src_params_updated(&self) -> bool {
-        *self == NDSUP_A::SRC_PARAMS_UPDATED
+        **self == NDSUP_A::SRC_PARAMS_UPDATED
     }
 }
-#[doc = "Write proxy for field `NDSUP`"]
+impl core::ops::Deref for NDSUP_R {
+    type Target = crate::FieldReader<bool, NDSUP_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NDSUP` writer - Channel x Next Descriptor Source Update"]
 pub struct NDSUP_W<'a> {
     w: &'a mut W,
 }
@@ -129,9 +169,7 @@ impl<'a> NDSUP_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: NDSUP_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Source parameters remain unchanged."]
     #[inline(always)]
@@ -156,7 +194,7 @@ impl<'a> NDSUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
@@ -174,9 +212,12 @@ impl From<NDDUP_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Reader of field `NDDUP`"]
-pub type NDDUP_R = crate::R<bool, NDDUP_A>;
+#[doc = "Field `NDDUP` reader - Channel x Next Descriptor Destination Update"]
+pub struct NDDUP_R(crate::FieldReader<bool, NDDUP_A>);
 impl NDDUP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        NDDUP_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NDDUP_A {
@@ -188,15 +229,22 @@ impl NDDUP_R {
     #[doc = "Checks if the value of the field is `DST_PARAMS_UNCHANGED`"]
     #[inline(always)]
     pub fn is_dst_params_unchanged(&self) -> bool {
-        *self == NDDUP_A::DST_PARAMS_UNCHANGED
+        **self == NDDUP_A::DST_PARAMS_UNCHANGED
     }
     #[doc = "Checks if the value of the field is `DST_PARAMS_UPDATED`"]
     #[inline(always)]
     pub fn is_dst_params_updated(&self) -> bool {
-        *self == NDDUP_A::DST_PARAMS_UPDATED
+        **self == NDDUP_A::DST_PARAMS_UPDATED
     }
 }
-#[doc = "Write proxy for field `NDDUP`"]
+impl core::ops::Deref for NDDUP_R {
+    type Target = crate::FieldReader<bool, NDDUP_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NDDUP` writer - Channel x Next Descriptor Destination Update"]
 pub struct NDDUP_W<'a> {
     w: &'a mut W,
 }
@@ -204,9 +252,7 @@ impl<'a> NDDUP_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: NDDUP_A) -> &'a mut W {
-        {
-            self.bit(variant.into())
-        }
+        self.bit(variant.into())
     }
     #[doc = "Destination parameters remain unchanged."]
     #[inline(always)]
@@ -231,7 +277,7 @@ impl<'a> NDDUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
@@ -254,9 +300,12 @@ impl From<NDVIEW_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `NDVIEW`"]
-pub type NDVIEW_R = crate::R<u8, NDVIEW_A>;
+#[doc = "Field `NDVIEW` reader - Channel x Next Descriptor View"]
+pub struct NDVIEW_R(crate::FieldReader<u8, NDVIEW_A>);
 impl NDVIEW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        NDVIEW_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NDVIEW_A {
@@ -271,25 +320,32 @@ impl NDVIEW_R {
     #[doc = "Checks if the value of the field is `NDV0`"]
     #[inline(always)]
     pub fn is_ndv0(&self) -> bool {
-        *self == NDVIEW_A::NDV0
+        **self == NDVIEW_A::NDV0
     }
     #[doc = "Checks if the value of the field is `NDV1`"]
     #[inline(always)]
     pub fn is_ndv1(&self) -> bool {
-        *self == NDVIEW_A::NDV1
+        **self == NDVIEW_A::NDV1
     }
     #[doc = "Checks if the value of the field is `NDV2`"]
     #[inline(always)]
     pub fn is_ndv2(&self) -> bool {
-        *self == NDVIEW_A::NDV2
+        **self == NDVIEW_A::NDV2
     }
     #[doc = "Checks if the value of the field is `NDV3`"]
     #[inline(always)]
     pub fn is_ndv3(&self) -> bool {
-        *self == NDVIEW_A::NDV3
+        **self == NDVIEW_A::NDV3
     }
 }
-#[doc = "Write proxy for field `NDVIEW`"]
+impl core::ops::Deref for NDVIEW_R {
+    type Target = crate::FieldReader<u8, NDVIEW_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `NDVIEW` writer - Channel x Next Descriptor View"]
 pub struct NDVIEW_W<'a> {
     w: &'a mut W,
 }
@@ -297,9 +353,7 @@ impl<'a> NDVIEW_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: NDVIEW_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Next Descriptor View 0"]
     #[inline(always)]
@@ -324,7 +378,7 @@ impl<'a> NDVIEW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | (((value as u32) & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
         self.w
     }
 }
@@ -370,5 +424,30 @@ impl W {
     #[inline(always)]
     pub fn ndview(&mut self) -> NDVIEW_W {
         NDVIEW_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Channel Next Descriptor Control Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc14](index.html) module"]
+pub struct CNDC14_SPEC;
+impl crate::RegisterSpec for CNDC14_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cndc14::R](R) reader structure"]
+impl crate::Readable for CNDC14_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cndc14::W](W) writer structure"]
+impl crate::Writable for CNDC14_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets CNDC14 to value 0"]
+impl crate::Resettable for CNDC14_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
