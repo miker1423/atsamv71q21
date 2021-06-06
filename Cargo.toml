@@ -1,11 +1,15 @@
 [package]
 name = "atsamv71q21"
 version = "0.2.0"
-authors = ["miguel"]
+authors = ["Miguel Perez <miguelpg_95@hotmail.com>"]
 edition = "2018"
 exclude = ["examples/**/*"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/miker1423/atsamv71q21"
+license = "MIT"
+categories = ["embedded", "hardware-support", "no-std", "PAC"]
+keywords = ["arm", "cortex-m", "atsam", "svd2rust"]
+description = "Peripheral Access API for ATSAMV71Q21 microcontrollers"
+readme = "readme.md"
 
 [dependencies]
 bare-metal = "1.0.0"

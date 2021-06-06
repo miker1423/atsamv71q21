@@ -14,7 +14,7 @@ panic-halt = "0.2.0"
 
 [dependencies.atsamv71q21]
 path = "../.."
-version = "0.1.0"
+version = "0.2.0"
 features = ["rt"]
 
 [dependencies.lazy_static]
