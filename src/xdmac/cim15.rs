@@ -1,6 +1,24 @@
-#[doc = "Writer for register CIM15"]
-pub type W = crate::W<u32, super::CIM15>;
-#[doc = "Write proxy for field `BIM`"]
+#[doc = "Register `CIM15` writer"]
+pub struct W(crate::W<CIM15_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CIM15_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<CIM15_SPEC>> for W {
+    fn from(writer: crate::W<CIM15_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `BIM` writer - End of Block Interrupt Mask Bit"]
 pub struct BIM_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +36,11 @@ impl<'a> BIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `LIM`"]
+#[doc = "Field `LIM` writer - End of Linked List Interrupt Mask Bit"]
 pub struct LIM_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +58,11 @@ impl<'a> LIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `DIM`"]
+#[doc = "Field `DIM` writer - End of Disable Interrupt Mask Bit"]
 pub struct DIM_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +80,11 @@ impl<'a> DIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `FIM`"]
+#[doc = "Field `FIM` writer - End of Flush Interrupt Mask Bit"]
 pub struct FIM_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +102,11 @@ impl<'a> FIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `RBEIM`"]
+#[doc = "Field `RBEIM` writer - Read Bus Error Interrupt Mask Bit"]
 pub struct RBEIM_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +124,11 @@ impl<'a> RBEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `WBEIM`"]
+#[doc = "Field `WBEIM` writer - Write Bus Error Interrupt Mask Bit"]
 pub struct WBEIM_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +146,11 @@ impl<'a> WBEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `ROIM`"]
+#[doc = "Field `ROIM` writer - Request Overflow Error Interrupt Mask Bit"]
 pub struct ROIM_W<'a> {
     w: &'a mut W,
 }
@@ -150,7 +168,7 @@ impl<'a> ROIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -190,4 +208,18 @@ impl W {
     pub fn roim(&mut self) -> ROIM_W {
         ROIM_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Channel Interrupt Mask Register (chid = 15)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim15](index.html) module"]
+pub struct CIM15_SPEC;
+impl crate::RegisterSpec for CIM15_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [cim15::W](W) writer structure"]
+impl crate::Writable for CIM15_SPEC {
+    type Writer = W;
 }

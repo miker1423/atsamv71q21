@@ -1,6 +1,24 @@
-#[doc = "Writer for register GE"]
-pub type W = crate::W<u32, super::GE>;
-#[doc = "Write proxy for field `EN0`"]
+#[doc = "Register `GE` writer"]
+pub struct W(crate::W<GE_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GE_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<GE_SPEC>> for W {
+    fn from(writer: crate::W<GE_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `EN0` writer - XDMAC Channel 0 Enable Bit"]
 pub struct EN0_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +36,11 @@ impl<'a> EN0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN1`"]
+#[doc = "Field `EN1` writer - XDMAC Channel 1 Enable Bit"]
 pub struct EN1_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +58,11 @@ impl<'a> EN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN2`"]
+#[doc = "Field `EN2` writer - XDMAC Channel 2 Enable Bit"]
 pub struct EN2_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +80,11 @@ impl<'a> EN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN3`"]
+#[doc = "Field `EN3` writer - XDMAC Channel 3 Enable Bit"]
 pub struct EN3_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +102,11 @@ impl<'a> EN3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN4`"]
+#[doc = "Field `EN4` writer - XDMAC Channel 4 Enable Bit"]
 pub struct EN4_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +124,11 @@ impl<'a> EN4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN5`"]
+#[doc = "Field `EN5` writer - XDMAC Channel 5 Enable Bit"]
 pub struct EN5_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +146,11 @@ impl<'a> EN5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN6`"]
+#[doc = "Field `EN6` writer - XDMAC Channel 6 Enable Bit"]
 pub struct EN6_W<'a> {
     w: &'a mut W,
 }
@@ -150,11 +168,11 @@ impl<'a> EN6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN7`"]
+#[doc = "Field `EN7` writer - XDMAC Channel 7 Enable Bit"]
 pub struct EN7_W<'a> {
     w: &'a mut W,
 }
@@ -172,11 +190,11 @@ impl<'a> EN7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN8`"]
+#[doc = "Field `EN8` writer - XDMAC Channel 8 Enable Bit"]
 pub struct EN8_W<'a> {
     w: &'a mut W,
 }
@@ -194,11 +212,11 @@ impl<'a> EN8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN9`"]
+#[doc = "Field `EN9` writer - XDMAC Channel 9 Enable Bit"]
 pub struct EN9_W<'a> {
     w: &'a mut W,
 }
@@ -216,11 +234,11 @@ impl<'a> EN9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN10`"]
+#[doc = "Field `EN10` writer - XDMAC Channel 10 Enable Bit"]
 pub struct EN10_W<'a> {
     w: &'a mut W,
 }
@@ -238,11 +256,11 @@ impl<'a> EN10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN11`"]
+#[doc = "Field `EN11` writer - XDMAC Channel 11 Enable Bit"]
 pub struct EN11_W<'a> {
     w: &'a mut W,
 }
@@ -260,11 +278,11 @@ impl<'a> EN11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN12`"]
+#[doc = "Field `EN12` writer - XDMAC Channel 12 Enable Bit"]
 pub struct EN12_W<'a> {
     w: &'a mut W,
 }
@@ -282,11 +300,11 @@ impl<'a> EN12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN13`"]
+#[doc = "Field `EN13` writer - XDMAC Channel 13 Enable Bit"]
 pub struct EN13_W<'a> {
     w: &'a mut W,
 }
@@ -304,11 +322,11 @@ impl<'a> EN13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN14`"]
+#[doc = "Field `EN14` writer - XDMAC Channel 14 Enable Bit"]
 pub struct EN14_W<'a> {
     w: &'a mut W,
 }
@@ -326,11 +344,11 @@ impl<'a> EN14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN15`"]
+#[doc = "Field `EN15` writer - XDMAC Channel 15 Enable Bit"]
 pub struct EN15_W<'a> {
     w: &'a mut W,
 }
@@ -348,11 +366,11 @@ impl<'a> EN15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN16`"]
+#[doc = "Field `EN16` writer - XDMAC Channel 16 Enable Bit"]
 pub struct EN16_W<'a> {
     w: &'a mut W,
 }
@@ -370,11 +388,11 @@ impl<'a> EN16_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN17`"]
+#[doc = "Field `EN17` writer - XDMAC Channel 17 Enable Bit"]
 pub struct EN17_W<'a> {
     w: &'a mut W,
 }
@@ -392,11 +410,11 @@ impl<'a> EN17_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN18`"]
+#[doc = "Field `EN18` writer - XDMAC Channel 18 Enable Bit"]
 pub struct EN18_W<'a> {
     w: &'a mut W,
 }
@@ -414,11 +432,11 @@ impl<'a> EN18_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN19`"]
+#[doc = "Field `EN19` writer - XDMAC Channel 19 Enable Bit"]
 pub struct EN19_W<'a> {
     w: &'a mut W,
 }
@@ -436,11 +454,11 @@ impl<'a> EN19_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN20`"]
+#[doc = "Field `EN20` writer - XDMAC Channel 20 Enable Bit"]
 pub struct EN20_W<'a> {
     w: &'a mut W,
 }
@@ -458,11 +476,11 @@ impl<'a> EN20_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN21`"]
+#[doc = "Field `EN21` writer - XDMAC Channel 21 Enable Bit"]
 pub struct EN21_W<'a> {
     w: &'a mut W,
 }
@@ -480,11 +498,11 @@ impl<'a> EN21_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN22`"]
+#[doc = "Field `EN22` writer - XDMAC Channel 22 Enable Bit"]
 pub struct EN22_W<'a> {
     w: &'a mut W,
 }
@@ -502,11 +520,11 @@ impl<'a> EN22_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
         self.w
     }
 }
-#[doc = "Write proxy for field `EN23`"]
+#[doc = "Field `EN23` writer - XDMAC Channel 23 Enable Bit"]
 pub struct EN23_W<'a> {
     w: &'a mut W,
 }
@@ -524,7 +542,7 @@ impl<'a> EN23_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
         self.w
     }
 }
@@ -649,4 +667,18 @@ impl W {
     pub fn en23(&mut self) -> EN23_W {
         EN23_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Global Channel Enable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ge](index.html) module"]
+pub struct GE_SPEC;
+impl crate::RegisterSpec for GE_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [ge::W](W) writer structure"]
+impl crate::Writable for GE_SPEC {
+    type Writer = W;
 }

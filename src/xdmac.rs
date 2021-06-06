@@ -2,4398 +2,2145 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Global Type Register"]
-    pub gtype: GTYPE,
+    pub gtype: crate::Reg<gtype::GTYPE_SPEC>,
     #[doc = "0x04 - Global Configuration Register"]
-    pub gcfg: GCFG,
+    pub gcfg: crate::Reg<gcfg::GCFG_SPEC>,
     #[doc = "0x08 - Global Weighted Arbiter Configuration Register"]
-    pub gwac: GWAC,
+    pub gwac: crate::Reg<gwac::GWAC_SPEC>,
     #[doc = "0x0c - Global Interrupt Enable Register"]
-    pub gie: GIE,
+    pub gie: crate::Reg<gie::GIE_SPEC>,
     #[doc = "0x10 - Global Interrupt Disable Register"]
-    pub gid: GID,
+    pub gid: crate::Reg<gid::GID_SPEC>,
     #[doc = "0x14 - Global Interrupt Mask Register"]
-    pub gim: GIM,
+    pub gim: crate::Reg<gim::GIM_SPEC>,
     #[doc = "0x18 - Global Interrupt Status Register"]
-    pub gis: GIS,
+    pub gis: crate::Reg<gis::GIS_SPEC>,
     #[doc = "0x1c - Global Channel Enable Register"]
-    pub ge: GE,
+    pub ge: crate::Reg<ge::GE_SPEC>,
     #[doc = "0x20 - Global Channel Disable Register"]
-    pub gd: GD,
+    pub gd: crate::Reg<gd::GD_SPEC>,
     #[doc = "0x24 - Global Channel Status Register"]
-    pub gs: GS,
+    pub gs: crate::Reg<gs::GS_SPEC>,
     #[doc = "0x28 - Global Channel Read Suspend Register"]
-    pub grs: GRS,
+    pub grs: crate::Reg<grs::GRS_SPEC>,
     #[doc = "0x2c - Global Channel Write Suspend Register"]
-    pub gws: GWS,
+    pub gws: crate::Reg<gws::GWS_SPEC>,
     #[doc = "0x30 - Global Channel Read Write Suspend Register"]
-    pub grws: GRWS,
+    pub grws: crate::Reg<grws::GRWS_SPEC>,
     #[doc = "0x34 - Global Channel Read Write Resume Register"]
-    pub grwr: GRWR,
+    pub grwr: crate::Reg<grwr::GRWR_SPEC>,
     #[doc = "0x38 - Global Channel Software Request Register"]
-    pub gswr: GSWR,
+    pub gswr: crate::Reg<gswr::GSWR_SPEC>,
     #[doc = "0x3c - Global Channel Software Request Status Register"]
-    pub gsws: GSWS,
+    pub gsws: crate::Reg<gsws::GSWS_SPEC>,
     #[doc = "0x40 - Global Channel Software Flush Request Register"]
-    pub gswf: GSWF,
+    pub gswf: crate::Reg<gswf::GSWF_SPEC>,
     _reserved17: [u8; 12usize],
     #[doc = "0x50 - Channel Interrupt Enable Register (chid = 0)"]
-    pub cie0: CIE0,
+    pub cie0: crate::Reg<cie0::CIE0_SPEC>,
     #[doc = "0x54 - Channel Interrupt Disable Register (chid = 0)"]
-    pub cid0: CID0,
+    pub cid0: crate::Reg<cid0::CID0_SPEC>,
     #[doc = "0x58 - Channel Interrupt Mask Register (chid = 0)"]
-    pub cim0: CIM0,
+    pub cim0: crate::Reg<cim0::CIM0_SPEC>,
     #[doc = "0x5c - Channel Interrupt Status Register (chid = 0)"]
-    pub cis0: CIS0,
+    pub cis0: crate::Reg<cis0::CIS0_SPEC>,
     #[doc = "0x60 - Channel Source Address Register (chid = 0)"]
-    pub csa0: CSA0,
+    pub csa0: crate::Reg<csa0::CSA0_SPEC>,
     #[doc = "0x64 - Channel Destination Address Register (chid = 0)"]
-    pub cda0: CDA0,
+    pub cda0: crate::Reg<cda0::CDA0_SPEC>,
     #[doc = "0x68 - Channel Next Descriptor Address Register (chid = 0)"]
-    pub cnda0: CNDA0,
+    pub cnda0: crate::Reg<cnda0::CNDA0_SPEC>,
     #[doc = "0x6c - Channel Next Descriptor Control Register (chid = 0)"]
-    pub cndc0: CNDC0,
+    pub cndc0: crate::Reg<cndc0::CNDC0_SPEC>,
     #[doc = "0x70 - Channel Microblock Control Register (chid = 0)"]
-    pub cubc0: CUBC0,
+    pub cubc0: crate::Reg<cubc0::CUBC0_SPEC>,
     #[doc = "0x74 - Channel Block Control Register (chid = 0)"]
-    pub cbc0: CBC0,
+    pub cbc0: crate::Reg<cbc0::CBC0_SPEC>,
     #[doc = "0x78 - Channel Configuration Register (chid = 0)"]
-    pub cc0: CC0,
+    pub cc0: crate::Reg<cc0::CC0_SPEC>,
     #[doc = "0x7c - Channel Data Stride Memory Set Pattern (chid = 0)"]
-    pub cds_msp0: CDS_MSP0,
+    pub cds_msp0: crate::Reg<cds_msp0::CDS_MSP0_SPEC>,
     #[doc = "0x80 - Channel Source Microblock Stride (chid = 0)"]
-    pub csus0: CSUS0,
+    pub csus0: crate::Reg<csus0::CSUS0_SPEC>,
     #[doc = "0x84 - Channel Destination Microblock Stride (chid = 0)"]
-    pub cdus0: CDUS0,
+    pub cdus0: crate::Reg<cdus0::CDUS0_SPEC>,
     _reserved31: [u8; 8usize],
     #[doc = "0x90 - Channel Interrupt Enable Register (chid = 1)"]
-    pub cie1: CIE1,
+    pub cie1: crate::Reg<cie1::CIE1_SPEC>,
     #[doc = "0x94 - Channel Interrupt Disable Register (chid = 1)"]
-    pub cid1: CID1,
+    pub cid1: crate::Reg<cid1::CID1_SPEC>,
     #[doc = "0x98 - Channel Interrupt Mask Register (chid = 1)"]
-    pub cim1: CIM1,
+    pub cim1: crate::Reg<cim1::CIM1_SPEC>,
     #[doc = "0x9c - Channel Interrupt Status Register (chid = 1)"]
-    pub cis1: CIS1,
+    pub cis1: crate::Reg<cis1::CIS1_SPEC>,
     #[doc = "0xa0 - Channel Source Address Register (chid = 1)"]
-    pub csa1: CSA1,
+    pub csa1: crate::Reg<csa1::CSA1_SPEC>,
     #[doc = "0xa4 - Channel Destination Address Register (chid = 1)"]
-    pub cda1: CDA1,
+    pub cda1: crate::Reg<cda1::CDA1_SPEC>,
     #[doc = "0xa8 - Channel Next Descriptor Address Register (chid = 1)"]
-    pub cnda1: CNDA1,
+    pub cnda1: crate::Reg<cnda1::CNDA1_SPEC>,
     #[doc = "0xac - Channel Next Descriptor Control Register (chid = 1)"]
-    pub cndc1: CNDC1,
+    pub cndc1: crate::Reg<cndc1::CNDC1_SPEC>,
     #[doc = "0xb0 - Channel Microblock Control Register (chid = 1)"]
-    pub cubc1: CUBC1,
+    pub cubc1: crate::Reg<cubc1::CUBC1_SPEC>,
     #[doc = "0xb4 - Channel Block Control Register (chid = 1)"]
-    pub cbc1: CBC1,
+    pub cbc1: crate::Reg<cbc1::CBC1_SPEC>,
     #[doc = "0xb8 - Channel Configuration Register (chid = 1)"]
-    pub cc1: CC1,
+    pub cc1: crate::Reg<cc1::CC1_SPEC>,
     #[doc = "0xbc - Channel Data Stride Memory Set Pattern (chid = 1)"]
-    pub cds_msp1: CDS_MSP1,
+    pub cds_msp1: crate::Reg<cds_msp1::CDS_MSP1_SPEC>,
     #[doc = "0xc0 - Channel Source Microblock Stride (chid = 1)"]
-    pub csus1: CSUS1,
+    pub csus1: crate::Reg<csus1::CSUS1_SPEC>,
     #[doc = "0xc4 - Channel Destination Microblock Stride (chid = 1)"]
-    pub cdus1: CDUS1,
+    pub cdus1: crate::Reg<cdus1::CDUS1_SPEC>,
     _reserved45: [u8; 8usize],
     #[doc = "0xd0 - Channel Interrupt Enable Register (chid = 2)"]
-    pub cie2: CIE2,
+    pub cie2: crate::Reg<cie2::CIE2_SPEC>,
     #[doc = "0xd4 - Channel Interrupt Disable Register (chid = 2)"]
-    pub cid2: CID2,
+    pub cid2: crate::Reg<cid2::CID2_SPEC>,
     #[doc = "0xd8 - Channel Interrupt Mask Register (chid = 2)"]
-    pub cim2: CIM2,
+    pub cim2: crate::Reg<cim2::CIM2_SPEC>,
     #[doc = "0xdc - Channel Interrupt Status Register (chid = 2)"]
-    pub cis2: CIS2,
+    pub cis2: crate::Reg<cis2::CIS2_SPEC>,
     #[doc = "0xe0 - Channel Source Address Register (chid = 2)"]
-    pub csa2: CSA2,
+    pub csa2: crate::Reg<csa2::CSA2_SPEC>,
     #[doc = "0xe4 - Channel Destination Address Register (chid = 2)"]
-    pub cda2: CDA2,
+    pub cda2: crate::Reg<cda2::CDA2_SPEC>,
     #[doc = "0xe8 - Channel Next Descriptor Address Register (chid = 2)"]
-    pub cnda2: CNDA2,
+    pub cnda2: crate::Reg<cnda2::CNDA2_SPEC>,
     #[doc = "0xec - Channel Next Descriptor Control Register (chid = 2)"]
-    pub cndc2: CNDC2,
+    pub cndc2: crate::Reg<cndc2::CNDC2_SPEC>,
     #[doc = "0xf0 - Channel Microblock Control Register (chid = 2)"]
-    pub cubc2: CUBC2,
+    pub cubc2: crate::Reg<cubc2::CUBC2_SPEC>,
     #[doc = "0xf4 - Channel Block Control Register (chid = 2)"]
-    pub cbc2: CBC2,
+    pub cbc2: crate::Reg<cbc2::CBC2_SPEC>,
     #[doc = "0xf8 - Channel Configuration Register (chid = 2)"]
-    pub cc2: CC2,
+    pub cc2: crate::Reg<cc2::CC2_SPEC>,
     #[doc = "0xfc - Channel Data Stride Memory Set Pattern (chid = 2)"]
-    pub cds_msp2: CDS_MSP2,
+    pub cds_msp2: crate::Reg<cds_msp2::CDS_MSP2_SPEC>,
     #[doc = "0x100 - Channel Source Microblock Stride (chid = 2)"]
-    pub csus2: CSUS2,
+    pub csus2: crate::Reg<csus2::CSUS2_SPEC>,
     #[doc = "0x104 - Channel Destination Microblock Stride (chid = 2)"]
-    pub cdus2: CDUS2,
+    pub cdus2: crate::Reg<cdus2::CDUS2_SPEC>,
     _reserved59: [u8; 8usize],
     #[doc = "0x110 - Channel Interrupt Enable Register (chid = 3)"]
-    pub cie3: CIE3,
+    pub cie3: crate::Reg<cie3::CIE3_SPEC>,
     #[doc = "0x114 - Channel Interrupt Disable Register (chid = 3)"]
-    pub cid3: CID3,
+    pub cid3: crate::Reg<cid3::CID3_SPEC>,
     #[doc = "0x118 - Channel Interrupt Mask Register (chid = 3)"]
-    pub cim3: CIM3,
+    pub cim3: crate::Reg<cim3::CIM3_SPEC>,
     #[doc = "0x11c - Channel Interrupt Status Register (chid = 3)"]
-    pub cis3: CIS3,
+    pub cis3: crate::Reg<cis3::CIS3_SPEC>,
     #[doc = "0x120 - Channel Source Address Register (chid = 3)"]
-    pub csa3: CSA3,
+    pub csa3: crate::Reg<csa3::CSA3_SPEC>,
     #[doc = "0x124 - Channel Destination Address Register (chid = 3)"]
-    pub cda3: CDA3,
+    pub cda3: crate::Reg<cda3::CDA3_SPEC>,
     #[doc = "0x128 - Channel Next Descriptor Address Register (chid = 3)"]
-    pub cnda3: CNDA3,
+    pub cnda3: crate::Reg<cnda3::CNDA3_SPEC>,
     #[doc = "0x12c - Channel Next Descriptor Control Register (chid = 3)"]
-    pub cndc3: CNDC3,
+    pub cndc3: crate::Reg<cndc3::CNDC3_SPEC>,
     #[doc = "0x130 - Channel Microblock Control Register (chid = 3)"]
-    pub cubc3: CUBC3,
+    pub cubc3: crate::Reg<cubc3::CUBC3_SPEC>,
     #[doc = "0x134 - Channel Block Control Register (chid = 3)"]
-    pub cbc3: CBC3,
+    pub cbc3: crate::Reg<cbc3::CBC3_SPEC>,
     #[doc = "0x138 - Channel Configuration Register (chid = 3)"]
-    pub cc3: CC3,
+    pub cc3: crate::Reg<cc3::CC3_SPEC>,
     #[doc = "0x13c - Channel Data Stride Memory Set Pattern (chid = 3)"]
-    pub cds_msp3: CDS_MSP3,
+    pub cds_msp3: crate::Reg<cds_msp3::CDS_MSP3_SPEC>,
     #[doc = "0x140 - Channel Source Microblock Stride (chid = 3)"]
-    pub csus3: CSUS3,
+    pub csus3: crate::Reg<csus3::CSUS3_SPEC>,
     #[doc = "0x144 - Channel Destination Microblock Stride (chid = 3)"]
-    pub cdus3: CDUS3,
+    pub cdus3: crate::Reg<cdus3::CDUS3_SPEC>,
     _reserved73: [u8; 8usize],
     #[doc = "0x150 - Channel Interrupt Enable Register (chid = 4)"]
-    pub cie4: CIE4,
+    pub cie4: crate::Reg<cie4::CIE4_SPEC>,
     #[doc = "0x154 - Channel Interrupt Disable Register (chid = 4)"]
-    pub cid4: CID4,
+    pub cid4: crate::Reg<cid4::CID4_SPEC>,
     #[doc = "0x158 - Channel Interrupt Mask Register (chid = 4)"]
-    pub cim4: CIM4,
+    pub cim4: crate::Reg<cim4::CIM4_SPEC>,
     #[doc = "0x15c - Channel Interrupt Status Register (chid = 4)"]
-    pub cis4: CIS4,
+    pub cis4: crate::Reg<cis4::CIS4_SPEC>,
     #[doc = "0x160 - Channel Source Address Register (chid = 4)"]
-    pub csa4: CSA4,
+    pub csa4: crate::Reg<csa4::CSA4_SPEC>,
     #[doc = "0x164 - Channel Destination Address Register (chid = 4)"]
-    pub cda4: CDA4,
+    pub cda4: crate::Reg<cda4::CDA4_SPEC>,
     #[doc = "0x168 - Channel Next Descriptor Address Register (chid = 4)"]
-    pub cnda4: CNDA4,
+    pub cnda4: crate::Reg<cnda4::CNDA4_SPEC>,
     #[doc = "0x16c - Channel Next Descriptor Control Register (chid = 4)"]
-    pub cndc4: CNDC4,
+    pub cndc4: crate::Reg<cndc4::CNDC4_SPEC>,
     #[doc = "0x170 - Channel Microblock Control Register (chid = 4)"]
-    pub cubc4: CUBC4,
+    pub cubc4: crate::Reg<cubc4::CUBC4_SPEC>,
     #[doc = "0x174 - Channel Block Control Register (chid = 4)"]
-    pub cbc4: CBC4,
+    pub cbc4: crate::Reg<cbc4::CBC4_SPEC>,
     #[doc = "0x178 - Channel Configuration Register (chid = 4)"]
-    pub cc4: CC4,
+    pub cc4: crate::Reg<cc4::CC4_SPEC>,
     #[doc = "0x17c - Channel Data Stride Memory Set Pattern (chid = 4)"]
-    pub cds_msp4: CDS_MSP4,
+    pub cds_msp4: crate::Reg<cds_msp4::CDS_MSP4_SPEC>,
     #[doc = "0x180 - Channel Source Microblock Stride (chid = 4)"]
-    pub csus4: CSUS4,
+    pub csus4: crate::Reg<csus4::CSUS4_SPEC>,
     #[doc = "0x184 - Channel Destination Microblock Stride (chid = 4)"]
-    pub cdus4: CDUS4,
+    pub cdus4: crate::Reg<cdus4::CDUS4_SPEC>,
     _reserved87: [u8; 8usize],
     #[doc = "0x190 - Channel Interrupt Enable Register (chid = 5)"]
-    pub cie5: CIE5,
+    pub cie5: crate::Reg<cie5::CIE5_SPEC>,
     #[doc = "0x194 - Channel Interrupt Disable Register (chid = 5)"]
-    pub cid5: CID5,
+    pub cid5: crate::Reg<cid5::CID5_SPEC>,
     #[doc = "0x198 - Channel Interrupt Mask Register (chid = 5)"]
-    pub cim5: CIM5,
+    pub cim5: crate::Reg<cim5::CIM5_SPEC>,
     #[doc = "0x19c - Channel Interrupt Status Register (chid = 5)"]
-    pub cis5: CIS5,
+    pub cis5: crate::Reg<cis5::CIS5_SPEC>,
     #[doc = "0x1a0 - Channel Source Address Register (chid = 5)"]
-    pub csa5: CSA5,
+    pub csa5: crate::Reg<csa5::CSA5_SPEC>,
     #[doc = "0x1a4 - Channel Destination Address Register (chid = 5)"]
-    pub cda5: CDA5,
+    pub cda5: crate::Reg<cda5::CDA5_SPEC>,
     #[doc = "0x1a8 - Channel Next Descriptor Address Register (chid = 5)"]
-    pub cnda5: CNDA5,
+    pub cnda5: crate::Reg<cnda5::CNDA5_SPEC>,
     #[doc = "0x1ac - Channel Next Descriptor Control Register (chid = 5)"]
-    pub cndc5: CNDC5,
+    pub cndc5: crate::Reg<cndc5::CNDC5_SPEC>,
     #[doc = "0x1b0 - Channel Microblock Control Register (chid = 5)"]
-    pub cubc5: CUBC5,
+    pub cubc5: crate::Reg<cubc5::CUBC5_SPEC>,
     #[doc = "0x1b4 - Channel Block Control Register (chid = 5)"]
-    pub cbc5: CBC5,
+    pub cbc5: crate::Reg<cbc5::CBC5_SPEC>,
     #[doc = "0x1b8 - Channel Configuration Register (chid = 5)"]
-    pub cc5: CC5,
+    pub cc5: crate::Reg<cc5::CC5_SPEC>,
     #[doc = "0x1bc - Channel Data Stride Memory Set Pattern (chid = 5)"]
-    pub cds_msp5: CDS_MSP5,
+    pub cds_msp5: crate::Reg<cds_msp5::CDS_MSP5_SPEC>,
     #[doc = "0x1c0 - Channel Source Microblock Stride (chid = 5)"]
-    pub csus5: CSUS5,
+    pub csus5: crate::Reg<csus5::CSUS5_SPEC>,
     #[doc = "0x1c4 - Channel Destination Microblock Stride (chid = 5)"]
-    pub cdus5: CDUS5,
+    pub cdus5: crate::Reg<cdus5::CDUS5_SPEC>,
     _reserved101: [u8; 8usize],
     #[doc = "0x1d0 - Channel Interrupt Enable Register (chid = 6)"]
-    pub cie6: CIE6,
+    pub cie6: crate::Reg<cie6::CIE6_SPEC>,
     #[doc = "0x1d4 - Channel Interrupt Disable Register (chid = 6)"]
-    pub cid6: CID6,
+    pub cid6: crate::Reg<cid6::CID6_SPEC>,
     #[doc = "0x1d8 - Channel Interrupt Mask Register (chid = 6)"]
-    pub cim6: CIM6,
+    pub cim6: crate::Reg<cim6::CIM6_SPEC>,
     #[doc = "0x1dc - Channel Interrupt Status Register (chid = 6)"]
-    pub cis6: CIS6,
+    pub cis6: crate::Reg<cis6::CIS6_SPEC>,
     #[doc = "0x1e0 - Channel Source Address Register (chid = 6)"]
-    pub csa6: CSA6,
+    pub csa6: crate::Reg<csa6::CSA6_SPEC>,
     #[doc = "0x1e4 - Channel Destination Address Register (chid = 6)"]
-    pub cda6: CDA6,
+    pub cda6: crate::Reg<cda6::CDA6_SPEC>,
     #[doc = "0x1e8 - Channel Next Descriptor Address Register (chid = 6)"]
-    pub cnda6: CNDA6,
+    pub cnda6: crate::Reg<cnda6::CNDA6_SPEC>,
     #[doc = "0x1ec - Channel Next Descriptor Control Register (chid = 6)"]
-    pub cndc6: CNDC6,
+    pub cndc6: crate::Reg<cndc6::CNDC6_SPEC>,
     #[doc = "0x1f0 - Channel Microblock Control Register (chid = 6)"]
-    pub cubc6: CUBC6,
+    pub cubc6: crate::Reg<cubc6::CUBC6_SPEC>,
     #[doc = "0x1f4 - Channel Block Control Register (chid = 6)"]
-    pub cbc6: CBC6,
+    pub cbc6: crate::Reg<cbc6::CBC6_SPEC>,
     #[doc = "0x1f8 - Channel Configuration Register (chid = 6)"]
-    pub cc6: CC6,
+    pub cc6: crate::Reg<cc6::CC6_SPEC>,
     #[doc = "0x1fc - Channel Data Stride Memory Set Pattern (chid = 6)"]
-    pub cds_msp6: CDS_MSP6,
+    pub cds_msp6: crate::Reg<cds_msp6::CDS_MSP6_SPEC>,
     #[doc = "0x200 - Channel Source Microblock Stride (chid = 6)"]
-    pub csus6: CSUS6,
+    pub csus6: crate::Reg<csus6::CSUS6_SPEC>,
     #[doc = "0x204 - Channel Destination Microblock Stride (chid = 6)"]
-    pub cdus6: CDUS6,
+    pub cdus6: crate::Reg<cdus6::CDUS6_SPEC>,
     _reserved115: [u8; 8usize],
     #[doc = "0x210 - Channel Interrupt Enable Register (chid = 7)"]
-    pub cie7: CIE7,
+    pub cie7: crate::Reg<cie7::CIE7_SPEC>,
     #[doc = "0x214 - Channel Interrupt Disable Register (chid = 7)"]
-    pub cid7: CID7,
+    pub cid7: crate::Reg<cid7::CID7_SPEC>,
     #[doc = "0x218 - Channel Interrupt Mask Register (chid = 7)"]
-    pub cim7: CIM7,
+    pub cim7: crate::Reg<cim7::CIM7_SPEC>,
     #[doc = "0x21c - Channel Interrupt Status Register (chid = 7)"]
-    pub cis7: CIS7,
+    pub cis7: crate::Reg<cis7::CIS7_SPEC>,
     #[doc = "0x220 - Channel Source Address Register (chid = 7)"]
-    pub csa7: CSA7,
+    pub csa7: crate::Reg<csa7::CSA7_SPEC>,
     #[doc = "0x224 - Channel Destination Address Register (chid = 7)"]
-    pub cda7: CDA7,
+    pub cda7: crate::Reg<cda7::CDA7_SPEC>,
     #[doc = "0x228 - Channel Next Descriptor Address Register (chid = 7)"]
-    pub cnda7: CNDA7,
+    pub cnda7: crate::Reg<cnda7::CNDA7_SPEC>,
     #[doc = "0x22c - Channel Next Descriptor Control Register (chid = 7)"]
-    pub cndc7: CNDC7,
+    pub cndc7: crate::Reg<cndc7::CNDC7_SPEC>,
     #[doc = "0x230 - Channel Microblock Control Register (chid = 7)"]
-    pub cubc7: CUBC7,
+    pub cubc7: crate::Reg<cubc7::CUBC7_SPEC>,
     #[doc = "0x234 - Channel Block Control Register (chid = 7)"]
-    pub cbc7: CBC7,
+    pub cbc7: crate::Reg<cbc7::CBC7_SPEC>,
     #[doc = "0x238 - Channel Configuration Register (chid = 7)"]
-    pub cc7: CC7,
+    pub cc7: crate::Reg<cc7::CC7_SPEC>,
     #[doc = "0x23c - Channel Data Stride Memory Set Pattern (chid = 7)"]
-    pub cds_msp7: CDS_MSP7,
+    pub cds_msp7: crate::Reg<cds_msp7::CDS_MSP7_SPEC>,
     #[doc = "0x240 - Channel Source Microblock Stride (chid = 7)"]
-    pub csus7: CSUS7,
+    pub csus7: crate::Reg<csus7::CSUS7_SPEC>,
     #[doc = "0x244 - Channel Destination Microblock Stride (chid = 7)"]
-    pub cdus7: CDUS7,
+    pub cdus7: crate::Reg<cdus7::CDUS7_SPEC>,
     _reserved129: [u8; 8usize],
     #[doc = "0x250 - Channel Interrupt Enable Register (chid = 8)"]
-    pub cie8: CIE8,
+    pub cie8: crate::Reg<cie8::CIE8_SPEC>,
     #[doc = "0x254 - Channel Interrupt Disable Register (chid = 8)"]
-    pub cid8: CID8,
+    pub cid8: crate::Reg<cid8::CID8_SPEC>,
     #[doc = "0x258 - Channel Interrupt Mask Register (chid = 8)"]
-    pub cim8: CIM8,
+    pub cim8: crate::Reg<cim8::CIM8_SPEC>,
     #[doc = "0x25c - Channel Interrupt Status Register (chid = 8)"]
-    pub cis8: CIS8,
+    pub cis8: crate::Reg<cis8::CIS8_SPEC>,
     #[doc = "0x260 - Channel Source Address Register (chid = 8)"]
-    pub csa8: CSA8,
+    pub csa8: crate::Reg<csa8::CSA8_SPEC>,
     #[doc = "0x264 - Channel Destination Address Register (chid = 8)"]
-    pub cda8: CDA8,
+    pub cda8: crate::Reg<cda8::CDA8_SPEC>,
     #[doc = "0x268 - Channel Next Descriptor Address Register (chid = 8)"]
-    pub cnda8: CNDA8,
+    pub cnda8: crate::Reg<cnda8::CNDA8_SPEC>,
     #[doc = "0x26c - Channel Next Descriptor Control Register (chid = 8)"]
-    pub cndc8: CNDC8,
+    pub cndc8: crate::Reg<cndc8::CNDC8_SPEC>,
     #[doc = "0x270 - Channel Microblock Control Register (chid = 8)"]
-    pub cubc8: CUBC8,
+    pub cubc8: crate::Reg<cubc8::CUBC8_SPEC>,
     #[doc = "0x274 - Channel Block Control Register (chid = 8)"]
-    pub cbc8: CBC8,
+    pub cbc8: crate::Reg<cbc8::CBC8_SPEC>,
     #[doc = "0x278 - Channel Configuration Register (chid = 8)"]
-    pub cc8: CC8,
+    pub cc8: crate::Reg<cc8::CC8_SPEC>,
     #[doc = "0x27c - Channel Data Stride Memory Set Pattern (chid = 8)"]
-    pub cds_msp8: CDS_MSP8,
+    pub cds_msp8: crate::Reg<cds_msp8::CDS_MSP8_SPEC>,
     #[doc = "0x280 - Channel Source Microblock Stride (chid = 8)"]
-    pub csus8: CSUS8,
+    pub csus8: crate::Reg<csus8::CSUS8_SPEC>,
     #[doc = "0x284 - Channel Destination Microblock Stride (chid = 8)"]
-    pub cdus8: CDUS8,
+    pub cdus8: crate::Reg<cdus8::CDUS8_SPEC>,
     _reserved143: [u8; 8usize],
     #[doc = "0x290 - Channel Interrupt Enable Register (chid = 9)"]
-    pub cie9: CIE9,
+    pub cie9: crate::Reg<cie9::CIE9_SPEC>,
     #[doc = "0x294 - Channel Interrupt Disable Register (chid = 9)"]
-    pub cid9: CID9,
+    pub cid9: crate::Reg<cid9::CID9_SPEC>,
     #[doc = "0x298 - Channel Interrupt Mask Register (chid = 9)"]
-    pub cim9: CIM9,
+    pub cim9: crate::Reg<cim9::CIM9_SPEC>,
     #[doc = "0x29c - Channel Interrupt Status Register (chid = 9)"]
-    pub cis9: CIS9,
+    pub cis9: crate::Reg<cis9::CIS9_SPEC>,
     #[doc = "0x2a0 - Channel Source Address Register (chid = 9)"]
-    pub csa9: CSA9,
+    pub csa9: crate::Reg<csa9::CSA9_SPEC>,
     #[doc = "0x2a4 - Channel Destination Address Register (chid = 9)"]
-    pub cda9: CDA9,
+    pub cda9: crate::Reg<cda9::CDA9_SPEC>,
     #[doc = "0x2a8 - Channel Next Descriptor Address Register (chid = 9)"]
-    pub cnda9: CNDA9,
+    pub cnda9: crate::Reg<cnda9::CNDA9_SPEC>,
     #[doc = "0x2ac - Channel Next Descriptor Control Register (chid = 9)"]
-    pub cndc9: CNDC9,
+    pub cndc9: crate::Reg<cndc9::CNDC9_SPEC>,
     #[doc = "0x2b0 - Channel Microblock Control Register (chid = 9)"]
-    pub cubc9: CUBC9,
+    pub cubc9: crate::Reg<cubc9::CUBC9_SPEC>,
     #[doc = "0x2b4 - Channel Block Control Register (chid = 9)"]
-    pub cbc9: CBC9,
+    pub cbc9: crate::Reg<cbc9::CBC9_SPEC>,
     #[doc = "0x2b8 - Channel Configuration Register (chid = 9)"]
-    pub cc9: CC9,
+    pub cc9: crate::Reg<cc9::CC9_SPEC>,
     #[doc = "0x2bc - Channel Data Stride Memory Set Pattern (chid = 9)"]
-    pub cds_msp9: CDS_MSP9,
+    pub cds_msp9: crate::Reg<cds_msp9::CDS_MSP9_SPEC>,
     #[doc = "0x2c0 - Channel Source Microblock Stride (chid = 9)"]
-    pub csus9: CSUS9,
+    pub csus9: crate::Reg<csus9::CSUS9_SPEC>,
     #[doc = "0x2c4 - Channel Destination Microblock Stride (chid = 9)"]
-    pub cdus9: CDUS9,
+    pub cdus9: crate::Reg<cdus9::CDUS9_SPEC>,
     _reserved157: [u8; 8usize],
     #[doc = "0x2d0 - Channel Interrupt Enable Register (chid = 10)"]
-    pub cie10: CIE10,
+    pub cie10: crate::Reg<cie10::CIE10_SPEC>,
     #[doc = "0x2d4 - Channel Interrupt Disable Register (chid = 10)"]
-    pub cid10: CID10,
+    pub cid10: crate::Reg<cid10::CID10_SPEC>,
     #[doc = "0x2d8 - Channel Interrupt Mask Register (chid = 10)"]
-    pub cim10: CIM10,
+    pub cim10: crate::Reg<cim10::CIM10_SPEC>,
     #[doc = "0x2dc - Channel Interrupt Status Register (chid = 10)"]
-    pub cis10: CIS10,
+    pub cis10: crate::Reg<cis10::CIS10_SPEC>,
     #[doc = "0x2e0 - Channel Source Address Register (chid = 10)"]
-    pub csa10: CSA10,
+    pub csa10: crate::Reg<csa10::CSA10_SPEC>,
     #[doc = "0x2e4 - Channel Destination Address Register (chid = 10)"]
-    pub cda10: CDA10,
+    pub cda10: crate::Reg<cda10::CDA10_SPEC>,
     #[doc = "0x2e8 - Channel Next Descriptor Address Register (chid = 10)"]
-    pub cnda10: CNDA10,
+    pub cnda10: crate::Reg<cnda10::CNDA10_SPEC>,
     #[doc = "0x2ec - Channel Next Descriptor Control Register (chid = 10)"]
-    pub cndc10: CNDC10,
+    pub cndc10: crate::Reg<cndc10::CNDC10_SPEC>,
     #[doc = "0x2f0 - Channel Microblock Control Register (chid = 10)"]
-    pub cubc10: CUBC10,
+    pub cubc10: crate::Reg<cubc10::CUBC10_SPEC>,
     #[doc = "0x2f4 - Channel Block Control Register (chid = 10)"]
-    pub cbc10: CBC10,
+    pub cbc10: crate::Reg<cbc10::CBC10_SPEC>,
     #[doc = "0x2f8 - Channel Configuration Register (chid = 10)"]
-    pub cc10: CC10,
+    pub cc10: crate::Reg<cc10::CC10_SPEC>,
     #[doc = "0x2fc - Channel Data Stride Memory Set Pattern (chid = 10)"]
-    pub cds_msp10: CDS_MSP10,
+    pub cds_msp10: crate::Reg<cds_msp10::CDS_MSP10_SPEC>,
     #[doc = "0x300 - Channel Source Microblock Stride (chid = 10)"]
-    pub csus10: CSUS10,
+    pub csus10: crate::Reg<csus10::CSUS10_SPEC>,
     #[doc = "0x304 - Channel Destination Microblock Stride (chid = 10)"]
-    pub cdus10: CDUS10,
+    pub cdus10: crate::Reg<cdus10::CDUS10_SPEC>,
     _reserved171: [u8; 8usize],
     #[doc = "0x310 - Channel Interrupt Enable Register (chid = 11)"]
-    pub cie11: CIE11,
+    pub cie11: crate::Reg<cie11::CIE11_SPEC>,
     #[doc = "0x314 - Channel Interrupt Disable Register (chid = 11)"]
-    pub cid11: CID11,
+    pub cid11: crate::Reg<cid11::CID11_SPEC>,
     #[doc = "0x318 - Channel Interrupt Mask Register (chid = 11)"]
-    pub cim11: CIM11,
+    pub cim11: crate::Reg<cim11::CIM11_SPEC>,
     #[doc = "0x31c - Channel Interrupt Status Register (chid = 11)"]
-    pub cis11: CIS11,
+    pub cis11: crate::Reg<cis11::CIS11_SPEC>,
     #[doc = "0x320 - Channel Source Address Register (chid = 11)"]
-    pub csa11: CSA11,
+    pub csa11: crate::Reg<csa11::CSA11_SPEC>,
     #[doc = "0x324 - Channel Destination Address Register (chid = 11)"]
-    pub cda11: CDA11,
+    pub cda11: crate::Reg<cda11::CDA11_SPEC>,
     #[doc = "0x328 - Channel Next Descriptor Address Register (chid = 11)"]
-    pub cnda11: CNDA11,
+    pub cnda11: crate::Reg<cnda11::CNDA11_SPEC>,
     #[doc = "0x32c - Channel Next Descriptor Control Register (chid = 11)"]
-    pub cndc11: CNDC11,
+    pub cndc11: crate::Reg<cndc11::CNDC11_SPEC>,
     #[doc = "0x330 - Channel Microblock Control Register (chid = 11)"]
-    pub cubc11: CUBC11,
+    pub cubc11: crate::Reg<cubc11::CUBC11_SPEC>,
     #[doc = "0x334 - Channel Block Control Register (chid = 11)"]
-    pub cbc11: CBC11,
+    pub cbc11: crate::Reg<cbc11::CBC11_SPEC>,
     #[doc = "0x338 - Channel Configuration Register (chid = 11)"]
-    pub cc11: CC11,
+    pub cc11: crate::Reg<cc11::CC11_SPEC>,
     #[doc = "0x33c - Channel Data Stride Memory Set Pattern (chid = 11)"]
-    pub cds_msp11: CDS_MSP11,
+    pub cds_msp11: crate::Reg<cds_msp11::CDS_MSP11_SPEC>,
     #[doc = "0x340 - Channel Source Microblock Stride (chid = 11)"]
-    pub csus11: CSUS11,
+    pub csus11: crate::Reg<csus11::CSUS11_SPEC>,
     #[doc = "0x344 - Channel Destination Microblock Stride (chid = 11)"]
-    pub cdus11: CDUS11,
+    pub cdus11: crate::Reg<cdus11::CDUS11_SPEC>,
     _reserved185: [u8; 8usize],
     #[doc = "0x350 - Channel Interrupt Enable Register (chid = 12)"]
-    pub cie12: CIE12,
+    pub cie12: crate::Reg<cie12::CIE12_SPEC>,
     #[doc = "0x354 - Channel Interrupt Disable Register (chid = 12)"]
-    pub cid12: CID12,
+    pub cid12: crate::Reg<cid12::CID12_SPEC>,
     #[doc = "0x358 - Channel Interrupt Mask Register (chid = 12)"]
-    pub cim12: CIM12,
+    pub cim12: crate::Reg<cim12::CIM12_SPEC>,
     #[doc = "0x35c - Channel Interrupt Status Register (chid = 12)"]
-    pub cis12: CIS12,
+    pub cis12: crate::Reg<cis12::CIS12_SPEC>,
     #[doc = "0x360 - Channel Source Address Register (chid = 12)"]
-    pub csa12: CSA12,
+    pub csa12: crate::Reg<csa12::CSA12_SPEC>,
     #[doc = "0x364 - Channel Destination Address Register (chid = 12)"]
-    pub cda12: CDA12,
+    pub cda12: crate::Reg<cda12::CDA12_SPEC>,
     #[doc = "0x368 - Channel Next Descriptor Address Register (chid = 12)"]
-    pub cnda12: CNDA12,
+    pub cnda12: crate::Reg<cnda12::CNDA12_SPEC>,
     #[doc = "0x36c - Channel Next Descriptor Control Register (chid = 12)"]
-    pub cndc12: CNDC12,
+    pub cndc12: crate::Reg<cndc12::CNDC12_SPEC>,
     #[doc = "0x370 - Channel Microblock Control Register (chid = 12)"]
-    pub cubc12: CUBC12,
+    pub cubc12: crate::Reg<cubc12::CUBC12_SPEC>,
     #[doc = "0x374 - Channel Block Control Register (chid = 12)"]
-    pub cbc12: CBC12,
+    pub cbc12: crate::Reg<cbc12::CBC12_SPEC>,
     #[doc = "0x378 - Channel Configuration Register (chid = 12)"]
-    pub cc12: CC12,
+    pub cc12: crate::Reg<cc12::CC12_SPEC>,
     #[doc = "0x37c - Channel Data Stride Memory Set Pattern (chid = 12)"]
-    pub cds_msp12: CDS_MSP12,
+    pub cds_msp12: crate::Reg<cds_msp12::CDS_MSP12_SPEC>,
     #[doc = "0x380 - Channel Source Microblock Stride (chid = 12)"]
-    pub csus12: CSUS12,
+    pub csus12: crate::Reg<csus12::CSUS12_SPEC>,
     #[doc = "0x384 - Channel Destination Microblock Stride (chid = 12)"]
-    pub cdus12: CDUS12,
+    pub cdus12: crate::Reg<cdus12::CDUS12_SPEC>,
     _reserved199: [u8; 8usize],
     #[doc = "0x390 - Channel Interrupt Enable Register (chid = 13)"]
-    pub cie13: CIE13,
+    pub cie13: crate::Reg<cie13::CIE13_SPEC>,
     #[doc = "0x394 - Channel Interrupt Disable Register (chid = 13)"]
-    pub cid13: CID13,
+    pub cid13: crate::Reg<cid13::CID13_SPEC>,
     #[doc = "0x398 - Channel Interrupt Mask Register (chid = 13)"]
-    pub cim13: CIM13,
+    pub cim13: crate::Reg<cim13::CIM13_SPEC>,
     #[doc = "0x39c - Channel Interrupt Status Register (chid = 13)"]
-    pub cis13: CIS13,
+    pub cis13: crate::Reg<cis13::CIS13_SPEC>,
     #[doc = "0x3a0 - Channel Source Address Register (chid = 13)"]
-    pub csa13: CSA13,
+    pub csa13: crate::Reg<csa13::CSA13_SPEC>,
     #[doc = "0x3a4 - Channel Destination Address Register (chid = 13)"]
-    pub cda13: CDA13,
+    pub cda13: crate::Reg<cda13::CDA13_SPEC>,
     #[doc = "0x3a8 - Channel Next Descriptor Address Register (chid = 13)"]
-    pub cnda13: CNDA13,
+    pub cnda13: crate::Reg<cnda13::CNDA13_SPEC>,
     #[doc = "0x3ac - Channel Next Descriptor Control Register (chid = 13)"]
-    pub cndc13: CNDC13,
+    pub cndc13: crate::Reg<cndc13::CNDC13_SPEC>,
     #[doc = "0x3b0 - Channel Microblock Control Register (chid = 13)"]
-    pub cubc13: CUBC13,
+    pub cubc13: crate::Reg<cubc13::CUBC13_SPEC>,
     #[doc = "0x3b4 - Channel Block Control Register (chid = 13)"]
-    pub cbc13: CBC13,
+    pub cbc13: crate::Reg<cbc13::CBC13_SPEC>,
     #[doc = "0x3b8 - Channel Configuration Register (chid = 13)"]
-    pub cc13: CC13,
+    pub cc13: crate::Reg<cc13::CC13_SPEC>,
     #[doc = "0x3bc - Channel Data Stride Memory Set Pattern (chid = 13)"]
-    pub cds_msp13: CDS_MSP13,
+    pub cds_msp13: crate::Reg<cds_msp13::CDS_MSP13_SPEC>,
     #[doc = "0x3c0 - Channel Source Microblock Stride (chid = 13)"]
-    pub csus13: CSUS13,
+    pub csus13: crate::Reg<csus13::CSUS13_SPEC>,
     #[doc = "0x3c4 - Channel Destination Microblock Stride (chid = 13)"]
-    pub cdus13: CDUS13,
+    pub cdus13: crate::Reg<cdus13::CDUS13_SPEC>,
     _reserved213: [u8; 8usize],
     #[doc = "0x3d0 - Channel Interrupt Enable Register (chid = 14)"]
-    pub cie14: CIE14,
+    pub cie14: crate::Reg<cie14::CIE14_SPEC>,
     #[doc = "0x3d4 - Channel Interrupt Disable Register (chid = 14)"]
-    pub cid14: CID14,
+    pub cid14: crate::Reg<cid14::CID14_SPEC>,
     #[doc = "0x3d8 - Channel Interrupt Mask Register (chid = 14)"]
-    pub cim14: CIM14,
+    pub cim14: crate::Reg<cim14::CIM14_SPEC>,
     #[doc = "0x3dc - Channel Interrupt Status Register (chid = 14)"]
-    pub cis14: CIS14,
+    pub cis14: crate::Reg<cis14::CIS14_SPEC>,
     #[doc = "0x3e0 - Channel Source Address Register (chid = 14)"]
-    pub csa14: CSA14,
+    pub csa14: crate::Reg<csa14::CSA14_SPEC>,
     #[doc = "0x3e4 - Channel Destination Address Register (chid = 14)"]
-    pub cda14: CDA14,
+    pub cda14: crate::Reg<cda14::CDA14_SPEC>,
     #[doc = "0x3e8 - Channel Next Descriptor Address Register (chid = 14)"]
-    pub cnda14: CNDA14,
+    pub cnda14: crate::Reg<cnda14::CNDA14_SPEC>,
     #[doc = "0x3ec - Channel Next Descriptor Control Register (chid = 14)"]
-    pub cndc14: CNDC14,
+    pub cndc14: crate::Reg<cndc14::CNDC14_SPEC>,
     #[doc = "0x3f0 - Channel Microblock Control Register (chid = 14)"]
-    pub cubc14: CUBC14,
+    pub cubc14: crate::Reg<cubc14::CUBC14_SPEC>,
     #[doc = "0x3f4 - Channel Block Control Register (chid = 14)"]
-    pub cbc14: CBC14,
+    pub cbc14: crate::Reg<cbc14::CBC14_SPEC>,
     #[doc = "0x3f8 - Channel Configuration Register (chid = 14)"]
-    pub cc14: CC14,
+    pub cc14: crate::Reg<cc14::CC14_SPEC>,
     #[doc = "0x3fc - Channel Data Stride Memory Set Pattern (chid = 14)"]
-    pub cds_msp14: CDS_MSP14,
+    pub cds_msp14: crate::Reg<cds_msp14::CDS_MSP14_SPEC>,
     #[doc = "0x400 - Channel Source Microblock Stride (chid = 14)"]
-    pub csus14: CSUS14,
+    pub csus14: crate::Reg<csus14::CSUS14_SPEC>,
     #[doc = "0x404 - Channel Destination Microblock Stride (chid = 14)"]
-    pub cdus14: CDUS14,
+    pub cdus14: crate::Reg<cdus14::CDUS14_SPEC>,
     _reserved227: [u8; 8usize],
     #[doc = "0x410 - Channel Interrupt Enable Register (chid = 15)"]
-    pub cie15: CIE15,
+    pub cie15: crate::Reg<cie15::CIE15_SPEC>,
     #[doc = "0x414 - Channel Interrupt Disable Register (chid = 15)"]
-    pub cid15: CID15,
+    pub cid15: crate::Reg<cid15::CID15_SPEC>,
     #[doc = "0x418 - Channel Interrupt Mask Register (chid = 15)"]
-    pub cim15: CIM15,
+    pub cim15: crate::Reg<cim15::CIM15_SPEC>,
     #[doc = "0x41c - Channel Interrupt Status Register (chid = 15)"]
-    pub cis15: CIS15,
+    pub cis15: crate::Reg<cis15::CIS15_SPEC>,
     #[doc = "0x420 - Channel Source Address Register (chid = 15)"]
-    pub csa15: CSA15,
+    pub csa15: crate::Reg<csa15::CSA15_SPEC>,
     #[doc = "0x424 - Channel Destination Address Register (chid = 15)"]
-    pub cda15: CDA15,
+    pub cda15: crate::Reg<cda15::CDA15_SPEC>,
     #[doc = "0x428 - Channel Next Descriptor Address Register (chid = 15)"]
-    pub cnda15: CNDA15,
+    pub cnda15: crate::Reg<cnda15::CNDA15_SPEC>,
     #[doc = "0x42c - Channel Next Descriptor Control Register (chid = 15)"]
-    pub cndc15: CNDC15,
+    pub cndc15: crate::Reg<cndc15::CNDC15_SPEC>,
     #[doc = "0x430 - Channel Microblock Control Register (chid = 15)"]
-    pub cubc15: CUBC15,
+    pub cubc15: crate::Reg<cubc15::CUBC15_SPEC>,
     #[doc = "0x434 - Channel Block Control Register (chid = 15)"]
-    pub cbc15: CBC15,
+    pub cbc15: crate::Reg<cbc15::CBC15_SPEC>,
     #[doc = "0x438 - Channel Configuration Register (chid = 15)"]
-    pub cc15: CC15,
+    pub cc15: crate::Reg<cc15::CC15_SPEC>,
     #[doc = "0x43c - Channel Data Stride Memory Set Pattern (chid = 15)"]
-    pub cds_msp15: CDS_MSP15,
+    pub cds_msp15: crate::Reg<cds_msp15::CDS_MSP15_SPEC>,
     #[doc = "0x440 - Channel Source Microblock Stride (chid = 15)"]
-    pub csus15: CSUS15,
+    pub csus15: crate::Reg<csus15::CSUS15_SPEC>,
     #[doc = "0x444 - Channel Destination Microblock Stride (chid = 15)"]
-    pub cdus15: CDUS15,
+    pub cdus15: crate::Reg<cdus15::CDUS15_SPEC>,
     _reserved241: [u8; 8usize],
     #[doc = "0x450 - Channel Interrupt Enable Register (chid = 16)"]
-    pub cie16: CIE16,
+    pub cie16: crate::Reg<cie16::CIE16_SPEC>,
     #[doc = "0x454 - Channel Interrupt Disable Register (chid = 16)"]
-    pub cid16: CID16,
+    pub cid16: crate::Reg<cid16::CID16_SPEC>,
     #[doc = "0x458 - Channel Interrupt Mask Register (chid = 16)"]
-    pub cim16: CIM16,
+    pub cim16: crate::Reg<cim16::CIM16_SPEC>,
     #[doc = "0x45c - Channel Interrupt Status Register (chid = 16)"]
-    pub cis16: CIS16,
+    pub cis16: crate::Reg<cis16::CIS16_SPEC>,
     #[doc = "0x460 - Channel Source Address Register (chid = 16)"]
-    pub csa16: CSA16,
+    pub csa16: crate::Reg<csa16::CSA16_SPEC>,
     #[doc = "0x464 - Channel Destination Address Register (chid = 16)"]
-    pub cda16: CDA16,
+    pub cda16: crate::Reg<cda16::CDA16_SPEC>,
     #[doc = "0x468 - Channel Next Descriptor Address Register (chid = 16)"]
-    pub cnda16: CNDA16,
+    pub cnda16: crate::Reg<cnda16::CNDA16_SPEC>,
     #[doc = "0x46c - Channel Next Descriptor Control Register (chid = 16)"]
-    pub cndc16: CNDC16,
+    pub cndc16: crate::Reg<cndc16::CNDC16_SPEC>,
     #[doc = "0x470 - Channel Microblock Control Register (chid = 16)"]
-    pub cubc16: CUBC16,
+    pub cubc16: crate::Reg<cubc16::CUBC16_SPEC>,
     #[doc = "0x474 - Channel Block Control Register (chid = 16)"]
-    pub cbc16: CBC16,
+    pub cbc16: crate::Reg<cbc16::CBC16_SPEC>,
     #[doc = "0x478 - Channel Configuration Register (chid = 16)"]
-    pub cc16: CC16,
+    pub cc16: crate::Reg<cc16::CC16_SPEC>,
     #[doc = "0x47c - Channel Data Stride Memory Set Pattern (chid = 16)"]
-    pub cds_msp16: CDS_MSP16,
+    pub cds_msp16: crate::Reg<cds_msp16::CDS_MSP16_SPEC>,
     #[doc = "0x480 - Channel Source Microblock Stride (chid = 16)"]
-    pub csus16: CSUS16,
+    pub csus16: crate::Reg<csus16::CSUS16_SPEC>,
     #[doc = "0x484 - Channel Destination Microblock Stride (chid = 16)"]
-    pub cdus16: CDUS16,
+    pub cdus16: crate::Reg<cdus16::CDUS16_SPEC>,
     _reserved255: [u8; 8usize],
     #[doc = "0x490 - Channel Interrupt Enable Register (chid = 17)"]
-    pub cie17: CIE17,
+    pub cie17: crate::Reg<cie17::CIE17_SPEC>,
     #[doc = "0x494 - Channel Interrupt Disable Register (chid = 17)"]
-    pub cid17: CID17,
+    pub cid17: crate::Reg<cid17::CID17_SPEC>,
     #[doc = "0x498 - Channel Interrupt Mask Register (chid = 17)"]
-    pub cim17: CIM17,
+    pub cim17: crate::Reg<cim17::CIM17_SPEC>,
     #[doc = "0x49c - Channel Interrupt Status Register (chid = 17)"]
-    pub cis17: CIS17,
+    pub cis17: crate::Reg<cis17::CIS17_SPEC>,
     #[doc = "0x4a0 - Channel Source Address Register (chid = 17)"]
-    pub csa17: CSA17,
+    pub csa17: crate::Reg<csa17::CSA17_SPEC>,
     #[doc = "0x4a4 - Channel Destination Address Register (chid = 17)"]
-    pub cda17: CDA17,
+    pub cda17: crate::Reg<cda17::CDA17_SPEC>,
     #[doc = "0x4a8 - Channel Next Descriptor Address Register (chid = 17)"]
-    pub cnda17: CNDA17,
+    pub cnda17: crate::Reg<cnda17::CNDA17_SPEC>,
     #[doc = "0x4ac - Channel Next Descriptor Control Register (chid = 17)"]
-    pub cndc17: CNDC17,
+    pub cndc17: crate::Reg<cndc17::CNDC17_SPEC>,
     #[doc = "0x4b0 - Channel Microblock Control Register (chid = 17)"]
-    pub cubc17: CUBC17,
+    pub cubc17: crate::Reg<cubc17::CUBC17_SPEC>,
     #[doc = "0x4b4 - Channel Block Control Register (chid = 17)"]
-    pub cbc17: CBC17,
+    pub cbc17: crate::Reg<cbc17::CBC17_SPEC>,
     #[doc = "0x4b8 - Channel Configuration Register (chid = 17)"]
-    pub cc17: CC17,
+    pub cc17: crate::Reg<cc17::CC17_SPEC>,
     #[doc = "0x4bc - Channel Data Stride Memory Set Pattern (chid = 17)"]
-    pub cds_msp17: CDS_MSP17,
+    pub cds_msp17: crate::Reg<cds_msp17::CDS_MSP17_SPEC>,
     #[doc = "0x4c0 - Channel Source Microblock Stride (chid = 17)"]
-    pub csus17: CSUS17,
+    pub csus17: crate::Reg<csus17::CSUS17_SPEC>,
     #[doc = "0x4c4 - Channel Destination Microblock Stride (chid = 17)"]
-    pub cdus17: CDUS17,
+    pub cdus17: crate::Reg<cdus17::CDUS17_SPEC>,
     _reserved269: [u8; 8usize],
     #[doc = "0x4d0 - Channel Interrupt Enable Register (chid = 18)"]
-    pub cie18: CIE18,
+    pub cie18: crate::Reg<cie18::CIE18_SPEC>,
     #[doc = "0x4d4 - Channel Interrupt Disable Register (chid = 18)"]
-    pub cid18: CID18,
+    pub cid18: crate::Reg<cid18::CID18_SPEC>,
     #[doc = "0x4d8 - Channel Interrupt Mask Register (chid = 18)"]
-    pub cim18: CIM18,
+    pub cim18: crate::Reg<cim18::CIM18_SPEC>,
     #[doc = "0x4dc - Channel Interrupt Status Register (chid = 18)"]
-    pub cis18: CIS18,
+    pub cis18: crate::Reg<cis18::CIS18_SPEC>,
     #[doc = "0x4e0 - Channel Source Address Register (chid = 18)"]
-    pub csa18: CSA18,
+    pub csa18: crate::Reg<csa18::CSA18_SPEC>,
     #[doc = "0x4e4 - Channel Destination Address Register (chid = 18)"]
-    pub cda18: CDA18,
+    pub cda18: crate::Reg<cda18::CDA18_SPEC>,
     #[doc = "0x4e8 - Channel Next Descriptor Address Register (chid = 18)"]
-    pub cnda18: CNDA18,
+    pub cnda18: crate::Reg<cnda18::CNDA18_SPEC>,
     #[doc = "0x4ec - Channel Next Descriptor Control Register (chid = 18)"]
-    pub cndc18: CNDC18,
+    pub cndc18: crate::Reg<cndc18::CNDC18_SPEC>,
     #[doc = "0x4f0 - Channel Microblock Control Register (chid = 18)"]
-    pub cubc18: CUBC18,
+    pub cubc18: crate::Reg<cubc18::CUBC18_SPEC>,
     #[doc = "0x4f4 - Channel Block Control Register (chid = 18)"]
-    pub cbc18: CBC18,
+    pub cbc18: crate::Reg<cbc18::CBC18_SPEC>,
     #[doc = "0x4f8 - Channel Configuration Register (chid = 18)"]
-    pub cc18: CC18,
+    pub cc18: crate::Reg<cc18::CC18_SPEC>,
     #[doc = "0x4fc - Channel Data Stride Memory Set Pattern (chid = 18)"]
-    pub cds_msp18: CDS_MSP18,
+    pub cds_msp18: crate::Reg<cds_msp18::CDS_MSP18_SPEC>,
     #[doc = "0x500 - Channel Source Microblock Stride (chid = 18)"]
-    pub csus18: CSUS18,
+    pub csus18: crate::Reg<csus18::CSUS18_SPEC>,
     #[doc = "0x504 - Channel Destination Microblock Stride (chid = 18)"]
-    pub cdus18: CDUS18,
+    pub cdus18: crate::Reg<cdus18::CDUS18_SPEC>,
     _reserved283: [u8; 8usize],
     #[doc = "0x510 - Channel Interrupt Enable Register (chid = 19)"]
-    pub cie19: CIE19,
+    pub cie19: crate::Reg<cie19::CIE19_SPEC>,
     #[doc = "0x514 - Channel Interrupt Disable Register (chid = 19)"]
-    pub cid19: CID19,
+    pub cid19: crate::Reg<cid19::CID19_SPEC>,
     #[doc = "0x518 - Channel Interrupt Mask Register (chid = 19)"]
-    pub cim19: CIM19,
+    pub cim19: crate::Reg<cim19::CIM19_SPEC>,
     #[doc = "0x51c - Channel Interrupt Status Register (chid = 19)"]
-    pub cis19: CIS19,
+    pub cis19: crate::Reg<cis19::CIS19_SPEC>,
     #[doc = "0x520 - Channel Source Address Register (chid = 19)"]
-    pub csa19: CSA19,
+    pub csa19: crate::Reg<csa19::CSA19_SPEC>,
     #[doc = "0x524 - Channel Destination Address Register (chid = 19)"]
-    pub cda19: CDA19,
+    pub cda19: crate::Reg<cda19::CDA19_SPEC>,
     #[doc = "0x528 - Channel Next Descriptor Address Register (chid = 19)"]
-    pub cnda19: CNDA19,
+    pub cnda19: crate::Reg<cnda19::CNDA19_SPEC>,
     #[doc = "0x52c - Channel Next Descriptor Control Register (chid = 19)"]
-    pub cndc19: CNDC19,
+    pub cndc19: crate::Reg<cndc19::CNDC19_SPEC>,
     #[doc = "0x530 - Channel Microblock Control Register (chid = 19)"]
-    pub cubc19: CUBC19,
+    pub cubc19: crate::Reg<cubc19::CUBC19_SPEC>,
     #[doc = "0x534 - Channel Block Control Register (chid = 19)"]
-    pub cbc19: CBC19,
+    pub cbc19: crate::Reg<cbc19::CBC19_SPEC>,
     #[doc = "0x538 - Channel Configuration Register (chid = 19)"]
-    pub cc19: CC19,
+    pub cc19: crate::Reg<cc19::CC19_SPEC>,
     #[doc = "0x53c - Channel Data Stride Memory Set Pattern (chid = 19)"]
-    pub cds_msp19: CDS_MSP19,
+    pub cds_msp19: crate::Reg<cds_msp19::CDS_MSP19_SPEC>,
     #[doc = "0x540 - Channel Source Microblock Stride (chid = 19)"]
-    pub csus19: CSUS19,
+    pub csus19: crate::Reg<csus19::CSUS19_SPEC>,
     #[doc = "0x544 - Channel Destination Microblock Stride (chid = 19)"]
-    pub cdus19: CDUS19,
+    pub cdus19: crate::Reg<cdus19::CDUS19_SPEC>,
     _reserved297: [u8; 8usize],
     #[doc = "0x550 - Channel Interrupt Enable Register (chid = 20)"]
-    pub cie20: CIE20,
+    pub cie20: crate::Reg<cie20::CIE20_SPEC>,
     #[doc = "0x554 - Channel Interrupt Disable Register (chid = 20)"]
-    pub cid20: CID20,
+    pub cid20: crate::Reg<cid20::CID20_SPEC>,
     #[doc = "0x558 - Channel Interrupt Mask Register (chid = 20)"]
-    pub cim20: CIM20,
+    pub cim20: crate::Reg<cim20::CIM20_SPEC>,
     #[doc = "0x55c - Channel Interrupt Status Register (chid = 20)"]
-    pub cis20: CIS20,
+    pub cis20: crate::Reg<cis20::CIS20_SPEC>,
     #[doc = "0x560 - Channel Source Address Register (chid = 20)"]
-    pub csa20: CSA20,
+    pub csa20: crate::Reg<csa20::CSA20_SPEC>,
     #[doc = "0x564 - Channel Destination Address Register (chid = 20)"]
-    pub cda20: CDA20,
+    pub cda20: crate::Reg<cda20::CDA20_SPEC>,
     #[doc = "0x568 - Channel Next Descriptor Address Register (chid = 20)"]
-    pub cnda20: CNDA20,
+    pub cnda20: crate::Reg<cnda20::CNDA20_SPEC>,
     #[doc = "0x56c - Channel Next Descriptor Control Register (chid = 20)"]
-    pub cndc20: CNDC20,
+    pub cndc20: crate::Reg<cndc20::CNDC20_SPEC>,
     #[doc = "0x570 - Channel Microblock Control Register (chid = 20)"]
-    pub cubc20: CUBC20,
+    pub cubc20: crate::Reg<cubc20::CUBC20_SPEC>,
     #[doc = "0x574 - Channel Block Control Register (chid = 20)"]
-    pub cbc20: CBC20,
+    pub cbc20: crate::Reg<cbc20::CBC20_SPEC>,
     #[doc = "0x578 - Channel Configuration Register (chid = 20)"]
-    pub cc20: CC20,
+    pub cc20: crate::Reg<cc20::CC20_SPEC>,
     #[doc = "0x57c - Channel Data Stride Memory Set Pattern (chid = 20)"]
-    pub cds_msp20: CDS_MSP20,
+    pub cds_msp20: crate::Reg<cds_msp20::CDS_MSP20_SPEC>,
     #[doc = "0x580 - Channel Source Microblock Stride (chid = 20)"]
-    pub csus20: CSUS20,
+    pub csus20: crate::Reg<csus20::CSUS20_SPEC>,
     #[doc = "0x584 - Channel Destination Microblock Stride (chid = 20)"]
-    pub cdus20: CDUS20,
+    pub cdus20: crate::Reg<cdus20::CDUS20_SPEC>,
     _reserved311: [u8; 8usize],
     #[doc = "0x590 - Channel Interrupt Enable Register (chid = 21)"]
-    pub cie21: CIE21,
+    pub cie21: crate::Reg<cie21::CIE21_SPEC>,
     #[doc = "0x594 - Channel Interrupt Disable Register (chid = 21)"]
-    pub cid21: CID21,
+    pub cid21: crate::Reg<cid21::CID21_SPEC>,
     #[doc = "0x598 - Channel Interrupt Mask Register (chid = 21)"]
-    pub cim21: CIM21,
+    pub cim21: crate::Reg<cim21::CIM21_SPEC>,
     #[doc = "0x59c - Channel Interrupt Status Register (chid = 21)"]
-    pub cis21: CIS21,
+    pub cis21: crate::Reg<cis21::CIS21_SPEC>,
     #[doc = "0x5a0 - Channel Source Address Register (chid = 21)"]
-    pub csa21: CSA21,
+    pub csa21: crate::Reg<csa21::CSA21_SPEC>,
     #[doc = "0x5a4 - Channel Destination Address Register (chid = 21)"]
-    pub cda21: CDA21,
+    pub cda21: crate::Reg<cda21::CDA21_SPEC>,
     #[doc = "0x5a8 - Channel Next Descriptor Address Register (chid = 21)"]
-    pub cnda21: CNDA21,
+    pub cnda21: crate::Reg<cnda21::CNDA21_SPEC>,
     #[doc = "0x5ac - Channel Next Descriptor Control Register (chid = 21)"]
-    pub cndc21: CNDC21,
+    pub cndc21: crate::Reg<cndc21::CNDC21_SPEC>,
     #[doc = "0x5b0 - Channel Microblock Control Register (chid = 21)"]
-    pub cubc21: CUBC21,
+    pub cubc21: crate::Reg<cubc21::CUBC21_SPEC>,
     #[doc = "0x5b4 - Channel Block Control Register (chid = 21)"]
-    pub cbc21: CBC21,
+    pub cbc21: crate::Reg<cbc21::CBC21_SPEC>,
     #[doc = "0x5b8 - Channel Configuration Register (chid = 21)"]
-    pub cc21: CC21,
+    pub cc21: crate::Reg<cc21::CC21_SPEC>,
     #[doc = "0x5bc - Channel Data Stride Memory Set Pattern (chid = 21)"]
-    pub cds_msp21: CDS_MSP21,
+    pub cds_msp21: crate::Reg<cds_msp21::CDS_MSP21_SPEC>,
     #[doc = "0x5c0 - Channel Source Microblock Stride (chid = 21)"]
-    pub csus21: CSUS21,
+    pub csus21: crate::Reg<csus21::CSUS21_SPEC>,
     #[doc = "0x5c4 - Channel Destination Microblock Stride (chid = 21)"]
-    pub cdus21: CDUS21,
+    pub cdus21: crate::Reg<cdus21::CDUS21_SPEC>,
     _reserved325: [u8; 8usize],
     #[doc = "0x5d0 - Channel Interrupt Enable Register (chid = 22)"]
-    pub cie22: CIE22,
+    pub cie22: crate::Reg<cie22::CIE22_SPEC>,
     #[doc = "0x5d4 - Channel Interrupt Disable Register (chid = 22)"]
-    pub cid22: CID22,
+    pub cid22: crate::Reg<cid22::CID22_SPEC>,
     #[doc = "0x5d8 - Channel Interrupt Mask Register (chid = 22)"]
-    pub cim22: CIM22,
+    pub cim22: crate::Reg<cim22::CIM22_SPEC>,
     #[doc = "0x5dc - Channel Interrupt Status Register (chid = 22)"]
-    pub cis22: CIS22,
+    pub cis22: crate::Reg<cis22::CIS22_SPEC>,
     #[doc = "0x5e0 - Channel Source Address Register (chid = 22)"]
-    pub csa22: CSA22,
+    pub csa22: crate::Reg<csa22::CSA22_SPEC>,
     #[doc = "0x5e4 - Channel Destination Address Register (chid = 22)"]
-    pub cda22: CDA22,
+    pub cda22: crate::Reg<cda22::CDA22_SPEC>,
     #[doc = "0x5e8 - Channel Next Descriptor Address Register (chid = 22)"]
-    pub cnda22: CNDA22,
+    pub cnda22: crate::Reg<cnda22::CNDA22_SPEC>,
     #[doc = "0x5ec - Channel Next Descriptor Control Register (chid = 22)"]
-    pub cndc22: CNDC22,
+    pub cndc22: crate::Reg<cndc22::CNDC22_SPEC>,
     #[doc = "0x5f0 - Channel Microblock Control Register (chid = 22)"]
-    pub cubc22: CUBC22,
+    pub cubc22: crate::Reg<cubc22::CUBC22_SPEC>,
     #[doc = "0x5f4 - Channel Block Control Register (chid = 22)"]
-    pub cbc22: CBC22,
+    pub cbc22: crate::Reg<cbc22::CBC22_SPEC>,
     #[doc = "0x5f8 - Channel Configuration Register (chid = 22)"]
-    pub cc22: CC22,
+    pub cc22: crate::Reg<cc22::CC22_SPEC>,
     #[doc = "0x5fc - Channel Data Stride Memory Set Pattern (chid = 22)"]
-    pub cds_msp22: CDS_MSP22,
+    pub cds_msp22: crate::Reg<cds_msp22::CDS_MSP22_SPEC>,
     #[doc = "0x600 - Channel Source Microblock Stride (chid = 22)"]
-    pub csus22: CSUS22,
+    pub csus22: crate::Reg<csus22::CSUS22_SPEC>,
     #[doc = "0x604 - Channel Destination Microblock Stride (chid = 22)"]
-    pub cdus22: CDUS22,
+    pub cdus22: crate::Reg<cdus22::CDUS22_SPEC>,
     _reserved339: [u8; 8usize],
     #[doc = "0x610 - Channel Interrupt Enable Register (chid = 23)"]
-    pub cie23: CIE23,
+    pub cie23: crate::Reg<cie23::CIE23_SPEC>,
     #[doc = "0x614 - Channel Interrupt Disable Register (chid = 23)"]
-    pub cid23: CID23,
+    pub cid23: crate::Reg<cid23::CID23_SPEC>,
     #[doc = "0x618 - Channel Interrupt Mask Register (chid = 23)"]
-    pub cim23: CIM23,
+    pub cim23: crate::Reg<cim23::CIM23_SPEC>,
     #[doc = "0x61c - Channel Interrupt Status Register (chid = 23)"]
-    pub cis23: CIS23,
+    pub cis23: crate::Reg<cis23::CIS23_SPEC>,
     #[doc = "0x620 - Channel Source Address Register (chid = 23)"]
-    pub csa23: CSA23,
+    pub csa23: crate::Reg<csa23::CSA23_SPEC>,
     #[doc = "0x624 - Channel Destination Address Register (chid = 23)"]
-    pub cda23: CDA23,
+    pub cda23: crate::Reg<cda23::CDA23_SPEC>,
     #[doc = "0x628 - Channel Next Descriptor Address Register (chid = 23)"]
-    pub cnda23: CNDA23,
+    pub cnda23: crate::Reg<cnda23::CNDA23_SPEC>,
     #[doc = "0x62c - Channel Next Descriptor Control Register (chid = 23)"]
-    pub cndc23: CNDC23,
+    pub cndc23: crate::Reg<cndc23::CNDC23_SPEC>,
     #[doc = "0x630 - Channel Microblock Control Register (chid = 23)"]
-    pub cubc23: CUBC23,
+    pub cubc23: crate::Reg<cubc23::CUBC23_SPEC>,
     #[doc = "0x634 - Channel Block Control Register (chid = 23)"]
-    pub cbc23: CBC23,
+    pub cbc23: crate::Reg<cbc23::CBC23_SPEC>,
     #[doc = "0x638 - Channel Configuration Register (chid = 23)"]
-    pub cc23: CC23,
+    pub cc23: crate::Reg<cc23::CC23_SPEC>,
     #[doc = "0x63c - Channel Data Stride Memory Set Pattern (chid = 23)"]
-    pub cds_msp23: CDS_MSP23,
+    pub cds_msp23: crate::Reg<cds_msp23::CDS_MSP23_SPEC>,
     #[doc = "0x640 - Channel Source Microblock Stride (chid = 23)"]
-    pub csus23: CSUS23,
+    pub csus23: crate::Reg<csus23::CSUS23_SPEC>,
     #[doc = "0x644 - Channel Destination Microblock Stride (chid = 23)"]
-    pub cdus23: CDUS23,
+    pub cdus23: crate::Reg<cdus23::CDUS23_SPEC>,
 }
-#[doc = "Global Type Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gtype](gtype) module"]
-pub type GTYPE = crate::Reg<u32, _GTYPE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GTYPE;
-#[doc = "`read()` method returns [gtype::R](gtype::R) reader structure"]
-impl crate::Readable for GTYPE {}
-#[doc = "`write(|w| ..)` method takes [gtype::W](gtype::W) writer structure"]
-impl crate::Writable for GTYPE {}
+#[doc = "GTYPE register accessor: an alias for `Reg<GTYPE_SPEC>`"]
+pub type GTYPE = crate::Reg<gtype::GTYPE_SPEC>;
 #[doc = "Global Type Register"]
 pub mod gtype;
-#[doc = "Global Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gcfg](gcfg) module"]
-pub type GCFG = crate::Reg<u32, _GCFG>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GCFG;
-#[doc = "`read()` method returns [gcfg::R](gcfg::R) reader structure"]
-impl crate::Readable for GCFG {}
+#[doc = "GCFG register accessor: an alias for `Reg<GCFG_SPEC>`"]
+pub type GCFG = crate::Reg<gcfg::GCFG_SPEC>;
 #[doc = "Global Configuration Register"]
 pub mod gcfg;
-#[doc = "Global Weighted Arbiter Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gwac](gwac) module"]
-pub type GWAC = crate::Reg<u32, _GWAC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GWAC;
-#[doc = "`read()` method returns [gwac::R](gwac::R) reader structure"]
-impl crate::Readable for GWAC {}
-#[doc = "`write(|w| ..)` method takes [gwac::W](gwac::W) writer structure"]
-impl crate::Writable for GWAC {}
+#[doc = "GWAC register accessor: an alias for `Reg<GWAC_SPEC>`"]
+pub type GWAC = crate::Reg<gwac::GWAC_SPEC>;
 #[doc = "Global Weighted Arbiter Configuration Register"]
 pub mod gwac;
-#[doc = "Global Interrupt Enable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gie](gie) module"]
-pub type GIE = crate::Reg<u32, _GIE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GIE;
-#[doc = "`write(|w| ..)` method takes [gie::W](gie::W) writer structure"]
-impl crate::Writable for GIE {}
+#[doc = "GIE register accessor: an alias for `Reg<GIE_SPEC>`"]
+pub type GIE = crate::Reg<gie::GIE_SPEC>;
 #[doc = "Global Interrupt Enable Register"]
 pub mod gie;
-#[doc = "Global Interrupt Disable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gid](gid) module"]
-pub type GID = crate::Reg<u32, _GID>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GID;
-#[doc = "`write(|w| ..)` method takes [gid::W](gid::W) writer structure"]
-impl crate::Writable for GID {}
+#[doc = "GID register accessor: an alias for `Reg<GID_SPEC>`"]
+pub type GID = crate::Reg<gid::GID_SPEC>;
 #[doc = "Global Interrupt Disable Register"]
 pub mod gid;
-#[doc = "Global Interrupt Mask Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gim](gim) module"]
-pub type GIM = crate::Reg<u32, _GIM>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GIM;
-#[doc = "`read()` method returns [gim::R](gim::R) reader structure"]
-impl crate::Readable for GIM {}
+#[doc = "GIM register accessor: an alias for `Reg<GIM_SPEC>`"]
+pub type GIM = crate::Reg<gim::GIM_SPEC>;
 #[doc = "Global Interrupt Mask Register"]
 pub mod gim;
-#[doc = "Global Interrupt Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gis](gis) module"]
-pub type GIS = crate::Reg<u32, _GIS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GIS;
-#[doc = "`read()` method returns [gis::R](gis::R) reader structure"]
-impl crate::Readable for GIS {}
+#[doc = "GIS register accessor: an alias for `Reg<GIS_SPEC>`"]
+pub type GIS = crate::Reg<gis::GIS_SPEC>;
 #[doc = "Global Interrupt Status Register"]
 pub mod gis;
-#[doc = "Global Channel Enable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ge](ge) module"]
-pub type GE = crate::Reg<u32, _GE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GE;
-#[doc = "`write(|w| ..)` method takes [ge::W](ge::W) writer structure"]
-impl crate::Writable for GE {}
+#[doc = "GE register accessor: an alias for `Reg<GE_SPEC>`"]
+pub type GE = crate::Reg<ge::GE_SPEC>;
 #[doc = "Global Channel Enable Register"]
 pub mod ge;
-#[doc = "Global Channel Disable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gd](gd) module"]
-pub type GD = crate::Reg<u32, _GD>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GD;
-#[doc = "`write(|w| ..)` method takes [gd::W](gd::W) writer structure"]
-impl crate::Writable for GD {}
+#[doc = "GD register accessor: an alias for `Reg<GD_SPEC>`"]
+pub type GD = crate::Reg<gd::GD_SPEC>;
 #[doc = "Global Channel Disable Register"]
 pub mod gd;
-#[doc = "Global Channel Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gs](gs) module"]
-pub type GS = crate::Reg<u32, _GS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GS;
-#[doc = "`read()` method returns [gs::R](gs::R) reader structure"]
-impl crate::Readable for GS {}
+#[doc = "GS register accessor: an alias for `Reg<GS_SPEC>`"]
+pub type GS = crate::Reg<gs::GS_SPEC>;
 #[doc = "Global Channel Status Register"]
 pub mod gs;
-#[doc = "Global Channel Read Suspend Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grs](grs) module"]
-pub type GRS = crate::Reg<u32, _GRS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GRS;
-#[doc = "`read()` method returns [grs::R](grs::R) reader structure"]
-impl crate::Readable for GRS {}
-#[doc = "`write(|w| ..)` method takes [grs::W](grs::W) writer structure"]
-impl crate::Writable for GRS {}
+#[doc = "GRS register accessor: an alias for `Reg<GRS_SPEC>`"]
+pub type GRS = crate::Reg<grs::GRS_SPEC>;
 #[doc = "Global Channel Read Suspend Register"]
 pub mod grs;
-#[doc = "Global Channel Write Suspend Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gws](gws) module"]
-pub type GWS = crate::Reg<u32, _GWS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GWS;
-#[doc = "`read()` method returns [gws::R](gws::R) reader structure"]
-impl crate::Readable for GWS {}
-#[doc = "`write(|w| ..)` method takes [gws::W](gws::W) writer structure"]
-impl crate::Writable for GWS {}
+#[doc = "GWS register accessor: an alias for `Reg<GWS_SPEC>`"]
+pub type GWS = crate::Reg<gws::GWS_SPEC>;
 #[doc = "Global Channel Write Suspend Register"]
 pub mod gws;
-#[doc = "Global Channel Read Write Suspend Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grws](grws) module"]
-pub type GRWS = crate::Reg<u32, _GRWS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GRWS;
-#[doc = "`write(|w| ..)` method takes [grws::W](grws::W) writer structure"]
-impl crate::Writable for GRWS {}
+#[doc = "GRWS register accessor: an alias for `Reg<GRWS_SPEC>`"]
+pub type GRWS = crate::Reg<grws::GRWS_SPEC>;
 #[doc = "Global Channel Read Write Suspend Register"]
 pub mod grws;
-#[doc = "Global Channel Read Write Resume Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grwr](grwr) module"]
-pub type GRWR = crate::Reg<u32, _GRWR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GRWR;
-#[doc = "`write(|w| ..)` method takes [grwr::W](grwr::W) writer structure"]
-impl crate::Writable for GRWR {}
+#[doc = "GRWR register accessor: an alias for `Reg<GRWR_SPEC>`"]
+pub type GRWR = crate::Reg<grwr::GRWR_SPEC>;
 #[doc = "Global Channel Read Write Resume Register"]
 pub mod grwr;
-#[doc = "Global Channel Software Request Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gswr](gswr) module"]
-pub type GSWR = crate::Reg<u32, _GSWR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GSWR;
-#[doc = "`write(|w| ..)` method takes [gswr::W](gswr::W) writer structure"]
-impl crate::Writable for GSWR {}
+#[doc = "GSWR register accessor: an alias for `Reg<GSWR_SPEC>`"]
+pub type GSWR = crate::Reg<gswr::GSWR_SPEC>;
 #[doc = "Global Channel Software Request Register"]
 pub mod gswr;
-#[doc = "Global Channel Software Request Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gsws](gsws) module"]
-pub type GSWS = crate::Reg<u32, _GSWS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GSWS;
-#[doc = "`read()` method returns [gsws::R](gsws::R) reader structure"]
-impl crate::Readable for GSWS {}
+#[doc = "GSWS register accessor: an alias for `Reg<GSWS_SPEC>`"]
+pub type GSWS = crate::Reg<gsws::GSWS_SPEC>;
 #[doc = "Global Channel Software Request Status Register"]
 pub mod gsws;
-#[doc = "Global Channel Software Flush Request Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gswf](gswf) module"]
-pub type GSWF = crate::Reg<u32, _GSWF>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _GSWF;
-#[doc = "`write(|w| ..)` method takes [gswf::W](gswf::W) writer structure"]
-impl crate::Writable for GSWF {}
+#[doc = "GSWF register accessor: an alias for `Reg<GSWF_SPEC>`"]
+pub type GSWF = crate::Reg<gswf::GSWF_SPEC>;
 #[doc = "Global Channel Software Flush Request Register"]
 pub mod gswf;
-#[doc = "Channel Interrupt Enable Register (chid = 0)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie0](cie0) module"]
-pub type CIE0 = crate::Reg<u32, _CIE0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE0;
-#[doc = "`write(|w| ..)` method takes [cie0::W](cie0::W) writer structure"]
-impl crate::Writable for CIE0 {}
+#[doc = "CIE0 register accessor: an alias for `Reg<CIE0_SPEC>`"]
+pub type CIE0 = crate::Reg<cie0::CIE0_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 0)"]
 pub mod cie0;
-#[doc = "Channel Interrupt Disable Register (chid = 0)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid0](cid0) module"]
-pub type CID0 = crate::Reg<u32, _CID0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID0;
-#[doc = "`write(|w| ..)` method takes [cid0::W](cid0::W) writer structure"]
-impl crate::Writable for CID0 {}
+#[doc = "CID0 register accessor: an alias for `Reg<CID0_SPEC>`"]
+pub type CID0 = crate::Reg<cid0::CID0_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 0)"]
 pub mod cid0;
-#[doc = "Channel Interrupt Mask Register (chid = 0)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim0](cim0) module"]
-pub type CIM0 = crate::Reg<u32, _CIM0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM0;
-#[doc = "`write(|w| ..)` method takes [cim0::W](cim0::W) writer structure"]
-impl crate::Writable for CIM0 {}
+#[doc = "CIM0 register accessor: an alias for `Reg<CIM0_SPEC>`"]
+pub type CIM0 = crate::Reg<cim0::CIM0_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 0)"]
 pub mod cim0;
-#[doc = "Channel Interrupt Status Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis0](cis0) module"]
-pub type CIS0 = crate::Reg<u32, _CIS0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS0;
-#[doc = "`read()` method returns [cis0::R](cis0::R) reader structure"]
-impl crate::Readable for CIS0 {}
+#[doc = "CIS0 register accessor: an alias for `Reg<CIS0_SPEC>`"]
+pub type CIS0 = crate::Reg<cis0::CIS0_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 0)"]
 pub mod cis0;
-#[doc = "Channel Source Address Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa0](csa0) module"]
-pub type CSA0 = crate::Reg<u32, _CSA0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA0;
-#[doc = "`read()` method returns [csa0::R](csa0::R) reader structure"]
-impl crate::Readable for CSA0 {}
-#[doc = "`write(|w| ..)` method takes [csa0::W](csa0::W) writer structure"]
-impl crate::Writable for CSA0 {}
+#[doc = "CSA0 register accessor: an alias for `Reg<CSA0_SPEC>`"]
+pub type CSA0 = crate::Reg<csa0::CSA0_SPEC>;
 #[doc = "Channel Source Address Register (chid = 0)"]
 pub mod csa0;
-#[doc = "Channel Destination Address Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda0](cda0) module"]
-pub type CDA0 = crate::Reg<u32, _CDA0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA0;
-#[doc = "`read()` method returns [cda0::R](cda0::R) reader structure"]
-impl crate::Readable for CDA0 {}
-#[doc = "`write(|w| ..)` method takes [cda0::W](cda0::W) writer structure"]
-impl crate::Writable for CDA0 {}
+#[doc = "CDA0 register accessor: an alias for `Reg<CDA0_SPEC>`"]
+pub type CDA0 = crate::Reg<cda0::CDA0_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 0)"]
 pub mod cda0;
-#[doc = "Channel Next Descriptor Address Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda0](cnda0) module"]
-pub type CNDA0 = crate::Reg<u32, _CNDA0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA0;
-#[doc = "`read()` method returns [cnda0::R](cnda0::R) reader structure"]
-impl crate::Readable for CNDA0 {}
-#[doc = "`write(|w| ..)` method takes [cnda0::W](cnda0::W) writer structure"]
-impl crate::Writable for CNDA0 {}
+#[doc = "CNDA0 register accessor: an alias for `Reg<CNDA0_SPEC>`"]
+pub type CNDA0 = crate::Reg<cnda0::CNDA0_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 0)"]
 pub mod cnda0;
-#[doc = "Channel Next Descriptor Control Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc0](cndc0) module"]
-pub type CNDC0 = crate::Reg<u32, _CNDC0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC0;
-#[doc = "`read()` method returns [cndc0::R](cndc0::R) reader structure"]
-impl crate::Readable for CNDC0 {}
-#[doc = "`write(|w| ..)` method takes [cndc0::W](cndc0::W) writer structure"]
-impl crate::Writable for CNDC0 {}
+#[doc = "CNDC0 register accessor: an alias for `Reg<CNDC0_SPEC>`"]
+pub type CNDC0 = crate::Reg<cndc0::CNDC0_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 0)"]
 pub mod cndc0;
-#[doc = "Channel Microblock Control Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc0](cubc0) module"]
-pub type CUBC0 = crate::Reg<u32, _CUBC0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC0;
-#[doc = "`read()` method returns [cubc0::R](cubc0::R) reader structure"]
-impl crate::Readable for CUBC0 {}
-#[doc = "`write(|w| ..)` method takes [cubc0::W](cubc0::W) writer structure"]
-impl crate::Writable for CUBC0 {}
+#[doc = "CUBC0 register accessor: an alias for `Reg<CUBC0_SPEC>`"]
+pub type CUBC0 = crate::Reg<cubc0::CUBC0_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 0)"]
 pub mod cubc0;
-#[doc = "Channel Block Control Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc0](cbc0) module"]
-pub type CBC0 = crate::Reg<u32, _CBC0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC0;
-#[doc = "`read()` method returns [cbc0::R](cbc0::R) reader structure"]
-impl crate::Readable for CBC0 {}
-#[doc = "`write(|w| ..)` method takes [cbc0::W](cbc0::W) writer structure"]
-impl crate::Writable for CBC0 {}
+#[doc = "CBC0 register accessor: an alias for `Reg<CBC0_SPEC>`"]
+pub type CBC0 = crate::Reg<cbc0::CBC0_SPEC>;
 #[doc = "Channel Block Control Register (chid = 0)"]
 pub mod cbc0;
-#[doc = "Channel Configuration Register (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc0](cc0) module"]
-pub type CC0 = crate::Reg<u32, _CC0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC0;
-#[doc = "`read()` method returns [cc0::R](cc0::R) reader structure"]
-impl crate::Readable for CC0 {}
-#[doc = "`write(|w| ..)` method takes [cc0::W](cc0::W) writer structure"]
-impl crate::Writable for CC0 {}
+#[doc = "CC0 register accessor: an alias for `Reg<CC0_SPEC>`"]
+pub type CC0 = crate::Reg<cc0::CC0_SPEC>;
 #[doc = "Channel Configuration Register (chid = 0)"]
 pub mod cc0;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp0](cds_msp0) module"]
-pub type CDS_MSP0 = crate::Reg<u32, _CDS_MSP0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP0;
-#[doc = "`read()` method returns [cds_msp0::R](cds_msp0::R) reader structure"]
-impl crate::Readable for CDS_MSP0 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp0::W](cds_msp0::W) writer structure"]
-impl crate::Writable for CDS_MSP0 {}
+#[doc = "CDS_MSP0 register accessor: an alias for `Reg<CDS_MSP0_SPEC>`"]
+pub type CDS_MSP0 = crate::Reg<cds_msp0::CDS_MSP0_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 0)"]
 pub mod cds_msp0;
-#[doc = "Channel Source Microblock Stride (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus0](csus0) module"]
-pub type CSUS0 = crate::Reg<u32, _CSUS0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS0;
-#[doc = "`read()` method returns [csus0::R](csus0::R) reader structure"]
-impl crate::Readable for CSUS0 {}
-#[doc = "`write(|w| ..)` method takes [csus0::W](csus0::W) writer structure"]
-impl crate::Writable for CSUS0 {}
+#[doc = "CSUS0 register accessor: an alias for `Reg<CSUS0_SPEC>`"]
+pub type CSUS0 = crate::Reg<csus0::CSUS0_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 0)"]
 pub mod csus0;
-#[doc = "Channel Destination Microblock Stride (chid = 0)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus0](cdus0) module"]
-pub type CDUS0 = crate::Reg<u32, _CDUS0>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS0;
-#[doc = "`read()` method returns [cdus0::R](cdus0::R) reader structure"]
-impl crate::Readable for CDUS0 {}
-#[doc = "`write(|w| ..)` method takes [cdus0::W](cdus0::W) writer structure"]
-impl crate::Writable for CDUS0 {}
+#[doc = "CDUS0 register accessor: an alias for `Reg<CDUS0_SPEC>`"]
+pub type CDUS0 = crate::Reg<cdus0::CDUS0_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 0)"]
 pub mod cdus0;
-#[doc = "Channel Interrupt Enable Register (chid = 1)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie1](cie1) module"]
-pub type CIE1 = crate::Reg<u32, _CIE1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE1;
-#[doc = "`write(|w| ..)` method takes [cie1::W](cie1::W) writer structure"]
-impl crate::Writable for CIE1 {}
+#[doc = "CIE1 register accessor: an alias for `Reg<CIE1_SPEC>`"]
+pub type CIE1 = crate::Reg<cie1::CIE1_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 1)"]
 pub mod cie1;
-#[doc = "Channel Interrupt Disable Register (chid = 1)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid1](cid1) module"]
-pub type CID1 = crate::Reg<u32, _CID1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID1;
-#[doc = "`write(|w| ..)` method takes [cid1::W](cid1::W) writer structure"]
-impl crate::Writable for CID1 {}
+#[doc = "CID1 register accessor: an alias for `Reg<CID1_SPEC>`"]
+pub type CID1 = crate::Reg<cid1::CID1_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 1)"]
 pub mod cid1;
-#[doc = "Channel Interrupt Mask Register (chid = 1)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim1](cim1) module"]
-pub type CIM1 = crate::Reg<u32, _CIM1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM1;
-#[doc = "`write(|w| ..)` method takes [cim1::W](cim1::W) writer structure"]
-impl crate::Writable for CIM1 {}
+#[doc = "CIM1 register accessor: an alias for `Reg<CIM1_SPEC>`"]
+pub type CIM1 = crate::Reg<cim1::CIM1_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 1)"]
 pub mod cim1;
-#[doc = "Channel Interrupt Status Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis1](cis1) module"]
-pub type CIS1 = crate::Reg<u32, _CIS1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS1;
-#[doc = "`read()` method returns [cis1::R](cis1::R) reader structure"]
-impl crate::Readable for CIS1 {}
+#[doc = "CIS1 register accessor: an alias for `Reg<CIS1_SPEC>`"]
+pub type CIS1 = crate::Reg<cis1::CIS1_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 1)"]
 pub mod cis1;
-#[doc = "Channel Source Address Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa1](csa1) module"]
-pub type CSA1 = crate::Reg<u32, _CSA1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA1;
-#[doc = "`read()` method returns [csa1::R](csa1::R) reader structure"]
-impl crate::Readable for CSA1 {}
-#[doc = "`write(|w| ..)` method takes [csa1::W](csa1::W) writer structure"]
-impl crate::Writable for CSA1 {}
+#[doc = "CSA1 register accessor: an alias for `Reg<CSA1_SPEC>`"]
+pub type CSA1 = crate::Reg<csa1::CSA1_SPEC>;
 #[doc = "Channel Source Address Register (chid = 1)"]
 pub mod csa1;
-#[doc = "Channel Destination Address Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda1](cda1) module"]
-pub type CDA1 = crate::Reg<u32, _CDA1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA1;
-#[doc = "`read()` method returns [cda1::R](cda1::R) reader structure"]
-impl crate::Readable for CDA1 {}
-#[doc = "`write(|w| ..)` method takes [cda1::W](cda1::W) writer structure"]
-impl crate::Writable for CDA1 {}
+#[doc = "CDA1 register accessor: an alias for `Reg<CDA1_SPEC>`"]
+pub type CDA1 = crate::Reg<cda1::CDA1_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 1)"]
 pub mod cda1;
-#[doc = "Channel Next Descriptor Address Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda1](cnda1) module"]
-pub type CNDA1 = crate::Reg<u32, _CNDA1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA1;
-#[doc = "`read()` method returns [cnda1::R](cnda1::R) reader structure"]
-impl crate::Readable for CNDA1 {}
-#[doc = "`write(|w| ..)` method takes [cnda1::W](cnda1::W) writer structure"]
-impl crate::Writable for CNDA1 {}
+#[doc = "CNDA1 register accessor: an alias for `Reg<CNDA1_SPEC>`"]
+pub type CNDA1 = crate::Reg<cnda1::CNDA1_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 1)"]
 pub mod cnda1;
-#[doc = "Channel Next Descriptor Control Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc1](cndc1) module"]
-pub type CNDC1 = crate::Reg<u32, _CNDC1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC1;
-#[doc = "`read()` method returns [cndc1::R](cndc1::R) reader structure"]
-impl crate::Readable for CNDC1 {}
-#[doc = "`write(|w| ..)` method takes [cndc1::W](cndc1::W) writer structure"]
-impl crate::Writable for CNDC1 {}
+#[doc = "CNDC1 register accessor: an alias for `Reg<CNDC1_SPEC>`"]
+pub type CNDC1 = crate::Reg<cndc1::CNDC1_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 1)"]
 pub mod cndc1;
-#[doc = "Channel Microblock Control Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc1](cubc1) module"]
-pub type CUBC1 = crate::Reg<u32, _CUBC1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC1;
-#[doc = "`read()` method returns [cubc1::R](cubc1::R) reader structure"]
-impl crate::Readable for CUBC1 {}
-#[doc = "`write(|w| ..)` method takes [cubc1::W](cubc1::W) writer structure"]
-impl crate::Writable for CUBC1 {}
+#[doc = "CUBC1 register accessor: an alias for `Reg<CUBC1_SPEC>`"]
+pub type CUBC1 = crate::Reg<cubc1::CUBC1_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 1)"]
 pub mod cubc1;
-#[doc = "Channel Block Control Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc1](cbc1) module"]
-pub type CBC1 = crate::Reg<u32, _CBC1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC1;
-#[doc = "`read()` method returns [cbc1::R](cbc1::R) reader structure"]
-impl crate::Readable for CBC1 {}
-#[doc = "`write(|w| ..)` method takes [cbc1::W](cbc1::W) writer structure"]
-impl crate::Writable for CBC1 {}
+#[doc = "CBC1 register accessor: an alias for `Reg<CBC1_SPEC>`"]
+pub type CBC1 = crate::Reg<cbc1::CBC1_SPEC>;
 #[doc = "Channel Block Control Register (chid = 1)"]
 pub mod cbc1;
-#[doc = "Channel Configuration Register (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc1](cc1) module"]
-pub type CC1 = crate::Reg<u32, _CC1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC1;
-#[doc = "`read()` method returns [cc1::R](cc1::R) reader structure"]
-impl crate::Readable for CC1 {}
-#[doc = "`write(|w| ..)` method takes [cc1::W](cc1::W) writer structure"]
-impl crate::Writable for CC1 {}
+#[doc = "CC1 register accessor: an alias for `Reg<CC1_SPEC>`"]
+pub type CC1 = crate::Reg<cc1::CC1_SPEC>;
 #[doc = "Channel Configuration Register (chid = 1)"]
 pub mod cc1;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp1](cds_msp1) module"]
-pub type CDS_MSP1 = crate::Reg<u32, _CDS_MSP1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP1;
-#[doc = "`read()` method returns [cds_msp1::R](cds_msp1::R) reader structure"]
-impl crate::Readable for CDS_MSP1 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp1::W](cds_msp1::W) writer structure"]
-impl crate::Writable for CDS_MSP1 {}
+#[doc = "CDS_MSP1 register accessor: an alias for `Reg<CDS_MSP1_SPEC>`"]
+pub type CDS_MSP1 = crate::Reg<cds_msp1::CDS_MSP1_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 1)"]
 pub mod cds_msp1;
-#[doc = "Channel Source Microblock Stride (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus1](csus1) module"]
-pub type CSUS1 = crate::Reg<u32, _CSUS1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS1;
-#[doc = "`read()` method returns [csus1::R](csus1::R) reader structure"]
-impl crate::Readable for CSUS1 {}
-#[doc = "`write(|w| ..)` method takes [csus1::W](csus1::W) writer structure"]
-impl crate::Writable for CSUS1 {}
+#[doc = "CSUS1 register accessor: an alias for `Reg<CSUS1_SPEC>`"]
+pub type CSUS1 = crate::Reg<csus1::CSUS1_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 1)"]
 pub mod csus1;
-#[doc = "Channel Destination Microblock Stride (chid = 1)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus1](cdus1) module"]
-pub type CDUS1 = crate::Reg<u32, _CDUS1>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS1;
-#[doc = "`read()` method returns [cdus1::R](cdus1::R) reader structure"]
-impl crate::Readable for CDUS1 {}
-#[doc = "`write(|w| ..)` method takes [cdus1::W](cdus1::W) writer structure"]
-impl crate::Writable for CDUS1 {}
+#[doc = "CDUS1 register accessor: an alias for `Reg<CDUS1_SPEC>`"]
+pub type CDUS1 = crate::Reg<cdus1::CDUS1_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 1)"]
 pub mod cdus1;
-#[doc = "Channel Interrupt Enable Register (chid = 2)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie2](cie2) module"]
-pub type CIE2 = crate::Reg<u32, _CIE2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE2;
-#[doc = "`write(|w| ..)` method takes [cie2::W](cie2::W) writer structure"]
-impl crate::Writable for CIE2 {}
+#[doc = "CIE2 register accessor: an alias for `Reg<CIE2_SPEC>`"]
+pub type CIE2 = crate::Reg<cie2::CIE2_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 2)"]
 pub mod cie2;
-#[doc = "Channel Interrupt Disable Register (chid = 2)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid2](cid2) module"]
-pub type CID2 = crate::Reg<u32, _CID2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID2;
-#[doc = "`write(|w| ..)` method takes [cid2::W](cid2::W) writer structure"]
-impl crate::Writable for CID2 {}
+#[doc = "CID2 register accessor: an alias for `Reg<CID2_SPEC>`"]
+pub type CID2 = crate::Reg<cid2::CID2_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 2)"]
 pub mod cid2;
-#[doc = "Channel Interrupt Mask Register (chid = 2)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim2](cim2) module"]
-pub type CIM2 = crate::Reg<u32, _CIM2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM2;
-#[doc = "`write(|w| ..)` method takes [cim2::W](cim2::W) writer structure"]
-impl crate::Writable for CIM2 {}
+#[doc = "CIM2 register accessor: an alias for `Reg<CIM2_SPEC>`"]
+pub type CIM2 = crate::Reg<cim2::CIM2_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 2)"]
 pub mod cim2;
-#[doc = "Channel Interrupt Status Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis2](cis2) module"]
-pub type CIS2 = crate::Reg<u32, _CIS2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS2;
-#[doc = "`read()` method returns [cis2::R](cis2::R) reader structure"]
-impl crate::Readable for CIS2 {}
+#[doc = "CIS2 register accessor: an alias for `Reg<CIS2_SPEC>`"]
+pub type CIS2 = crate::Reg<cis2::CIS2_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 2)"]
 pub mod cis2;
-#[doc = "Channel Source Address Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa2](csa2) module"]
-pub type CSA2 = crate::Reg<u32, _CSA2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA2;
-#[doc = "`read()` method returns [csa2::R](csa2::R) reader structure"]
-impl crate::Readable for CSA2 {}
-#[doc = "`write(|w| ..)` method takes [csa2::W](csa2::W) writer structure"]
-impl crate::Writable for CSA2 {}
+#[doc = "CSA2 register accessor: an alias for `Reg<CSA2_SPEC>`"]
+pub type CSA2 = crate::Reg<csa2::CSA2_SPEC>;
 #[doc = "Channel Source Address Register (chid = 2)"]
 pub mod csa2;
-#[doc = "Channel Destination Address Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda2](cda2) module"]
-pub type CDA2 = crate::Reg<u32, _CDA2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA2;
-#[doc = "`read()` method returns [cda2::R](cda2::R) reader structure"]
-impl crate::Readable for CDA2 {}
-#[doc = "`write(|w| ..)` method takes [cda2::W](cda2::W) writer structure"]
-impl crate::Writable for CDA2 {}
+#[doc = "CDA2 register accessor: an alias for `Reg<CDA2_SPEC>`"]
+pub type CDA2 = crate::Reg<cda2::CDA2_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 2)"]
 pub mod cda2;
-#[doc = "Channel Next Descriptor Address Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda2](cnda2) module"]
-pub type CNDA2 = crate::Reg<u32, _CNDA2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA2;
-#[doc = "`read()` method returns [cnda2::R](cnda2::R) reader structure"]
-impl crate::Readable for CNDA2 {}
-#[doc = "`write(|w| ..)` method takes [cnda2::W](cnda2::W) writer structure"]
-impl crate::Writable for CNDA2 {}
+#[doc = "CNDA2 register accessor: an alias for `Reg<CNDA2_SPEC>`"]
+pub type CNDA2 = crate::Reg<cnda2::CNDA2_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 2)"]
 pub mod cnda2;
-#[doc = "Channel Next Descriptor Control Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc2](cndc2) module"]
-pub type CNDC2 = crate::Reg<u32, _CNDC2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC2;
-#[doc = "`read()` method returns [cndc2::R](cndc2::R) reader structure"]
-impl crate::Readable for CNDC2 {}
-#[doc = "`write(|w| ..)` method takes [cndc2::W](cndc2::W) writer structure"]
-impl crate::Writable for CNDC2 {}
+#[doc = "CNDC2 register accessor: an alias for `Reg<CNDC2_SPEC>`"]
+pub type CNDC2 = crate::Reg<cndc2::CNDC2_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 2)"]
 pub mod cndc2;
-#[doc = "Channel Microblock Control Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc2](cubc2) module"]
-pub type CUBC2 = crate::Reg<u32, _CUBC2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC2;
-#[doc = "`read()` method returns [cubc2::R](cubc2::R) reader structure"]
-impl crate::Readable for CUBC2 {}
-#[doc = "`write(|w| ..)` method takes [cubc2::W](cubc2::W) writer structure"]
-impl crate::Writable for CUBC2 {}
+#[doc = "CUBC2 register accessor: an alias for `Reg<CUBC2_SPEC>`"]
+pub type CUBC2 = crate::Reg<cubc2::CUBC2_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 2)"]
 pub mod cubc2;
-#[doc = "Channel Block Control Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc2](cbc2) module"]
-pub type CBC2 = crate::Reg<u32, _CBC2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC2;
-#[doc = "`read()` method returns [cbc2::R](cbc2::R) reader structure"]
-impl crate::Readable for CBC2 {}
-#[doc = "`write(|w| ..)` method takes [cbc2::W](cbc2::W) writer structure"]
-impl crate::Writable for CBC2 {}
+#[doc = "CBC2 register accessor: an alias for `Reg<CBC2_SPEC>`"]
+pub type CBC2 = crate::Reg<cbc2::CBC2_SPEC>;
 #[doc = "Channel Block Control Register (chid = 2)"]
 pub mod cbc2;
-#[doc = "Channel Configuration Register (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc2](cc2) module"]
-pub type CC2 = crate::Reg<u32, _CC2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC2;
-#[doc = "`read()` method returns [cc2::R](cc2::R) reader structure"]
-impl crate::Readable for CC2 {}
-#[doc = "`write(|w| ..)` method takes [cc2::W](cc2::W) writer structure"]
-impl crate::Writable for CC2 {}
+#[doc = "CC2 register accessor: an alias for `Reg<CC2_SPEC>`"]
+pub type CC2 = crate::Reg<cc2::CC2_SPEC>;
 #[doc = "Channel Configuration Register (chid = 2)"]
 pub mod cc2;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp2](cds_msp2) module"]
-pub type CDS_MSP2 = crate::Reg<u32, _CDS_MSP2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP2;
-#[doc = "`read()` method returns [cds_msp2::R](cds_msp2::R) reader structure"]
-impl crate::Readable for CDS_MSP2 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp2::W](cds_msp2::W) writer structure"]
-impl crate::Writable for CDS_MSP2 {}
+#[doc = "CDS_MSP2 register accessor: an alias for `Reg<CDS_MSP2_SPEC>`"]
+pub type CDS_MSP2 = crate::Reg<cds_msp2::CDS_MSP2_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 2)"]
 pub mod cds_msp2;
-#[doc = "Channel Source Microblock Stride (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus2](csus2) module"]
-pub type CSUS2 = crate::Reg<u32, _CSUS2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS2;
-#[doc = "`read()` method returns [csus2::R](csus2::R) reader structure"]
-impl crate::Readable for CSUS2 {}
-#[doc = "`write(|w| ..)` method takes [csus2::W](csus2::W) writer structure"]
-impl crate::Writable for CSUS2 {}
+#[doc = "CSUS2 register accessor: an alias for `Reg<CSUS2_SPEC>`"]
+pub type CSUS2 = crate::Reg<csus2::CSUS2_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 2)"]
 pub mod csus2;
-#[doc = "Channel Destination Microblock Stride (chid = 2)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus2](cdus2) module"]
-pub type CDUS2 = crate::Reg<u32, _CDUS2>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS2;
-#[doc = "`read()` method returns [cdus2::R](cdus2::R) reader structure"]
-impl crate::Readable for CDUS2 {}
-#[doc = "`write(|w| ..)` method takes [cdus2::W](cdus2::W) writer structure"]
-impl crate::Writable for CDUS2 {}
+#[doc = "CDUS2 register accessor: an alias for `Reg<CDUS2_SPEC>`"]
+pub type CDUS2 = crate::Reg<cdus2::CDUS2_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 2)"]
 pub mod cdus2;
-#[doc = "Channel Interrupt Enable Register (chid = 3)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie3](cie3) module"]
-pub type CIE3 = crate::Reg<u32, _CIE3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE3;
-#[doc = "`write(|w| ..)` method takes [cie3::W](cie3::W) writer structure"]
-impl crate::Writable for CIE3 {}
+#[doc = "CIE3 register accessor: an alias for `Reg<CIE3_SPEC>`"]
+pub type CIE3 = crate::Reg<cie3::CIE3_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 3)"]
 pub mod cie3;
-#[doc = "Channel Interrupt Disable Register (chid = 3)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid3](cid3) module"]
-pub type CID3 = crate::Reg<u32, _CID3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID3;
-#[doc = "`write(|w| ..)` method takes [cid3::W](cid3::W) writer structure"]
-impl crate::Writable for CID3 {}
+#[doc = "CID3 register accessor: an alias for `Reg<CID3_SPEC>`"]
+pub type CID3 = crate::Reg<cid3::CID3_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 3)"]
 pub mod cid3;
-#[doc = "Channel Interrupt Mask Register (chid = 3)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim3](cim3) module"]
-pub type CIM3 = crate::Reg<u32, _CIM3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM3;
-#[doc = "`write(|w| ..)` method takes [cim3::W](cim3::W) writer structure"]
-impl crate::Writable for CIM3 {}
+#[doc = "CIM3 register accessor: an alias for `Reg<CIM3_SPEC>`"]
+pub type CIM3 = crate::Reg<cim3::CIM3_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 3)"]
 pub mod cim3;
-#[doc = "Channel Interrupt Status Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis3](cis3) module"]
-pub type CIS3 = crate::Reg<u32, _CIS3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS3;
-#[doc = "`read()` method returns [cis3::R](cis3::R) reader structure"]
-impl crate::Readable for CIS3 {}
+#[doc = "CIS3 register accessor: an alias for `Reg<CIS3_SPEC>`"]
+pub type CIS3 = crate::Reg<cis3::CIS3_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 3)"]
 pub mod cis3;
-#[doc = "Channel Source Address Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa3](csa3) module"]
-pub type CSA3 = crate::Reg<u32, _CSA3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA3;
-#[doc = "`read()` method returns [csa3::R](csa3::R) reader structure"]
-impl crate::Readable for CSA3 {}
-#[doc = "`write(|w| ..)` method takes [csa3::W](csa3::W) writer structure"]
-impl crate::Writable for CSA3 {}
+#[doc = "CSA3 register accessor: an alias for `Reg<CSA3_SPEC>`"]
+pub type CSA3 = crate::Reg<csa3::CSA3_SPEC>;
 #[doc = "Channel Source Address Register (chid = 3)"]
 pub mod csa3;
-#[doc = "Channel Destination Address Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda3](cda3) module"]
-pub type CDA3 = crate::Reg<u32, _CDA3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA3;
-#[doc = "`read()` method returns [cda3::R](cda3::R) reader structure"]
-impl crate::Readable for CDA3 {}
-#[doc = "`write(|w| ..)` method takes [cda3::W](cda3::W) writer structure"]
-impl crate::Writable for CDA3 {}
+#[doc = "CDA3 register accessor: an alias for `Reg<CDA3_SPEC>`"]
+pub type CDA3 = crate::Reg<cda3::CDA3_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 3)"]
 pub mod cda3;
-#[doc = "Channel Next Descriptor Address Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda3](cnda3) module"]
-pub type CNDA3 = crate::Reg<u32, _CNDA3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA3;
-#[doc = "`read()` method returns [cnda3::R](cnda3::R) reader structure"]
-impl crate::Readable for CNDA3 {}
-#[doc = "`write(|w| ..)` method takes [cnda3::W](cnda3::W) writer structure"]
-impl crate::Writable for CNDA3 {}
+#[doc = "CNDA3 register accessor: an alias for `Reg<CNDA3_SPEC>`"]
+pub type CNDA3 = crate::Reg<cnda3::CNDA3_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 3)"]
 pub mod cnda3;
-#[doc = "Channel Next Descriptor Control Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc3](cndc3) module"]
-pub type CNDC3 = crate::Reg<u32, _CNDC3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC3;
-#[doc = "`read()` method returns [cndc3::R](cndc3::R) reader structure"]
-impl crate::Readable for CNDC3 {}
-#[doc = "`write(|w| ..)` method takes [cndc3::W](cndc3::W) writer structure"]
-impl crate::Writable for CNDC3 {}
+#[doc = "CNDC3 register accessor: an alias for `Reg<CNDC3_SPEC>`"]
+pub type CNDC3 = crate::Reg<cndc3::CNDC3_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 3)"]
 pub mod cndc3;
-#[doc = "Channel Microblock Control Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc3](cubc3) module"]
-pub type CUBC3 = crate::Reg<u32, _CUBC3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC3;
-#[doc = "`read()` method returns [cubc3::R](cubc3::R) reader structure"]
-impl crate::Readable for CUBC3 {}
-#[doc = "`write(|w| ..)` method takes [cubc3::W](cubc3::W) writer structure"]
-impl crate::Writable for CUBC3 {}
+#[doc = "CUBC3 register accessor: an alias for `Reg<CUBC3_SPEC>`"]
+pub type CUBC3 = crate::Reg<cubc3::CUBC3_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 3)"]
 pub mod cubc3;
-#[doc = "Channel Block Control Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc3](cbc3) module"]
-pub type CBC3 = crate::Reg<u32, _CBC3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC3;
-#[doc = "`read()` method returns [cbc3::R](cbc3::R) reader structure"]
-impl crate::Readable for CBC3 {}
-#[doc = "`write(|w| ..)` method takes [cbc3::W](cbc3::W) writer structure"]
-impl crate::Writable for CBC3 {}
+#[doc = "CBC3 register accessor: an alias for `Reg<CBC3_SPEC>`"]
+pub type CBC3 = crate::Reg<cbc3::CBC3_SPEC>;
 #[doc = "Channel Block Control Register (chid = 3)"]
 pub mod cbc3;
-#[doc = "Channel Configuration Register (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc3](cc3) module"]
-pub type CC3 = crate::Reg<u32, _CC3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC3;
-#[doc = "`read()` method returns [cc3::R](cc3::R) reader structure"]
-impl crate::Readable for CC3 {}
-#[doc = "`write(|w| ..)` method takes [cc3::W](cc3::W) writer structure"]
-impl crate::Writable for CC3 {}
+#[doc = "CC3 register accessor: an alias for `Reg<CC3_SPEC>`"]
+pub type CC3 = crate::Reg<cc3::CC3_SPEC>;
 #[doc = "Channel Configuration Register (chid = 3)"]
 pub mod cc3;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp3](cds_msp3) module"]
-pub type CDS_MSP3 = crate::Reg<u32, _CDS_MSP3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP3;
-#[doc = "`read()` method returns [cds_msp3::R](cds_msp3::R) reader structure"]
-impl crate::Readable for CDS_MSP3 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp3::W](cds_msp3::W) writer structure"]
-impl crate::Writable for CDS_MSP3 {}
+#[doc = "CDS_MSP3 register accessor: an alias for `Reg<CDS_MSP3_SPEC>`"]
+pub type CDS_MSP3 = crate::Reg<cds_msp3::CDS_MSP3_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 3)"]
 pub mod cds_msp3;
-#[doc = "Channel Source Microblock Stride (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus3](csus3) module"]
-pub type CSUS3 = crate::Reg<u32, _CSUS3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS3;
-#[doc = "`read()` method returns [csus3::R](csus3::R) reader structure"]
-impl crate::Readable for CSUS3 {}
-#[doc = "`write(|w| ..)` method takes [csus3::W](csus3::W) writer structure"]
-impl crate::Writable for CSUS3 {}
+#[doc = "CSUS3 register accessor: an alias for `Reg<CSUS3_SPEC>`"]
+pub type CSUS3 = crate::Reg<csus3::CSUS3_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 3)"]
 pub mod csus3;
-#[doc = "Channel Destination Microblock Stride (chid = 3)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus3](cdus3) module"]
-pub type CDUS3 = crate::Reg<u32, _CDUS3>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS3;
-#[doc = "`read()` method returns [cdus3::R](cdus3::R) reader structure"]
-impl crate::Readable for CDUS3 {}
-#[doc = "`write(|w| ..)` method takes [cdus3::W](cdus3::W) writer structure"]
-impl crate::Writable for CDUS3 {}
+#[doc = "CDUS3 register accessor: an alias for `Reg<CDUS3_SPEC>`"]
+pub type CDUS3 = crate::Reg<cdus3::CDUS3_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 3)"]
 pub mod cdus3;
-#[doc = "Channel Interrupt Enable Register (chid = 4)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie4](cie4) module"]
-pub type CIE4 = crate::Reg<u32, _CIE4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE4;
-#[doc = "`write(|w| ..)` method takes [cie4::W](cie4::W) writer structure"]
-impl crate::Writable for CIE4 {}
+#[doc = "CIE4 register accessor: an alias for `Reg<CIE4_SPEC>`"]
+pub type CIE4 = crate::Reg<cie4::CIE4_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 4)"]
 pub mod cie4;
-#[doc = "Channel Interrupt Disable Register (chid = 4)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid4](cid4) module"]
-pub type CID4 = crate::Reg<u32, _CID4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID4;
-#[doc = "`write(|w| ..)` method takes [cid4::W](cid4::W) writer structure"]
-impl crate::Writable for CID4 {}
+#[doc = "CID4 register accessor: an alias for `Reg<CID4_SPEC>`"]
+pub type CID4 = crate::Reg<cid4::CID4_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 4)"]
 pub mod cid4;
-#[doc = "Channel Interrupt Mask Register (chid = 4)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim4](cim4) module"]
-pub type CIM4 = crate::Reg<u32, _CIM4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM4;
-#[doc = "`write(|w| ..)` method takes [cim4::W](cim4::W) writer structure"]
-impl crate::Writable for CIM4 {}
+#[doc = "CIM4 register accessor: an alias for `Reg<CIM4_SPEC>`"]
+pub type CIM4 = crate::Reg<cim4::CIM4_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 4)"]
 pub mod cim4;
-#[doc = "Channel Interrupt Status Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis4](cis4) module"]
-pub type CIS4 = crate::Reg<u32, _CIS4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS4;
-#[doc = "`read()` method returns [cis4::R](cis4::R) reader structure"]
-impl crate::Readable for CIS4 {}
+#[doc = "CIS4 register accessor: an alias for `Reg<CIS4_SPEC>`"]
+pub type CIS4 = crate::Reg<cis4::CIS4_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 4)"]
 pub mod cis4;
-#[doc = "Channel Source Address Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa4](csa4) module"]
-pub type CSA4 = crate::Reg<u32, _CSA4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA4;
-#[doc = "`read()` method returns [csa4::R](csa4::R) reader structure"]
-impl crate::Readable for CSA4 {}
-#[doc = "`write(|w| ..)` method takes [csa4::W](csa4::W) writer structure"]
-impl crate::Writable for CSA4 {}
+#[doc = "CSA4 register accessor: an alias for `Reg<CSA4_SPEC>`"]
+pub type CSA4 = crate::Reg<csa4::CSA4_SPEC>;
 #[doc = "Channel Source Address Register (chid = 4)"]
 pub mod csa4;
-#[doc = "Channel Destination Address Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda4](cda4) module"]
-pub type CDA4 = crate::Reg<u32, _CDA4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA4;
-#[doc = "`read()` method returns [cda4::R](cda4::R) reader structure"]
-impl crate::Readable for CDA4 {}
-#[doc = "`write(|w| ..)` method takes [cda4::W](cda4::W) writer structure"]
-impl crate::Writable for CDA4 {}
+#[doc = "CDA4 register accessor: an alias for `Reg<CDA4_SPEC>`"]
+pub type CDA4 = crate::Reg<cda4::CDA4_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 4)"]
 pub mod cda4;
-#[doc = "Channel Next Descriptor Address Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda4](cnda4) module"]
-pub type CNDA4 = crate::Reg<u32, _CNDA4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA4;
-#[doc = "`read()` method returns [cnda4::R](cnda4::R) reader structure"]
-impl crate::Readable for CNDA4 {}
-#[doc = "`write(|w| ..)` method takes [cnda4::W](cnda4::W) writer structure"]
-impl crate::Writable for CNDA4 {}
+#[doc = "CNDA4 register accessor: an alias for `Reg<CNDA4_SPEC>`"]
+pub type CNDA4 = crate::Reg<cnda4::CNDA4_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 4)"]
 pub mod cnda4;
-#[doc = "Channel Next Descriptor Control Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc4](cndc4) module"]
-pub type CNDC4 = crate::Reg<u32, _CNDC4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC4;
-#[doc = "`read()` method returns [cndc4::R](cndc4::R) reader structure"]
-impl crate::Readable for CNDC4 {}
-#[doc = "`write(|w| ..)` method takes [cndc4::W](cndc4::W) writer structure"]
-impl crate::Writable for CNDC4 {}
+#[doc = "CNDC4 register accessor: an alias for `Reg<CNDC4_SPEC>`"]
+pub type CNDC4 = crate::Reg<cndc4::CNDC4_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 4)"]
 pub mod cndc4;
-#[doc = "Channel Microblock Control Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc4](cubc4) module"]
-pub type CUBC4 = crate::Reg<u32, _CUBC4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC4;
-#[doc = "`read()` method returns [cubc4::R](cubc4::R) reader structure"]
-impl crate::Readable for CUBC4 {}
-#[doc = "`write(|w| ..)` method takes [cubc4::W](cubc4::W) writer structure"]
-impl crate::Writable for CUBC4 {}
+#[doc = "CUBC4 register accessor: an alias for `Reg<CUBC4_SPEC>`"]
+pub type CUBC4 = crate::Reg<cubc4::CUBC4_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 4)"]
 pub mod cubc4;
-#[doc = "Channel Block Control Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc4](cbc4) module"]
-pub type CBC4 = crate::Reg<u32, _CBC4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC4;
-#[doc = "`read()` method returns [cbc4::R](cbc4::R) reader structure"]
-impl crate::Readable for CBC4 {}
-#[doc = "`write(|w| ..)` method takes [cbc4::W](cbc4::W) writer structure"]
-impl crate::Writable for CBC4 {}
+#[doc = "CBC4 register accessor: an alias for `Reg<CBC4_SPEC>`"]
+pub type CBC4 = crate::Reg<cbc4::CBC4_SPEC>;
 #[doc = "Channel Block Control Register (chid = 4)"]
 pub mod cbc4;
-#[doc = "Channel Configuration Register (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc4](cc4) module"]
-pub type CC4 = crate::Reg<u32, _CC4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC4;
-#[doc = "`read()` method returns [cc4::R](cc4::R) reader structure"]
-impl crate::Readable for CC4 {}
-#[doc = "`write(|w| ..)` method takes [cc4::W](cc4::W) writer structure"]
-impl crate::Writable for CC4 {}
+#[doc = "CC4 register accessor: an alias for `Reg<CC4_SPEC>`"]
+pub type CC4 = crate::Reg<cc4::CC4_SPEC>;
 #[doc = "Channel Configuration Register (chid = 4)"]
 pub mod cc4;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp4](cds_msp4) module"]
-pub type CDS_MSP4 = crate::Reg<u32, _CDS_MSP4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP4;
-#[doc = "`read()` method returns [cds_msp4::R](cds_msp4::R) reader structure"]
-impl crate::Readable for CDS_MSP4 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp4::W](cds_msp4::W) writer structure"]
-impl crate::Writable for CDS_MSP4 {}
+#[doc = "CDS_MSP4 register accessor: an alias for `Reg<CDS_MSP4_SPEC>`"]
+pub type CDS_MSP4 = crate::Reg<cds_msp4::CDS_MSP4_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 4)"]
 pub mod cds_msp4;
-#[doc = "Channel Source Microblock Stride (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus4](csus4) module"]
-pub type CSUS4 = crate::Reg<u32, _CSUS4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS4;
-#[doc = "`read()` method returns [csus4::R](csus4::R) reader structure"]
-impl crate::Readable for CSUS4 {}
-#[doc = "`write(|w| ..)` method takes [csus4::W](csus4::W) writer structure"]
-impl crate::Writable for CSUS4 {}
+#[doc = "CSUS4 register accessor: an alias for `Reg<CSUS4_SPEC>`"]
+pub type CSUS4 = crate::Reg<csus4::CSUS4_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 4)"]
 pub mod csus4;
-#[doc = "Channel Destination Microblock Stride (chid = 4)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus4](cdus4) module"]
-pub type CDUS4 = crate::Reg<u32, _CDUS4>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS4;
-#[doc = "`read()` method returns [cdus4::R](cdus4::R) reader structure"]
-impl crate::Readable for CDUS4 {}
-#[doc = "`write(|w| ..)` method takes [cdus4::W](cdus4::W) writer structure"]
-impl crate::Writable for CDUS4 {}
+#[doc = "CDUS4 register accessor: an alias for `Reg<CDUS4_SPEC>`"]
+pub type CDUS4 = crate::Reg<cdus4::CDUS4_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 4)"]
 pub mod cdus4;
-#[doc = "Channel Interrupt Enable Register (chid = 5)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie5](cie5) module"]
-pub type CIE5 = crate::Reg<u32, _CIE5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE5;
-#[doc = "`write(|w| ..)` method takes [cie5::W](cie5::W) writer structure"]
-impl crate::Writable for CIE5 {}
+#[doc = "CIE5 register accessor: an alias for `Reg<CIE5_SPEC>`"]
+pub type CIE5 = crate::Reg<cie5::CIE5_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 5)"]
 pub mod cie5;
-#[doc = "Channel Interrupt Disable Register (chid = 5)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid5](cid5) module"]
-pub type CID5 = crate::Reg<u32, _CID5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID5;
-#[doc = "`write(|w| ..)` method takes [cid5::W](cid5::W) writer structure"]
-impl crate::Writable for CID5 {}
+#[doc = "CID5 register accessor: an alias for `Reg<CID5_SPEC>`"]
+pub type CID5 = crate::Reg<cid5::CID5_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 5)"]
 pub mod cid5;
-#[doc = "Channel Interrupt Mask Register (chid = 5)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim5](cim5) module"]
-pub type CIM5 = crate::Reg<u32, _CIM5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM5;
-#[doc = "`write(|w| ..)` method takes [cim5::W](cim5::W) writer structure"]
-impl crate::Writable for CIM5 {}
+#[doc = "CIM5 register accessor: an alias for `Reg<CIM5_SPEC>`"]
+pub type CIM5 = crate::Reg<cim5::CIM5_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 5)"]
 pub mod cim5;
-#[doc = "Channel Interrupt Status Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis5](cis5) module"]
-pub type CIS5 = crate::Reg<u32, _CIS5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS5;
-#[doc = "`read()` method returns [cis5::R](cis5::R) reader structure"]
-impl crate::Readable for CIS5 {}
+#[doc = "CIS5 register accessor: an alias for `Reg<CIS5_SPEC>`"]
+pub type CIS5 = crate::Reg<cis5::CIS5_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 5)"]
 pub mod cis5;
-#[doc = "Channel Source Address Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa5](csa5) module"]
-pub type CSA5 = crate::Reg<u32, _CSA5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA5;
-#[doc = "`read()` method returns [csa5::R](csa5::R) reader structure"]
-impl crate::Readable for CSA5 {}
-#[doc = "`write(|w| ..)` method takes [csa5::W](csa5::W) writer structure"]
-impl crate::Writable for CSA5 {}
+#[doc = "CSA5 register accessor: an alias for `Reg<CSA5_SPEC>`"]
+pub type CSA5 = crate::Reg<csa5::CSA5_SPEC>;
 #[doc = "Channel Source Address Register (chid = 5)"]
 pub mod csa5;
-#[doc = "Channel Destination Address Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda5](cda5) module"]
-pub type CDA5 = crate::Reg<u32, _CDA5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA5;
-#[doc = "`read()` method returns [cda5::R](cda5::R) reader structure"]
-impl crate::Readable for CDA5 {}
-#[doc = "`write(|w| ..)` method takes [cda5::W](cda5::W) writer structure"]
-impl crate::Writable for CDA5 {}
+#[doc = "CDA5 register accessor: an alias for `Reg<CDA5_SPEC>`"]
+pub type CDA5 = crate::Reg<cda5::CDA5_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 5)"]
 pub mod cda5;
-#[doc = "Channel Next Descriptor Address Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda5](cnda5) module"]
-pub type CNDA5 = crate::Reg<u32, _CNDA5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA5;
-#[doc = "`read()` method returns [cnda5::R](cnda5::R) reader structure"]
-impl crate::Readable for CNDA5 {}
-#[doc = "`write(|w| ..)` method takes [cnda5::W](cnda5::W) writer structure"]
-impl crate::Writable for CNDA5 {}
+#[doc = "CNDA5 register accessor: an alias for `Reg<CNDA5_SPEC>`"]
+pub type CNDA5 = crate::Reg<cnda5::CNDA5_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 5)"]
 pub mod cnda5;
-#[doc = "Channel Next Descriptor Control Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc5](cndc5) module"]
-pub type CNDC5 = crate::Reg<u32, _CNDC5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC5;
-#[doc = "`read()` method returns [cndc5::R](cndc5::R) reader structure"]
-impl crate::Readable for CNDC5 {}
-#[doc = "`write(|w| ..)` method takes [cndc5::W](cndc5::W) writer structure"]
-impl crate::Writable for CNDC5 {}
+#[doc = "CNDC5 register accessor: an alias for `Reg<CNDC5_SPEC>`"]
+pub type CNDC5 = crate::Reg<cndc5::CNDC5_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 5)"]
 pub mod cndc5;
-#[doc = "Channel Microblock Control Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc5](cubc5) module"]
-pub type CUBC5 = crate::Reg<u32, _CUBC5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC5;
-#[doc = "`read()` method returns [cubc5::R](cubc5::R) reader structure"]
-impl crate::Readable for CUBC5 {}
-#[doc = "`write(|w| ..)` method takes [cubc5::W](cubc5::W) writer structure"]
-impl crate::Writable for CUBC5 {}
+#[doc = "CUBC5 register accessor: an alias for `Reg<CUBC5_SPEC>`"]
+pub type CUBC5 = crate::Reg<cubc5::CUBC5_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 5)"]
 pub mod cubc5;
-#[doc = "Channel Block Control Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc5](cbc5) module"]
-pub type CBC5 = crate::Reg<u32, _CBC5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC5;
-#[doc = "`read()` method returns [cbc5::R](cbc5::R) reader structure"]
-impl crate::Readable for CBC5 {}
-#[doc = "`write(|w| ..)` method takes [cbc5::W](cbc5::W) writer structure"]
-impl crate::Writable for CBC5 {}
+#[doc = "CBC5 register accessor: an alias for `Reg<CBC5_SPEC>`"]
+pub type CBC5 = crate::Reg<cbc5::CBC5_SPEC>;
 #[doc = "Channel Block Control Register (chid = 5)"]
 pub mod cbc5;
-#[doc = "Channel Configuration Register (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc5](cc5) module"]
-pub type CC5 = crate::Reg<u32, _CC5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC5;
-#[doc = "`read()` method returns [cc5::R](cc5::R) reader structure"]
-impl crate::Readable for CC5 {}
-#[doc = "`write(|w| ..)` method takes [cc5::W](cc5::W) writer structure"]
-impl crate::Writable for CC5 {}
+#[doc = "CC5 register accessor: an alias for `Reg<CC5_SPEC>`"]
+pub type CC5 = crate::Reg<cc5::CC5_SPEC>;
 #[doc = "Channel Configuration Register (chid = 5)"]
 pub mod cc5;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp5](cds_msp5) module"]
-pub type CDS_MSP5 = crate::Reg<u32, _CDS_MSP5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP5;
-#[doc = "`read()` method returns [cds_msp5::R](cds_msp5::R) reader structure"]
-impl crate::Readable for CDS_MSP5 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp5::W](cds_msp5::W) writer structure"]
-impl crate::Writable for CDS_MSP5 {}
+#[doc = "CDS_MSP5 register accessor: an alias for `Reg<CDS_MSP5_SPEC>`"]
+pub type CDS_MSP5 = crate::Reg<cds_msp5::CDS_MSP5_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 5)"]
 pub mod cds_msp5;
-#[doc = "Channel Source Microblock Stride (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus5](csus5) module"]
-pub type CSUS5 = crate::Reg<u32, _CSUS5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS5;
-#[doc = "`read()` method returns [csus5::R](csus5::R) reader structure"]
-impl crate::Readable for CSUS5 {}
-#[doc = "`write(|w| ..)` method takes [csus5::W](csus5::W) writer structure"]
-impl crate::Writable for CSUS5 {}
+#[doc = "CSUS5 register accessor: an alias for `Reg<CSUS5_SPEC>`"]
+pub type CSUS5 = crate::Reg<csus5::CSUS5_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 5)"]
 pub mod csus5;
-#[doc = "Channel Destination Microblock Stride (chid = 5)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus5](cdus5) module"]
-pub type CDUS5 = crate::Reg<u32, _CDUS5>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS5;
-#[doc = "`read()` method returns [cdus5::R](cdus5::R) reader structure"]
-impl crate::Readable for CDUS5 {}
-#[doc = "`write(|w| ..)` method takes [cdus5::W](cdus5::W) writer structure"]
-impl crate::Writable for CDUS5 {}
+#[doc = "CDUS5 register accessor: an alias for `Reg<CDUS5_SPEC>`"]
+pub type CDUS5 = crate::Reg<cdus5::CDUS5_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 5)"]
 pub mod cdus5;
-#[doc = "Channel Interrupt Enable Register (chid = 6)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie6](cie6) module"]
-pub type CIE6 = crate::Reg<u32, _CIE6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE6;
-#[doc = "`write(|w| ..)` method takes [cie6::W](cie6::W) writer structure"]
-impl crate::Writable for CIE6 {}
+#[doc = "CIE6 register accessor: an alias for `Reg<CIE6_SPEC>`"]
+pub type CIE6 = crate::Reg<cie6::CIE6_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 6)"]
 pub mod cie6;
-#[doc = "Channel Interrupt Disable Register (chid = 6)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid6](cid6) module"]
-pub type CID6 = crate::Reg<u32, _CID6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID6;
-#[doc = "`write(|w| ..)` method takes [cid6::W](cid6::W) writer structure"]
-impl crate::Writable for CID6 {}
+#[doc = "CID6 register accessor: an alias for `Reg<CID6_SPEC>`"]
+pub type CID6 = crate::Reg<cid6::CID6_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 6)"]
 pub mod cid6;
-#[doc = "Channel Interrupt Mask Register (chid = 6)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim6](cim6) module"]
-pub type CIM6 = crate::Reg<u32, _CIM6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM6;
-#[doc = "`write(|w| ..)` method takes [cim6::W](cim6::W) writer structure"]
-impl crate::Writable for CIM6 {}
+#[doc = "CIM6 register accessor: an alias for `Reg<CIM6_SPEC>`"]
+pub type CIM6 = crate::Reg<cim6::CIM6_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 6)"]
 pub mod cim6;
-#[doc = "Channel Interrupt Status Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis6](cis6) module"]
-pub type CIS6 = crate::Reg<u32, _CIS6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS6;
-#[doc = "`read()` method returns [cis6::R](cis6::R) reader structure"]
-impl crate::Readable for CIS6 {}
+#[doc = "CIS6 register accessor: an alias for `Reg<CIS6_SPEC>`"]
+pub type CIS6 = crate::Reg<cis6::CIS6_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 6)"]
 pub mod cis6;
-#[doc = "Channel Source Address Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa6](csa6) module"]
-pub type CSA6 = crate::Reg<u32, _CSA6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA6;
-#[doc = "`read()` method returns [csa6::R](csa6::R) reader structure"]
-impl crate::Readable for CSA6 {}
-#[doc = "`write(|w| ..)` method takes [csa6::W](csa6::W) writer structure"]
-impl crate::Writable for CSA6 {}
+#[doc = "CSA6 register accessor: an alias for `Reg<CSA6_SPEC>`"]
+pub type CSA6 = crate::Reg<csa6::CSA6_SPEC>;
 #[doc = "Channel Source Address Register (chid = 6)"]
 pub mod csa6;
-#[doc = "Channel Destination Address Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda6](cda6) module"]
-pub type CDA6 = crate::Reg<u32, _CDA6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA6;
-#[doc = "`read()` method returns [cda6::R](cda6::R) reader structure"]
-impl crate::Readable for CDA6 {}
-#[doc = "`write(|w| ..)` method takes [cda6::W](cda6::W) writer structure"]
-impl crate::Writable for CDA6 {}
+#[doc = "CDA6 register accessor: an alias for `Reg<CDA6_SPEC>`"]
+pub type CDA6 = crate::Reg<cda6::CDA6_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 6)"]
 pub mod cda6;
-#[doc = "Channel Next Descriptor Address Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda6](cnda6) module"]
-pub type CNDA6 = crate::Reg<u32, _CNDA6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA6;
-#[doc = "`read()` method returns [cnda6::R](cnda6::R) reader structure"]
-impl crate::Readable for CNDA6 {}
-#[doc = "`write(|w| ..)` method takes [cnda6::W](cnda6::W) writer structure"]
-impl crate::Writable for CNDA6 {}
+#[doc = "CNDA6 register accessor: an alias for `Reg<CNDA6_SPEC>`"]
+pub type CNDA6 = crate::Reg<cnda6::CNDA6_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 6)"]
 pub mod cnda6;
-#[doc = "Channel Next Descriptor Control Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc6](cndc6) module"]
-pub type CNDC6 = crate::Reg<u32, _CNDC6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC6;
-#[doc = "`read()` method returns [cndc6::R](cndc6::R) reader structure"]
-impl crate::Readable for CNDC6 {}
-#[doc = "`write(|w| ..)` method takes [cndc6::W](cndc6::W) writer structure"]
-impl crate::Writable for CNDC6 {}
+#[doc = "CNDC6 register accessor: an alias for `Reg<CNDC6_SPEC>`"]
+pub type CNDC6 = crate::Reg<cndc6::CNDC6_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 6)"]
 pub mod cndc6;
-#[doc = "Channel Microblock Control Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc6](cubc6) module"]
-pub type CUBC6 = crate::Reg<u32, _CUBC6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC6;
-#[doc = "`read()` method returns [cubc6::R](cubc6::R) reader structure"]
-impl crate::Readable for CUBC6 {}
-#[doc = "`write(|w| ..)` method takes [cubc6::W](cubc6::W) writer structure"]
-impl crate::Writable for CUBC6 {}
+#[doc = "CUBC6 register accessor: an alias for `Reg<CUBC6_SPEC>`"]
+pub type CUBC6 = crate::Reg<cubc6::CUBC6_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 6)"]
 pub mod cubc6;
-#[doc = "Channel Block Control Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc6](cbc6) module"]
-pub type CBC6 = crate::Reg<u32, _CBC6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC6;
-#[doc = "`read()` method returns [cbc6::R](cbc6::R) reader structure"]
-impl crate::Readable for CBC6 {}
-#[doc = "`write(|w| ..)` method takes [cbc6::W](cbc6::W) writer structure"]
-impl crate::Writable for CBC6 {}
+#[doc = "CBC6 register accessor: an alias for `Reg<CBC6_SPEC>`"]
+pub type CBC6 = crate::Reg<cbc6::CBC6_SPEC>;
 #[doc = "Channel Block Control Register (chid = 6)"]
 pub mod cbc6;
-#[doc = "Channel Configuration Register (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc6](cc6) module"]
-pub type CC6 = crate::Reg<u32, _CC6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC6;
-#[doc = "`read()` method returns [cc6::R](cc6::R) reader structure"]
-impl crate::Readable for CC6 {}
-#[doc = "`write(|w| ..)` method takes [cc6::W](cc6::W) writer structure"]
-impl crate::Writable for CC6 {}
+#[doc = "CC6 register accessor: an alias for `Reg<CC6_SPEC>`"]
+pub type CC6 = crate::Reg<cc6::CC6_SPEC>;
 #[doc = "Channel Configuration Register (chid = 6)"]
 pub mod cc6;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp6](cds_msp6) module"]
-pub type CDS_MSP6 = crate::Reg<u32, _CDS_MSP6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP6;
-#[doc = "`read()` method returns [cds_msp6::R](cds_msp6::R) reader structure"]
-impl crate::Readable for CDS_MSP6 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp6::W](cds_msp6::W) writer structure"]
-impl crate::Writable for CDS_MSP6 {}
+#[doc = "CDS_MSP6 register accessor: an alias for `Reg<CDS_MSP6_SPEC>`"]
+pub type CDS_MSP6 = crate::Reg<cds_msp6::CDS_MSP6_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 6)"]
 pub mod cds_msp6;
-#[doc = "Channel Source Microblock Stride (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus6](csus6) module"]
-pub type CSUS6 = crate::Reg<u32, _CSUS6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS6;
-#[doc = "`read()` method returns [csus6::R](csus6::R) reader structure"]
-impl crate::Readable for CSUS6 {}
-#[doc = "`write(|w| ..)` method takes [csus6::W](csus6::W) writer structure"]
-impl crate::Writable for CSUS6 {}
+#[doc = "CSUS6 register accessor: an alias for `Reg<CSUS6_SPEC>`"]
+pub type CSUS6 = crate::Reg<csus6::CSUS6_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 6)"]
 pub mod csus6;
-#[doc = "Channel Destination Microblock Stride (chid = 6)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus6](cdus6) module"]
-pub type CDUS6 = crate::Reg<u32, _CDUS6>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS6;
-#[doc = "`read()` method returns [cdus6::R](cdus6::R) reader structure"]
-impl crate::Readable for CDUS6 {}
-#[doc = "`write(|w| ..)` method takes [cdus6::W](cdus6::W) writer structure"]
-impl crate::Writable for CDUS6 {}
+#[doc = "CDUS6 register accessor: an alias for `Reg<CDUS6_SPEC>`"]
+pub type CDUS6 = crate::Reg<cdus6::CDUS6_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 6)"]
 pub mod cdus6;
-#[doc = "Channel Interrupt Enable Register (chid = 7)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie7](cie7) module"]
-pub type CIE7 = crate::Reg<u32, _CIE7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE7;
-#[doc = "`write(|w| ..)` method takes [cie7::W](cie7::W) writer structure"]
-impl crate::Writable for CIE7 {}
+#[doc = "CIE7 register accessor: an alias for `Reg<CIE7_SPEC>`"]
+pub type CIE7 = crate::Reg<cie7::CIE7_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 7)"]
 pub mod cie7;
-#[doc = "Channel Interrupt Disable Register (chid = 7)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid7](cid7) module"]
-pub type CID7 = crate::Reg<u32, _CID7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID7;
-#[doc = "`write(|w| ..)` method takes [cid7::W](cid7::W) writer structure"]
-impl crate::Writable for CID7 {}
+#[doc = "CID7 register accessor: an alias for `Reg<CID7_SPEC>`"]
+pub type CID7 = crate::Reg<cid7::CID7_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 7)"]
 pub mod cid7;
-#[doc = "Channel Interrupt Mask Register (chid = 7)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim7](cim7) module"]
-pub type CIM7 = crate::Reg<u32, _CIM7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM7;
-#[doc = "`write(|w| ..)` method takes [cim7::W](cim7::W) writer structure"]
-impl crate::Writable for CIM7 {}
+#[doc = "CIM7 register accessor: an alias for `Reg<CIM7_SPEC>`"]
+pub type CIM7 = crate::Reg<cim7::CIM7_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 7)"]
 pub mod cim7;
-#[doc = "Channel Interrupt Status Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis7](cis7) module"]
-pub type CIS7 = crate::Reg<u32, _CIS7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS7;
-#[doc = "`read()` method returns [cis7::R](cis7::R) reader structure"]
-impl crate::Readable for CIS7 {}
+#[doc = "CIS7 register accessor: an alias for `Reg<CIS7_SPEC>`"]
+pub type CIS7 = crate::Reg<cis7::CIS7_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 7)"]
 pub mod cis7;
-#[doc = "Channel Source Address Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa7](csa7) module"]
-pub type CSA7 = crate::Reg<u32, _CSA7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA7;
-#[doc = "`read()` method returns [csa7::R](csa7::R) reader structure"]
-impl crate::Readable for CSA7 {}
-#[doc = "`write(|w| ..)` method takes [csa7::W](csa7::W) writer structure"]
-impl crate::Writable for CSA7 {}
+#[doc = "CSA7 register accessor: an alias for `Reg<CSA7_SPEC>`"]
+pub type CSA7 = crate::Reg<csa7::CSA7_SPEC>;
 #[doc = "Channel Source Address Register (chid = 7)"]
 pub mod csa7;
-#[doc = "Channel Destination Address Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda7](cda7) module"]
-pub type CDA7 = crate::Reg<u32, _CDA7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA7;
-#[doc = "`read()` method returns [cda7::R](cda7::R) reader structure"]
-impl crate::Readable for CDA7 {}
-#[doc = "`write(|w| ..)` method takes [cda7::W](cda7::W) writer structure"]
-impl crate::Writable for CDA7 {}
+#[doc = "CDA7 register accessor: an alias for `Reg<CDA7_SPEC>`"]
+pub type CDA7 = crate::Reg<cda7::CDA7_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 7)"]
 pub mod cda7;
-#[doc = "Channel Next Descriptor Address Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda7](cnda7) module"]
-pub type CNDA7 = crate::Reg<u32, _CNDA7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA7;
-#[doc = "`read()` method returns [cnda7::R](cnda7::R) reader structure"]
-impl crate::Readable for CNDA7 {}
-#[doc = "`write(|w| ..)` method takes [cnda7::W](cnda7::W) writer structure"]
-impl crate::Writable for CNDA7 {}
+#[doc = "CNDA7 register accessor: an alias for `Reg<CNDA7_SPEC>`"]
+pub type CNDA7 = crate::Reg<cnda7::CNDA7_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 7)"]
 pub mod cnda7;
-#[doc = "Channel Next Descriptor Control Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc7](cndc7) module"]
-pub type CNDC7 = crate::Reg<u32, _CNDC7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC7;
-#[doc = "`read()` method returns [cndc7::R](cndc7::R) reader structure"]
-impl crate::Readable for CNDC7 {}
-#[doc = "`write(|w| ..)` method takes [cndc7::W](cndc7::W) writer structure"]
-impl crate::Writable for CNDC7 {}
+#[doc = "CNDC7 register accessor: an alias for `Reg<CNDC7_SPEC>`"]
+pub type CNDC7 = crate::Reg<cndc7::CNDC7_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 7)"]
 pub mod cndc7;
-#[doc = "Channel Microblock Control Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc7](cubc7) module"]
-pub type CUBC7 = crate::Reg<u32, _CUBC7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC7;
-#[doc = "`read()` method returns [cubc7::R](cubc7::R) reader structure"]
-impl crate::Readable for CUBC7 {}
-#[doc = "`write(|w| ..)` method takes [cubc7::W](cubc7::W) writer structure"]
-impl crate::Writable for CUBC7 {}
+#[doc = "CUBC7 register accessor: an alias for `Reg<CUBC7_SPEC>`"]
+pub type CUBC7 = crate::Reg<cubc7::CUBC7_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 7)"]
 pub mod cubc7;
-#[doc = "Channel Block Control Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc7](cbc7) module"]
-pub type CBC7 = crate::Reg<u32, _CBC7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC7;
-#[doc = "`read()` method returns [cbc7::R](cbc7::R) reader structure"]
-impl crate::Readable for CBC7 {}
-#[doc = "`write(|w| ..)` method takes [cbc7::W](cbc7::W) writer structure"]
-impl crate::Writable for CBC7 {}
+#[doc = "CBC7 register accessor: an alias for `Reg<CBC7_SPEC>`"]
+pub type CBC7 = crate::Reg<cbc7::CBC7_SPEC>;
 #[doc = "Channel Block Control Register (chid = 7)"]
 pub mod cbc7;
-#[doc = "Channel Configuration Register (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc7](cc7) module"]
-pub type CC7 = crate::Reg<u32, _CC7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC7;
-#[doc = "`read()` method returns [cc7::R](cc7::R) reader structure"]
-impl crate::Readable for CC7 {}
-#[doc = "`write(|w| ..)` method takes [cc7::W](cc7::W) writer structure"]
-impl crate::Writable for CC7 {}
+#[doc = "CC7 register accessor: an alias for `Reg<CC7_SPEC>`"]
+pub type CC7 = crate::Reg<cc7::CC7_SPEC>;
 #[doc = "Channel Configuration Register (chid = 7)"]
 pub mod cc7;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp7](cds_msp7) module"]
-pub type CDS_MSP7 = crate::Reg<u32, _CDS_MSP7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP7;
-#[doc = "`read()` method returns [cds_msp7::R](cds_msp7::R) reader structure"]
-impl crate::Readable for CDS_MSP7 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp7::W](cds_msp7::W) writer structure"]
-impl crate::Writable for CDS_MSP7 {}
+#[doc = "CDS_MSP7 register accessor: an alias for `Reg<CDS_MSP7_SPEC>`"]
+pub type CDS_MSP7 = crate::Reg<cds_msp7::CDS_MSP7_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 7)"]
 pub mod cds_msp7;
-#[doc = "Channel Source Microblock Stride (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus7](csus7) module"]
-pub type CSUS7 = crate::Reg<u32, _CSUS7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS7;
-#[doc = "`read()` method returns [csus7::R](csus7::R) reader structure"]
-impl crate::Readable for CSUS7 {}
-#[doc = "`write(|w| ..)` method takes [csus7::W](csus7::W) writer structure"]
-impl crate::Writable for CSUS7 {}
+#[doc = "CSUS7 register accessor: an alias for `Reg<CSUS7_SPEC>`"]
+pub type CSUS7 = crate::Reg<csus7::CSUS7_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 7)"]
 pub mod csus7;
-#[doc = "Channel Destination Microblock Stride (chid = 7)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus7](cdus7) module"]
-pub type CDUS7 = crate::Reg<u32, _CDUS7>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS7;
-#[doc = "`read()` method returns [cdus7::R](cdus7::R) reader structure"]
-impl crate::Readable for CDUS7 {}
-#[doc = "`write(|w| ..)` method takes [cdus7::W](cdus7::W) writer structure"]
-impl crate::Writable for CDUS7 {}
+#[doc = "CDUS7 register accessor: an alias for `Reg<CDUS7_SPEC>`"]
+pub type CDUS7 = crate::Reg<cdus7::CDUS7_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 7)"]
 pub mod cdus7;
-#[doc = "Channel Interrupt Enable Register (chid = 8)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie8](cie8) module"]
-pub type CIE8 = crate::Reg<u32, _CIE8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE8;
-#[doc = "`write(|w| ..)` method takes [cie8::W](cie8::W) writer structure"]
-impl crate::Writable for CIE8 {}
+#[doc = "CIE8 register accessor: an alias for `Reg<CIE8_SPEC>`"]
+pub type CIE8 = crate::Reg<cie8::CIE8_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 8)"]
 pub mod cie8;
-#[doc = "Channel Interrupt Disable Register (chid = 8)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid8](cid8) module"]
-pub type CID8 = crate::Reg<u32, _CID8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID8;
-#[doc = "`write(|w| ..)` method takes [cid8::W](cid8::W) writer structure"]
-impl crate::Writable for CID8 {}
+#[doc = "CID8 register accessor: an alias for `Reg<CID8_SPEC>`"]
+pub type CID8 = crate::Reg<cid8::CID8_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 8)"]
 pub mod cid8;
-#[doc = "Channel Interrupt Mask Register (chid = 8)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim8](cim8) module"]
-pub type CIM8 = crate::Reg<u32, _CIM8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM8;
-#[doc = "`write(|w| ..)` method takes [cim8::W](cim8::W) writer structure"]
-impl crate::Writable for CIM8 {}
+#[doc = "CIM8 register accessor: an alias for `Reg<CIM8_SPEC>`"]
+pub type CIM8 = crate::Reg<cim8::CIM8_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 8)"]
 pub mod cim8;
-#[doc = "Channel Interrupt Status Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis8](cis8) module"]
-pub type CIS8 = crate::Reg<u32, _CIS8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS8;
-#[doc = "`read()` method returns [cis8::R](cis8::R) reader structure"]
-impl crate::Readable for CIS8 {}
+#[doc = "CIS8 register accessor: an alias for `Reg<CIS8_SPEC>`"]
+pub type CIS8 = crate::Reg<cis8::CIS8_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 8)"]
 pub mod cis8;
-#[doc = "Channel Source Address Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa8](csa8) module"]
-pub type CSA8 = crate::Reg<u32, _CSA8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA8;
-#[doc = "`read()` method returns [csa8::R](csa8::R) reader structure"]
-impl crate::Readable for CSA8 {}
-#[doc = "`write(|w| ..)` method takes [csa8::W](csa8::W) writer structure"]
-impl crate::Writable for CSA8 {}
+#[doc = "CSA8 register accessor: an alias for `Reg<CSA8_SPEC>`"]
+pub type CSA8 = crate::Reg<csa8::CSA8_SPEC>;
 #[doc = "Channel Source Address Register (chid = 8)"]
 pub mod csa8;
-#[doc = "Channel Destination Address Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda8](cda8) module"]
-pub type CDA8 = crate::Reg<u32, _CDA8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA8;
-#[doc = "`read()` method returns [cda8::R](cda8::R) reader structure"]
-impl crate::Readable for CDA8 {}
-#[doc = "`write(|w| ..)` method takes [cda8::W](cda8::W) writer structure"]
-impl crate::Writable for CDA8 {}
+#[doc = "CDA8 register accessor: an alias for `Reg<CDA8_SPEC>`"]
+pub type CDA8 = crate::Reg<cda8::CDA8_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 8)"]
 pub mod cda8;
-#[doc = "Channel Next Descriptor Address Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda8](cnda8) module"]
-pub type CNDA8 = crate::Reg<u32, _CNDA8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA8;
-#[doc = "`read()` method returns [cnda8::R](cnda8::R) reader structure"]
-impl crate::Readable for CNDA8 {}
-#[doc = "`write(|w| ..)` method takes [cnda8::W](cnda8::W) writer structure"]
-impl crate::Writable for CNDA8 {}
+#[doc = "CNDA8 register accessor: an alias for `Reg<CNDA8_SPEC>`"]
+pub type CNDA8 = crate::Reg<cnda8::CNDA8_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 8)"]
 pub mod cnda8;
-#[doc = "Channel Next Descriptor Control Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc8](cndc8) module"]
-pub type CNDC8 = crate::Reg<u32, _CNDC8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC8;
-#[doc = "`read()` method returns [cndc8::R](cndc8::R) reader structure"]
-impl crate::Readable for CNDC8 {}
-#[doc = "`write(|w| ..)` method takes [cndc8::W](cndc8::W) writer structure"]
-impl crate::Writable for CNDC8 {}
+#[doc = "CNDC8 register accessor: an alias for `Reg<CNDC8_SPEC>`"]
+pub type CNDC8 = crate::Reg<cndc8::CNDC8_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 8)"]
 pub mod cndc8;
-#[doc = "Channel Microblock Control Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc8](cubc8) module"]
-pub type CUBC8 = crate::Reg<u32, _CUBC8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC8;
-#[doc = "`read()` method returns [cubc8::R](cubc8::R) reader structure"]
-impl crate::Readable for CUBC8 {}
-#[doc = "`write(|w| ..)` method takes [cubc8::W](cubc8::W) writer structure"]
-impl crate::Writable for CUBC8 {}
+#[doc = "CUBC8 register accessor: an alias for `Reg<CUBC8_SPEC>`"]
+pub type CUBC8 = crate::Reg<cubc8::CUBC8_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 8)"]
 pub mod cubc8;
-#[doc = "Channel Block Control Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc8](cbc8) module"]
-pub type CBC8 = crate::Reg<u32, _CBC8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC8;
-#[doc = "`read()` method returns [cbc8::R](cbc8::R) reader structure"]
-impl crate::Readable for CBC8 {}
-#[doc = "`write(|w| ..)` method takes [cbc8::W](cbc8::W) writer structure"]
-impl crate::Writable for CBC8 {}
+#[doc = "CBC8 register accessor: an alias for `Reg<CBC8_SPEC>`"]
+pub type CBC8 = crate::Reg<cbc8::CBC8_SPEC>;
 #[doc = "Channel Block Control Register (chid = 8)"]
 pub mod cbc8;
-#[doc = "Channel Configuration Register (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc8](cc8) module"]
-pub type CC8 = crate::Reg<u32, _CC8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC8;
-#[doc = "`read()` method returns [cc8::R](cc8::R) reader structure"]
-impl crate::Readable for CC8 {}
-#[doc = "`write(|w| ..)` method takes [cc8::W](cc8::W) writer structure"]
-impl crate::Writable for CC8 {}
+#[doc = "CC8 register accessor: an alias for `Reg<CC8_SPEC>`"]
+pub type CC8 = crate::Reg<cc8::CC8_SPEC>;
 #[doc = "Channel Configuration Register (chid = 8)"]
 pub mod cc8;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp8](cds_msp8) module"]
-pub type CDS_MSP8 = crate::Reg<u32, _CDS_MSP8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP8;
-#[doc = "`read()` method returns [cds_msp8::R](cds_msp8::R) reader structure"]
-impl crate::Readable for CDS_MSP8 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp8::W](cds_msp8::W) writer structure"]
-impl crate::Writable for CDS_MSP8 {}
+#[doc = "CDS_MSP8 register accessor: an alias for `Reg<CDS_MSP8_SPEC>`"]
+pub type CDS_MSP8 = crate::Reg<cds_msp8::CDS_MSP8_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 8)"]
 pub mod cds_msp8;
-#[doc = "Channel Source Microblock Stride (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus8](csus8) module"]
-pub type CSUS8 = crate::Reg<u32, _CSUS8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS8;
-#[doc = "`read()` method returns [csus8::R](csus8::R) reader structure"]
-impl crate::Readable for CSUS8 {}
-#[doc = "`write(|w| ..)` method takes [csus8::W](csus8::W) writer structure"]
-impl crate::Writable for CSUS8 {}
+#[doc = "CSUS8 register accessor: an alias for `Reg<CSUS8_SPEC>`"]
+pub type CSUS8 = crate::Reg<csus8::CSUS8_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 8)"]
 pub mod csus8;
-#[doc = "Channel Destination Microblock Stride (chid = 8)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus8](cdus8) module"]
-pub type CDUS8 = crate::Reg<u32, _CDUS8>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS8;
-#[doc = "`read()` method returns [cdus8::R](cdus8::R) reader structure"]
-impl crate::Readable for CDUS8 {}
-#[doc = "`write(|w| ..)` method takes [cdus8::W](cdus8::W) writer structure"]
-impl crate::Writable for CDUS8 {}
+#[doc = "CDUS8 register accessor: an alias for `Reg<CDUS8_SPEC>`"]
+pub type CDUS8 = crate::Reg<cdus8::CDUS8_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 8)"]
 pub mod cdus8;
-#[doc = "Channel Interrupt Enable Register (chid = 9)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie9](cie9) module"]
-pub type CIE9 = crate::Reg<u32, _CIE9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE9;
-#[doc = "`write(|w| ..)` method takes [cie9::W](cie9::W) writer structure"]
-impl crate::Writable for CIE9 {}
+#[doc = "CIE9 register accessor: an alias for `Reg<CIE9_SPEC>`"]
+pub type CIE9 = crate::Reg<cie9::CIE9_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 9)"]
 pub mod cie9;
-#[doc = "Channel Interrupt Disable Register (chid = 9)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid9](cid9) module"]
-pub type CID9 = crate::Reg<u32, _CID9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID9;
-#[doc = "`write(|w| ..)` method takes [cid9::W](cid9::W) writer structure"]
-impl crate::Writable for CID9 {}
+#[doc = "CID9 register accessor: an alias for `Reg<CID9_SPEC>`"]
+pub type CID9 = crate::Reg<cid9::CID9_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 9)"]
 pub mod cid9;
-#[doc = "Channel Interrupt Mask Register (chid = 9)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim9](cim9) module"]
-pub type CIM9 = crate::Reg<u32, _CIM9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM9;
-#[doc = "`write(|w| ..)` method takes [cim9::W](cim9::W) writer structure"]
-impl crate::Writable for CIM9 {}
+#[doc = "CIM9 register accessor: an alias for `Reg<CIM9_SPEC>`"]
+pub type CIM9 = crate::Reg<cim9::CIM9_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 9)"]
 pub mod cim9;
-#[doc = "Channel Interrupt Status Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis9](cis9) module"]
-pub type CIS9 = crate::Reg<u32, _CIS9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS9;
-#[doc = "`read()` method returns [cis9::R](cis9::R) reader structure"]
-impl crate::Readable for CIS9 {}
+#[doc = "CIS9 register accessor: an alias for `Reg<CIS9_SPEC>`"]
+pub type CIS9 = crate::Reg<cis9::CIS9_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 9)"]
 pub mod cis9;
-#[doc = "Channel Source Address Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa9](csa9) module"]
-pub type CSA9 = crate::Reg<u32, _CSA9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA9;
-#[doc = "`read()` method returns [csa9::R](csa9::R) reader structure"]
-impl crate::Readable for CSA9 {}
-#[doc = "`write(|w| ..)` method takes [csa9::W](csa9::W) writer structure"]
-impl crate::Writable for CSA9 {}
+#[doc = "CSA9 register accessor: an alias for `Reg<CSA9_SPEC>`"]
+pub type CSA9 = crate::Reg<csa9::CSA9_SPEC>;
 #[doc = "Channel Source Address Register (chid = 9)"]
 pub mod csa9;
-#[doc = "Channel Destination Address Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda9](cda9) module"]
-pub type CDA9 = crate::Reg<u32, _CDA9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA9;
-#[doc = "`read()` method returns [cda9::R](cda9::R) reader structure"]
-impl crate::Readable for CDA9 {}
-#[doc = "`write(|w| ..)` method takes [cda9::W](cda9::W) writer structure"]
-impl crate::Writable for CDA9 {}
+#[doc = "CDA9 register accessor: an alias for `Reg<CDA9_SPEC>`"]
+pub type CDA9 = crate::Reg<cda9::CDA9_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 9)"]
 pub mod cda9;
-#[doc = "Channel Next Descriptor Address Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda9](cnda9) module"]
-pub type CNDA9 = crate::Reg<u32, _CNDA9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA9;
-#[doc = "`read()` method returns [cnda9::R](cnda9::R) reader structure"]
-impl crate::Readable for CNDA9 {}
-#[doc = "`write(|w| ..)` method takes [cnda9::W](cnda9::W) writer structure"]
-impl crate::Writable for CNDA9 {}
+#[doc = "CNDA9 register accessor: an alias for `Reg<CNDA9_SPEC>`"]
+pub type CNDA9 = crate::Reg<cnda9::CNDA9_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 9)"]
 pub mod cnda9;
-#[doc = "Channel Next Descriptor Control Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc9](cndc9) module"]
-pub type CNDC9 = crate::Reg<u32, _CNDC9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC9;
-#[doc = "`read()` method returns [cndc9::R](cndc9::R) reader structure"]
-impl crate::Readable for CNDC9 {}
-#[doc = "`write(|w| ..)` method takes [cndc9::W](cndc9::W) writer structure"]
-impl crate::Writable for CNDC9 {}
+#[doc = "CNDC9 register accessor: an alias for `Reg<CNDC9_SPEC>`"]
+pub type CNDC9 = crate::Reg<cndc9::CNDC9_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 9)"]
 pub mod cndc9;
-#[doc = "Channel Microblock Control Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc9](cubc9) module"]
-pub type CUBC9 = crate::Reg<u32, _CUBC9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC9;
-#[doc = "`read()` method returns [cubc9::R](cubc9::R) reader structure"]
-impl crate::Readable for CUBC9 {}
-#[doc = "`write(|w| ..)` method takes [cubc9::W](cubc9::W) writer structure"]
-impl crate::Writable for CUBC9 {}
+#[doc = "CUBC9 register accessor: an alias for `Reg<CUBC9_SPEC>`"]
+pub type CUBC9 = crate::Reg<cubc9::CUBC9_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 9)"]
 pub mod cubc9;
-#[doc = "Channel Block Control Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc9](cbc9) module"]
-pub type CBC9 = crate::Reg<u32, _CBC9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC9;
-#[doc = "`read()` method returns [cbc9::R](cbc9::R) reader structure"]
-impl crate::Readable for CBC9 {}
-#[doc = "`write(|w| ..)` method takes [cbc9::W](cbc9::W) writer structure"]
-impl crate::Writable for CBC9 {}
+#[doc = "CBC9 register accessor: an alias for `Reg<CBC9_SPEC>`"]
+pub type CBC9 = crate::Reg<cbc9::CBC9_SPEC>;
 #[doc = "Channel Block Control Register (chid = 9)"]
 pub mod cbc9;
-#[doc = "Channel Configuration Register (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc9](cc9) module"]
-pub type CC9 = crate::Reg<u32, _CC9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC9;
-#[doc = "`read()` method returns [cc9::R](cc9::R) reader structure"]
-impl crate::Readable for CC9 {}
-#[doc = "`write(|w| ..)` method takes [cc9::W](cc9::W) writer structure"]
-impl crate::Writable for CC9 {}
+#[doc = "CC9 register accessor: an alias for `Reg<CC9_SPEC>`"]
+pub type CC9 = crate::Reg<cc9::CC9_SPEC>;
 #[doc = "Channel Configuration Register (chid = 9)"]
 pub mod cc9;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp9](cds_msp9) module"]
-pub type CDS_MSP9 = crate::Reg<u32, _CDS_MSP9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP9;
-#[doc = "`read()` method returns [cds_msp9::R](cds_msp9::R) reader structure"]
-impl crate::Readable for CDS_MSP9 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp9::W](cds_msp9::W) writer structure"]
-impl crate::Writable for CDS_MSP9 {}
+#[doc = "CDS_MSP9 register accessor: an alias for `Reg<CDS_MSP9_SPEC>`"]
+pub type CDS_MSP9 = crate::Reg<cds_msp9::CDS_MSP9_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 9)"]
 pub mod cds_msp9;
-#[doc = "Channel Source Microblock Stride (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus9](csus9) module"]
-pub type CSUS9 = crate::Reg<u32, _CSUS9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS9;
-#[doc = "`read()` method returns [csus9::R](csus9::R) reader structure"]
-impl crate::Readable for CSUS9 {}
-#[doc = "`write(|w| ..)` method takes [csus9::W](csus9::W) writer structure"]
-impl crate::Writable for CSUS9 {}
+#[doc = "CSUS9 register accessor: an alias for `Reg<CSUS9_SPEC>`"]
+pub type CSUS9 = crate::Reg<csus9::CSUS9_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 9)"]
 pub mod csus9;
-#[doc = "Channel Destination Microblock Stride (chid = 9)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus9](cdus9) module"]
-pub type CDUS9 = crate::Reg<u32, _CDUS9>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS9;
-#[doc = "`read()` method returns [cdus9::R](cdus9::R) reader structure"]
-impl crate::Readable for CDUS9 {}
-#[doc = "`write(|w| ..)` method takes [cdus9::W](cdus9::W) writer structure"]
-impl crate::Writable for CDUS9 {}
+#[doc = "CDUS9 register accessor: an alias for `Reg<CDUS9_SPEC>`"]
+pub type CDUS9 = crate::Reg<cdus9::CDUS9_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 9)"]
 pub mod cdus9;
-#[doc = "Channel Interrupt Enable Register (chid = 10)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie10](cie10) module"]
-pub type CIE10 = crate::Reg<u32, _CIE10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE10;
-#[doc = "`write(|w| ..)` method takes [cie10::W](cie10::W) writer structure"]
-impl crate::Writable for CIE10 {}
+#[doc = "CIE10 register accessor: an alias for `Reg<CIE10_SPEC>`"]
+pub type CIE10 = crate::Reg<cie10::CIE10_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 10)"]
 pub mod cie10;
-#[doc = "Channel Interrupt Disable Register (chid = 10)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid10](cid10) module"]
-pub type CID10 = crate::Reg<u32, _CID10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID10;
-#[doc = "`write(|w| ..)` method takes [cid10::W](cid10::W) writer structure"]
-impl crate::Writable for CID10 {}
+#[doc = "CID10 register accessor: an alias for `Reg<CID10_SPEC>`"]
+pub type CID10 = crate::Reg<cid10::CID10_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 10)"]
 pub mod cid10;
-#[doc = "Channel Interrupt Mask Register (chid = 10)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim10](cim10) module"]
-pub type CIM10 = crate::Reg<u32, _CIM10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM10;
-#[doc = "`write(|w| ..)` method takes [cim10::W](cim10::W) writer structure"]
-impl crate::Writable for CIM10 {}
+#[doc = "CIM10 register accessor: an alias for `Reg<CIM10_SPEC>`"]
+pub type CIM10 = crate::Reg<cim10::CIM10_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 10)"]
 pub mod cim10;
-#[doc = "Channel Interrupt Status Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis10](cis10) module"]
-pub type CIS10 = crate::Reg<u32, _CIS10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS10;
-#[doc = "`read()` method returns [cis10::R](cis10::R) reader structure"]
-impl crate::Readable for CIS10 {}
+#[doc = "CIS10 register accessor: an alias for `Reg<CIS10_SPEC>`"]
+pub type CIS10 = crate::Reg<cis10::CIS10_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 10)"]
 pub mod cis10;
-#[doc = "Channel Source Address Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa10](csa10) module"]
-pub type CSA10 = crate::Reg<u32, _CSA10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA10;
-#[doc = "`read()` method returns [csa10::R](csa10::R) reader structure"]
-impl crate::Readable for CSA10 {}
-#[doc = "`write(|w| ..)` method takes [csa10::W](csa10::W) writer structure"]
-impl crate::Writable for CSA10 {}
+#[doc = "CSA10 register accessor: an alias for `Reg<CSA10_SPEC>`"]
+pub type CSA10 = crate::Reg<csa10::CSA10_SPEC>;
 #[doc = "Channel Source Address Register (chid = 10)"]
 pub mod csa10;
-#[doc = "Channel Destination Address Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda10](cda10) module"]
-pub type CDA10 = crate::Reg<u32, _CDA10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA10;
-#[doc = "`read()` method returns [cda10::R](cda10::R) reader structure"]
-impl crate::Readable for CDA10 {}
-#[doc = "`write(|w| ..)` method takes [cda10::W](cda10::W) writer structure"]
-impl crate::Writable for CDA10 {}
+#[doc = "CDA10 register accessor: an alias for `Reg<CDA10_SPEC>`"]
+pub type CDA10 = crate::Reg<cda10::CDA10_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 10)"]
 pub mod cda10;
-#[doc = "Channel Next Descriptor Address Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda10](cnda10) module"]
-pub type CNDA10 = crate::Reg<u32, _CNDA10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA10;
-#[doc = "`read()` method returns [cnda10::R](cnda10::R) reader structure"]
-impl crate::Readable for CNDA10 {}
-#[doc = "`write(|w| ..)` method takes [cnda10::W](cnda10::W) writer structure"]
-impl crate::Writable for CNDA10 {}
+#[doc = "CNDA10 register accessor: an alias for `Reg<CNDA10_SPEC>`"]
+pub type CNDA10 = crate::Reg<cnda10::CNDA10_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 10)"]
 pub mod cnda10;
-#[doc = "Channel Next Descriptor Control Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc10](cndc10) module"]
-pub type CNDC10 = crate::Reg<u32, _CNDC10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC10;
-#[doc = "`read()` method returns [cndc10::R](cndc10::R) reader structure"]
-impl crate::Readable for CNDC10 {}
-#[doc = "`write(|w| ..)` method takes [cndc10::W](cndc10::W) writer structure"]
-impl crate::Writable for CNDC10 {}
+#[doc = "CNDC10 register accessor: an alias for `Reg<CNDC10_SPEC>`"]
+pub type CNDC10 = crate::Reg<cndc10::CNDC10_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 10)"]
 pub mod cndc10;
-#[doc = "Channel Microblock Control Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc10](cubc10) module"]
-pub type CUBC10 = crate::Reg<u32, _CUBC10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC10;
-#[doc = "`read()` method returns [cubc10::R](cubc10::R) reader structure"]
-impl crate::Readable for CUBC10 {}
-#[doc = "`write(|w| ..)` method takes [cubc10::W](cubc10::W) writer structure"]
-impl crate::Writable for CUBC10 {}
+#[doc = "CUBC10 register accessor: an alias for `Reg<CUBC10_SPEC>`"]
+pub type CUBC10 = crate::Reg<cubc10::CUBC10_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 10)"]
 pub mod cubc10;
-#[doc = "Channel Block Control Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc10](cbc10) module"]
-pub type CBC10 = crate::Reg<u32, _CBC10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC10;
-#[doc = "`read()` method returns [cbc10::R](cbc10::R) reader structure"]
-impl crate::Readable for CBC10 {}
-#[doc = "`write(|w| ..)` method takes [cbc10::W](cbc10::W) writer structure"]
-impl crate::Writable for CBC10 {}
+#[doc = "CBC10 register accessor: an alias for `Reg<CBC10_SPEC>`"]
+pub type CBC10 = crate::Reg<cbc10::CBC10_SPEC>;
 #[doc = "Channel Block Control Register (chid = 10)"]
 pub mod cbc10;
-#[doc = "Channel Configuration Register (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc10](cc10) module"]
-pub type CC10 = crate::Reg<u32, _CC10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC10;
-#[doc = "`read()` method returns [cc10::R](cc10::R) reader structure"]
-impl crate::Readable for CC10 {}
-#[doc = "`write(|w| ..)` method takes [cc10::W](cc10::W) writer structure"]
-impl crate::Writable for CC10 {}
+#[doc = "CC10 register accessor: an alias for `Reg<CC10_SPEC>`"]
+pub type CC10 = crate::Reg<cc10::CC10_SPEC>;
 #[doc = "Channel Configuration Register (chid = 10)"]
 pub mod cc10;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp10](cds_msp10) module"]
-pub type CDS_MSP10 = crate::Reg<u32, _CDS_MSP10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP10;
-#[doc = "`read()` method returns [cds_msp10::R](cds_msp10::R) reader structure"]
-impl crate::Readable for CDS_MSP10 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp10::W](cds_msp10::W) writer structure"]
-impl crate::Writable for CDS_MSP10 {}
+#[doc = "CDS_MSP10 register accessor: an alias for `Reg<CDS_MSP10_SPEC>`"]
+pub type CDS_MSP10 = crate::Reg<cds_msp10::CDS_MSP10_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 10)"]
 pub mod cds_msp10;
-#[doc = "Channel Source Microblock Stride (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus10](csus10) module"]
-pub type CSUS10 = crate::Reg<u32, _CSUS10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS10;
-#[doc = "`read()` method returns [csus10::R](csus10::R) reader structure"]
-impl crate::Readable for CSUS10 {}
-#[doc = "`write(|w| ..)` method takes [csus10::W](csus10::W) writer structure"]
-impl crate::Writable for CSUS10 {}
+#[doc = "CSUS10 register accessor: an alias for `Reg<CSUS10_SPEC>`"]
+pub type CSUS10 = crate::Reg<csus10::CSUS10_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 10)"]
 pub mod csus10;
-#[doc = "Channel Destination Microblock Stride (chid = 10)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus10](cdus10) module"]
-pub type CDUS10 = crate::Reg<u32, _CDUS10>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS10;
-#[doc = "`read()` method returns [cdus10::R](cdus10::R) reader structure"]
-impl crate::Readable for CDUS10 {}
-#[doc = "`write(|w| ..)` method takes [cdus10::W](cdus10::W) writer structure"]
-impl crate::Writable for CDUS10 {}
+#[doc = "CDUS10 register accessor: an alias for `Reg<CDUS10_SPEC>`"]
+pub type CDUS10 = crate::Reg<cdus10::CDUS10_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 10)"]
 pub mod cdus10;
-#[doc = "Channel Interrupt Enable Register (chid = 11)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie11](cie11) module"]
-pub type CIE11 = crate::Reg<u32, _CIE11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE11;
-#[doc = "`write(|w| ..)` method takes [cie11::W](cie11::W) writer structure"]
-impl crate::Writable for CIE11 {}
+#[doc = "CIE11 register accessor: an alias for `Reg<CIE11_SPEC>`"]
+pub type CIE11 = crate::Reg<cie11::CIE11_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 11)"]
 pub mod cie11;
-#[doc = "Channel Interrupt Disable Register (chid = 11)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid11](cid11) module"]
-pub type CID11 = crate::Reg<u32, _CID11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID11;
-#[doc = "`write(|w| ..)` method takes [cid11::W](cid11::W) writer structure"]
-impl crate::Writable for CID11 {}
+#[doc = "CID11 register accessor: an alias for `Reg<CID11_SPEC>`"]
+pub type CID11 = crate::Reg<cid11::CID11_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 11)"]
 pub mod cid11;
-#[doc = "Channel Interrupt Mask Register (chid = 11)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim11](cim11) module"]
-pub type CIM11 = crate::Reg<u32, _CIM11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM11;
-#[doc = "`write(|w| ..)` method takes [cim11::W](cim11::W) writer structure"]
-impl crate::Writable for CIM11 {}
+#[doc = "CIM11 register accessor: an alias for `Reg<CIM11_SPEC>`"]
+pub type CIM11 = crate::Reg<cim11::CIM11_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 11)"]
 pub mod cim11;
-#[doc = "Channel Interrupt Status Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis11](cis11) module"]
-pub type CIS11 = crate::Reg<u32, _CIS11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS11;
-#[doc = "`read()` method returns [cis11::R](cis11::R) reader structure"]
-impl crate::Readable for CIS11 {}
+#[doc = "CIS11 register accessor: an alias for `Reg<CIS11_SPEC>`"]
+pub type CIS11 = crate::Reg<cis11::CIS11_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 11)"]
 pub mod cis11;
-#[doc = "Channel Source Address Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa11](csa11) module"]
-pub type CSA11 = crate::Reg<u32, _CSA11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA11;
-#[doc = "`read()` method returns [csa11::R](csa11::R) reader structure"]
-impl crate::Readable for CSA11 {}
-#[doc = "`write(|w| ..)` method takes [csa11::W](csa11::W) writer structure"]
-impl crate::Writable for CSA11 {}
+#[doc = "CSA11 register accessor: an alias for `Reg<CSA11_SPEC>`"]
+pub type CSA11 = crate::Reg<csa11::CSA11_SPEC>;
 #[doc = "Channel Source Address Register (chid = 11)"]
 pub mod csa11;
-#[doc = "Channel Destination Address Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda11](cda11) module"]
-pub type CDA11 = crate::Reg<u32, _CDA11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA11;
-#[doc = "`read()` method returns [cda11::R](cda11::R) reader structure"]
-impl crate::Readable for CDA11 {}
-#[doc = "`write(|w| ..)` method takes [cda11::W](cda11::W) writer structure"]
-impl crate::Writable for CDA11 {}
+#[doc = "CDA11 register accessor: an alias for `Reg<CDA11_SPEC>`"]
+pub type CDA11 = crate::Reg<cda11::CDA11_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 11)"]
 pub mod cda11;
-#[doc = "Channel Next Descriptor Address Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda11](cnda11) module"]
-pub type CNDA11 = crate::Reg<u32, _CNDA11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA11;
-#[doc = "`read()` method returns [cnda11::R](cnda11::R) reader structure"]
-impl crate::Readable for CNDA11 {}
-#[doc = "`write(|w| ..)` method takes [cnda11::W](cnda11::W) writer structure"]
-impl crate::Writable for CNDA11 {}
+#[doc = "CNDA11 register accessor: an alias for `Reg<CNDA11_SPEC>`"]
+pub type CNDA11 = crate::Reg<cnda11::CNDA11_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 11)"]
 pub mod cnda11;
-#[doc = "Channel Next Descriptor Control Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc11](cndc11) module"]
-pub type CNDC11 = crate::Reg<u32, _CNDC11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC11;
-#[doc = "`read()` method returns [cndc11::R](cndc11::R) reader structure"]
-impl crate::Readable for CNDC11 {}
-#[doc = "`write(|w| ..)` method takes [cndc11::W](cndc11::W) writer structure"]
-impl crate::Writable for CNDC11 {}
+#[doc = "CNDC11 register accessor: an alias for `Reg<CNDC11_SPEC>`"]
+pub type CNDC11 = crate::Reg<cndc11::CNDC11_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 11)"]
 pub mod cndc11;
-#[doc = "Channel Microblock Control Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc11](cubc11) module"]
-pub type CUBC11 = crate::Reg<u32, _CUBC11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC11;
-#[doc = "`read()` method returns [cubc11::R](cubc11::R) reader structure"]
-impl crate::Readable for CUBC11 {}
-#[doc = "`write(|w| ..)` method takes [cubc11::W](cubc11::W) writer structure"]
-impl crate::Writable for CUBC11 {}
+#[doc = "CUBC11 register accessor: an alias for `Reg<CUBC11_SPEC>`"]
+pub type CUBC11 = crate::Reg<cubc11::CUBC11_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 11)"]
 pub mod cubc11;
-#[doc = "Channel Block Control Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc11](cbc11) module"]
-pub type CBC11 = crate::Reg<u32, _CBC11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC11;
-#[doc = "`read()` method returns [cbc11::R](cbc11::R) reader structure"]
-impl crate::Readable for CBC11 {}
-#[doc = "`write(|w| ..)` method takes [cbc11::W](cbc11::W) writer structure"]
-impl crate::Writable for CBC11 {}
+#[doc = "CBC11 register accessor: an alias for `Reg<CBC11_SPEC>`"]
+pub type CBC11 = crate::Reg<cbc11::CBC11_SPEC>;
 #[doc = "Channel Block Control Register (chid = 11)"]
 pub mod cbc11;
-#[doc = "Channel Configuration Register (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc11](cc11) module"]
-pub type CC11 = crate::Reg<u32, _CC11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC11;
-#[doc = "`read()` method returns [cc11::R](cc11::R) reader structure"]
-impl crate::Readable for CC11 {}
-#[doc = "`write(|w| ..)` method takes [cc11::W](cc11::W) writer structure"]
-impl crate::Writable for CC11 {}
+#[doc = "CC11 register accessor: an alias for `Reg<CC11_SPEC>`"]
+pub type CC11 = crate::Reg<cc11::CC11_SPEC>;
 #[doc = "Channel Configuration Register (chid = 11)"]
 pub mod cc11;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp11](cds_msp11) module"]
-pub type CDS_MSP11 = crate::Reg<u32, _CDS_MSP11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP11;
-#[doc = "`read()` method returns [cds_msp11::R](cds_msp11::R) reader structure"]
-impl crate::Readable for CDS_MSP11 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp11::W](cds_msp11::W) writer structure"]
-impl crate::Writable for CDS_MSP11 {}
+#[doc = "CDS_MSP11 register accessor: an alias for `Reg<CDS_MSP11_SPEC>`"]
+pub type CDS_MSP11 = crate::Reg<cds_msp11::CDS_MSP11_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 11)"]
 pub mod cds_msp11;
-#[doc = "Channel Source Microblock Stride (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus11](csus11) module"]
-pub type CSUS11 = crate::Reg<u32, _CSUS11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS11;
-#[doc = "`read()` method returns [csus11::R](csus11::R) reader structure"]
-impl crate::Readable for CSUS11 {}
-#[doc = "`write(|w| ..)` method takes [csus11::W](csus11::W) writer structure"]
-impl crate::Writable for CSUS11 {}
+#[doc = "CSUS11 register accessor: an alias for `Reg<CSUS11_SPEC>`"]
+pub type CSUS11 = crate::Reg<csus11::CSUS11_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 11)"]
 pub mod csus11;
-#[doc = "Channel Destination Microblock Stride (chid = 11)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus11](cdus11) module"]
-pub type CDUS11 = crate::Reg<u32, _CDUS11>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS11;
-#[doc = "`read()` method returns [cdus11::R](cdus11::R) reader structure"]
-impl crate::Readable for CDUS11 {}
-#[doc = "`write(|w| ..)` method takes [cdus11::W](cdus11::W) writer structure"]
-impl crate::Writable for CDUS11 {}
+#[doc = "CDUS11 register accessor: an alias for `Reg<CDUS11_SPEC>`"]
+pub type CDUS11 = crate::Reg<cdus11::CDUS11_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 11)"]
 pub mod cdus11;
-#[doc = "Channel Interrupt Enable Register (chid = 12)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie12](cie12) module"]
-pub type CIE12 = crate::Reg<u32, _CIE12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE12;
-#[doc = "`write(|w| ..)` method takes [cie12::W](cie12::W) writer structure"]
-impl crate::Writable for CIE12 {}
+#[doc = "CIE12 register accessor: an alias for `Reg<CIE12_SPEC>`"]
+pub type CIE12 = crate::Reg<cie12::CIE12_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 12)"]
 pub mod cie12;
-#[doc = "Channel Interrupt Disable Register (chid = 12)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid12](cid12) module"]
-pub type CID12 = crate::Reg<u32, _CID12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID12;
-#[doc = "`write(|w| ..)` method takes [cid12::W](cid12::W) writer structure"]
-impl crate::Writable for CID12 {}
+#[doc = "CID12 register accessor: an alias for `Reg<CID12_SPEC>`"]
+pub type CID12 = crate::Reg<cid12::CID12_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 12)"]
 pub mod cid12;
-#[doc = "Channel Interrupt Mask Register (chid = 12)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim12](cim12) module"]
-pub type CIM12 = crate::Reg<u32, _CIM12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM12;
-#[doc = "`write(|w| ..)` method takes [cim12::W](cim12::W) writer structure"]
-impl crate::Writable for CIM12 {}
+#[doc = "CIM12 register accessor: an alias for `Reg<CIM12_SPEC>`"]
+pub type CIM12 = crate::Reg<cim12::CIM12_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 12)"]
 pub mod cim12;
-#[doc = "Channel Interrupt Status Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis12](cis12) module"]
-pub type CIS12 = crate::Reg<u32, _CIS12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS12;
-#[doc = "`read()` method returns [cis12::R](cis12::R) reader structure"]
-impl crate::Readable for CIS12 {}
+#[doc = "CIS12 register accessor: an alias for `Reg<CIS12_SPEC>`"]
+pub type CIS12 = crate::Reg<cis12::CIS12_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 12)"]
 pub mod cis12;
-#[doc = "Channel Source Address Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa12](csa12) module"]
-pub type CSA12 = crate::Reg<u32, _CSA12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA12;
-#[doc = "`read()` method returns [csa12::R](csa12::R) reader structure"]
-impl crate::Readable for CSA12 {}
-#[doc = "`write(|w| ..)` method takes [csa12::W](csa12::W) writer structure"]
-impl crate::Writable for CSA12 {}
+#[doc = "CSA12 register accessor: an alias for `Reg<CSA12_SPEC>`"]
+pub type CSA12 = crate::Reg<csa12::CSA12_SPEC>;
 #[doc = "Channel Source Address Register (chid = 12)"]
 pub mod csa12;
-#[doc = "Channel Destination Address Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda12](cda12) module"]
-pub type CDA12 = crate::Reg<u32, _CDA12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA12;
-#[doc = "`read()` method returns [cda12::R](cda12::R) reader structure"]
-impl crate::Readable for CDA12 {}
-#[doc = "`write(|w| ..)` method takes [cda12::W](cda12::W) writer structure"]
-impl crate::Writable for CDA12 {}
+#[doc = "CDA12 register accessor: an alias for `Reg<CDA12_SPEC>`"]
+pub type CDA12 = crate::Reg<cda12::CDA12_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 12)"]
 pub mod cda12;
-#[doc = "Channel Next Descriptor Address Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda12](cnda12) module"]
-pub type CNDA12 = crate::Reg<u32, _CNDA12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA12;
-#[doc = "`read()` method returns [cnda12::R](cnda12::R) reader structure"]
-impl crate::Readable for CNDA12 {}
-#[doc = "`write(|w| ..)` method takes [cnda12::W](cnda12::W) writer structure"]
-impl crate::Writable for CNDA12 {}
+#[doc = "CNDA12 register accessor: an alias for `Reg<CNDA12_SPEC>`"]
+pub type CNDA12 = crate::Reg<cnda12::CNDA12_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 12)"]
 pub mod cnda12;
-#[doc = "Channel Next Descriptor Control Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc12](cndc12) module"]
-pub type CNDC12 = crate::Reg<u32, _CNDC12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC12;
-#[doc = "`read()` method returns [cndc12::R](cndc12::R) reader structure"]
-impl crate::Readable for CNDC12 {}
-#[doc = "`write(|w| ..)` method takes [cndc12::W](cndc12::W) writer structure"]
-impl crate::Writable for CNDC12 {}
+#[doc = "CNDC12 register accessor: an alias for `Reg<CNDC12_SPEC>`"]
+pub type CNDC12 = crate::Reg<cndc12::CNDC12_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 12)"]
 pub mod cndc12;
-#[doc = "Channel Microblock Control Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc12](cubc12) module"]
-pub type CUBC12 = crate::Reg<u32, _CUBC12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC12;
-#[doc = "`read()` method returns [cubc12::R](cubc12::R) reader structure"]
-impl crate::Readable for CUBC12 {}
-#[doc = "`write(|w| ..)` method takes [cubc12::W](cubc12::W) writer structure"]
-impl crate::Writable for CUBC12 {}
+#[doc = "CUBC12 register accessor: an alias for `Reg<CUBC12_SPEC>`"]
+pub type CUBC12 = crate::Reg<cubc12::CUBC12_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 12)"]
 pub mod cubc12;
-#[doc = "Channel Block Control Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc12](cbc12) module"]
-pub type CBC12 = crate::Reg<u32, _CBC12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC12;
-#[doc = "`read()` method returns [cbc12::R](cbc12::R) reader structure"]
-impl crate::Readable for CBC12 {}
-#[doc = "`write(|w| ..)` method takes [cbc12::W](cbc12::W) writer structure"]
-impl crate::Writable for CBC12 {}
+#[doc = "CBC12 register accessor: an alias for `Reg<CBC12_SPEC>`"]
+pub type CBC12 = crate::Reg<cbc12::CBC12_SPEC>;
 #[doc = "Channel Block Control Register (chid = 12)"]
 pub mod cbc12;
-#[doc = "Channel Configuration Register (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc12](cc12) module"]
-pub type CC12 = crate::Reg<u32, _CC12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC12;
-#[doc = "`read()` method returns [cc12::R](cc12::R) reader structure"]
-impl crate::Readable for CC12 {}
-#[doc = "`write(|w| ..)` method takes [cc12::W](cc12::W) writer structure"]
-impl crate::Writable for CC12 {}
+#[doc = "CC12 register accessor: an alias for `Reg<CC12_SPEC>`"]
+pub type CC12 = crate::Reg<cc12::CC12_SPEC>;
 #[doc = "Channel Configuration Register (chid = 12)"]
 pub mod cc12;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp12](cds_msp12) module"]
-pub type CDS_MSP12 = crate::Reg<u32, _CDS_MSP12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP12;
-#[doc = "`read()` method returns [cds_msp12::R](cds_msp12::R) reader structure"]
-impl crate::Readable for CDS_MSP12 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp12::W](cds_msp12::W) writer structure"]
-impl crate::Writable for CDS_MSP12 {}
+#[doc = "CDS_MSP12 register accessor: an alias for `Reg<CDS_MSP12_SPEC>`"]
+pub type CDS_MSP12 = crate::Reg<cds_msp12::CDS_MSP12_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 12)"]
 pub mod cds_msp12;
-#[doc = "Channel Source Microblock Stride (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus12](csus12) module"]
-pub type CSUS12 = crate::Reg<u32, _CSUS12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS12;
-#[doc = "`read()` method returns [csus12::R](csus12::R) reader structure"]
-impl crate::Readable for CSUS12 {}
-#[doc = "`write(|w| ..)` method takes [csus12::W](csus12::W) writer structure"]
-impl crate::Writable for CSUS12 {}
+#[doc = "CSUS12 register accessor: an alias for `Reg<CSUS12_SPEC>`"]
+pub type CSUS12 = crate::Reg<csus12::CSUS12_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 12)"]
 pub mod csus12;
-#[doc = "Channel Destination Microblock Stride (chid = 12)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus12](cdus12) module"]
-pub type CDUS12 = crate::Reg<u32, _CDUS12>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS12;
-#[doc = "`read()` method returns [cdus12::R](cdus12::R) reader structure"]
-impl crate::Readable for CDUS12 {}
-#[doc = "`write(|w| ..)` method takes [cdus12::W](cdus12::W) writer structure"]
-impl crate::Writable for CDUS12 {}
+#[doc = "CDUS12 register accessor: an alias for `Reg<CDUS12_SPEC>`"]
+pub type CDUS12 = crate::Reg<cdus12::CDUS12_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 12)"]
 pub mod cdus12;
-#[doc = "Channel Interrupt Enable Register (chid = 13)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie13](cie13) module"]
-pub type CIE13 = crate::Reg<u32, _CIE13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE13;
-#[doc = "`write(|w| ..)` method takes [cie13::W](cie13::W) writer structure"]
-impl crate::Writable for CIE13 {}
+#[doc = "CIE13 register accessor: an alias for `Reg<CIE13_SPEC>`"]
+pub type CIE13 = crate::Reg<cie13::CIE13_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 13)"]
 pub mod cie13;
-#[doc = "Channel Interrupt Disable Register (chid = 13)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid13](cid13) module"]
-pub type CID13 = crate::Reg<u32, _CID13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID13;
-#[doc = "`write(|w| ..)` method takes [cid13::W](cid13::W) writer structure"]
-impl crate::Writable for CID13 {}
+#[doc = "CID13 register accessor: an alias for `Reg<CID13_SPEC>`"]
+pub type CID13 = crate::Reg<cid13::CID13_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 13)"]
 pub mod cid13;
-#[doc = "Channel Interrupt Mask Register (chid = 13)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim13](cim13) module"]
-pub type CIM13 = crate::Reg<u32, _CIM13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM13;
-#[doc = "`write(|w| ..)` method takes [cim13::W](cim13::W) writer structure"]
-impl crate::Writable for CIM13 {}
+#[doc = "CIM13 register accessor: an alias for `Reg<CIM13_SPEC>`"]
+pub type CIM13 = crate::Reg<cim13::CIM13_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 13)"]
 pub mod cim13;
-#[doc = "Channel Interrupt Status Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis13](cis13) module"]
-pub type CIS13 = crate::Reg<u32, _CIS13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS13;
-#[doc = "`read()` method returns [cis13::R](cis13::R) reader structure"]
-impl crate::Readable for CIS13 {}
+#[doc = "CIS13 register accessor: an alias for `Reg<CIS13_SPEC>`"]
+pub type CIS13 = crate::Reg<cis13::CIS13_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 13)"]
 pub mod cis13;
-#[doc = "Channel Source Address Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa13](csa13) module"]
-pub type CSA13 = crate::Reg<u32, _CSA13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA13;
-#[doc = "`read()` method returns [csa13::R](csa13::R) reader structure"]
-impl crate::Readable for CSA13 {}
-#[doc = "`write(|w| ..)` method takes [csa13::W](csa13::W) writer structure"]
-impl crate::Writable for CSA13 {}
+#[doc = "CSA13 register accessor: an alias for `Reg<CSA13_SPEC>`"]
+pub type CSA13 = crate::Reg<csa13::CSA13_SPEC>;
 #[doc = "Channel Source Address Register (chid = 13)"]
 pub mod csa13;
-#[doc = "Channel Destination Address Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda13](cda13) module"]
-pub type CDA13 = crate::Reg<u32, _CDA13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA13;
-#[doc = "`read()` method returns [cda13::R](cda13::R) reader structure"]
-impl crate::Readable for CDA13 {}
-#[doc = "`write(|w| ..)` method takes [cda13::W](cda13::W) writer structure"]
-impl crate::Writable for CDA13 {}
+#[doc = "CDA13 register accessor: an alias for `Reg<CDA13_SPEC>`"]
+pub type CDA13 = crate::Reg<cda13::CDA13_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 13)"]
 pub mod cda13;
-#[doc = "Channel Next Descriptor Address Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda13](cnda13) module"]
-pub type CNDA13 = crate::Reg<u32, _CNDA13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA13;
-#[doc = "`read()` method returns [cnda13::R](cnda13::R) reader structure"]
-impl crate::Readable for CNDA13 {}
-#[doc = "`write(|w| ..)` method takes [cnda13::W](cnda13::W) writer structure"]
-impl crate::Writable for CNDA13 {}
+#[doc = "CNDA13 register accessor: an alias for `Reg<CNDA13_SPEC>`"]
+pub type CNDA13 = crate::Reg<cnda13::CNDA13_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 13)"]
 pub mod cnda13;
-#[doc = "Channel Next Descriptor Control Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc13](cndc13) module"]
-pub type CNDC13 = crate::Reg<u32, _CNDC13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC13;
-#[doc = "`read()` method returns [cndc13::R](cndc13::R) reader structure"]
-impl crate::Readable for CNDC13 {}
-#[doc = "`write(|w| ..)` method takes [cndc13::W](cndc13::W) writer structure"]
-impl crate::Writable for CNDC13 {}
+#[doc = "CNDC13 register accessor: an alias for `Reg<CNDC13_SPEC>`"]
+pub type CNDC13 = crate::Reg<cndc13::CNDC13_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 13)"]
 pub mod cndc13;
-#[doc = "Channel Microblock Control Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc13](cubc13) module"]
-pub type CUBC13 = crate::Reg<u32, _CUBC13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC13;
-#[doc = "`read()` method returns [cubc13::R](cubc13::R) reader structure"]
-impl crate::Readable for CUBC13 {}
-#[doc = "`write(|w| ..)` method takes [cubc13::W](cubc13::W) writer structure"]
-impl crate::Writable for CUBC13 {}
+#[doc = "CUBC13 register accessor: an alias for `Reg<CUBC13_SPEC>`"]
+pub type CUBC13 = crate::Reg<cubc13::CUBC13_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 13)"]
 pub mod cubc13;
-#[doc = "Channel Block Control Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc13](cbc13) module"]
-pub type CBC13 = crate::Reg<u32, _CBC13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC13;
-#[doc = "`read()` method returns [cbc13::R](cbc13::R) reader structure"]
-impl crate::Readable for CBC13 {}
-#[doc = "`write(|w| ..)` method takes [cbc13::W](cbc13::W) writer structure"]
-impl crate::Writable for CBC13 {}
+#[doc = "CBC13 register accessor: an alias for `Reg<CBC13_SPEC>`"]
+pub type CBC13 = crate::Reg<cbc13::CBC13_SPEC>;
 #[doc = "Channel Block Control Register (chid = 13)"]
 pub mod cbc13;
-#[doc = "Channel Configuration Register (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc13](cc13) module"]
-pub type CC13 = crate::Reg<u32, _CC13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC13;
-#[doc = "`read()` method returns [cc13::R](cc13::R) reader structure"]
-impl crate::Readable for CC13 {}
-#[doc = "`write(|w| ..)` method takes [cc13::W](cc13::W) writer structure"]
-impl crate::Writable for CC13 {}
+#[doc = "CC13 register accessor: an alias for `Reg<CC13_SPEC>`"]
+pub type CC13 = crate::Reg<cc13::CC13_SPEC>;
 #[doc = "Channel Configuration Register (chid = 13)"]
 pub mod cc13;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp13](cds_msp13) module"]
-pub type CDS_MSP13 = crate::Reg<u32, _CDS_MSP13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP13;
-#[doc = "`read()` method returns [cds_msp13::R](cds_msp13::R) reader structure"]
-impl crate::Readable for CDS_MSP13 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp13::W](cds_msp13::W) writer structure"]
-impl crate::Writable for CDS_MSP13 {}
+#[doc = "CDS_MSP13 register accessor: an alias for `Reg<CDS_MSP13_SPEC>`"]
+pub type CDS_MSP13 = crate::Reg<cds_msp13::CDS_MSP13_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 13)"]
 pub mod cds_msp13;
-#[doc = "Channel Source Microblock Stride (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus13](csus13) module"]
-pub type CSUS13 = crate::Reg<u32, _CSUS13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS13;
-#[doc = "`read()` method returns [csus13::R](csus13::R) reader structure"]
-impl crate::Readable for CSUS13 {}
-#[doc = "`write(|w| ..)` method takes [csus13::W](csus13::W) writer structure"]
-impl crate::Writable for CSUS13 {}
+#[doc = "CSUS13 register accessor: an alias for `Reg<CSUS13_SPEC>`"]
+pub type CSUS13 = crate::Reg<csus13::CSUS13_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 13)"]
 pub mod csus13;
-#[doc = "Channel Destination Microblock Stride (chid = 13)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus13](cdus13) module"]
-pub type CDUS13 = crate::Reg<u32, _CDUS13>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS13;
-#[doc = "`read()` method returns [cdus13::R](cdus13::R) reader structure"]
-impl crate::Readable for CDUS13 {}
-#[doc = "`write(|w| ..)` method takes [cdus13::W](cdus13::W) writer structure"]
-impl crate::Writable for CDUS13 {}
+#[doc = "CDUS13 register accessor: an alias for `Reg<CDUS13_SPEC>`"]
+pub type CDUS13 = crate::Reg<cdus13::CDUS13_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 13)"]
 pub mod cdus13;
-#[doc = "Channel Interrupt Enable Register (chid = 14)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie14](cie14) module"]
-pub type CIE14 = crate::Reg<u32, _CIE14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE14;
-#[doc = "`write(|w| ..)` method takes [cie14::W](cie14::W) writer structure"]
-impl crate::Writable for CIE14 {}
+#[doc = "CIE14 register accessor: an alias for `Reg<CIE14_SPEC>`"]
+pub type CIE14 = crate::Reg<cie14::CIE14_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 14)"]
 pub mod cie14;
-#[doc = "Channel Interrupt Disable Register (chid = 14)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid14](cid14) module"]
-pub type CID14 = crate::Reg<u32, _CID14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID14;
-#[doc = "`write(|w| ..)` method takes [cid14::W](cid14::W) writer structure"]
-impl crate::Writable for CID14 {}
+#[doc = "CID14 register accessor: an alias for `Reg<CID14_SPEC>`"]
+pub type CID14 = crate::Reg<cid14::CID14_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 14)"]
 pub mod cid14;
-#[doc = "Channel Interrupt Mask Register (chid = 14)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim14](cim14) module"]
-pub type CIM14 = crate::Reg<u32, _CIM14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM14;
-#[doc = "`write(|w| ..)` method takes [cim14::W](cim14::W) writer structure"]
-impl crate::Writable for CIM14 {}
+#[doc = "CIM14 register accessor: an alias for `Reg<CIM14_SPEC>`"]
+pub type CIM14 = crate::Reg<cim14::CIM14_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 14)"]
 pub mod cim14;
-#[doc = "Channel Interrupt Status Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis14](cis14) module"]
-pub type CIS14 = crate::Reg<u32, _CIS14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS14;
-#[doc = "`read()` method returns [cis14::R](cis14::R) reader structure"]
-impl crate::Readable for CIS14 {}
+#[doc = "CIS14 register accessor: an alias for `Reg<CIS14_SPEC>`"]
+pub type CIS14 = crate::Reg<cis14::CIS14_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 14)"]
 pub mod cis14;
-#[doc = "Channel Source Address Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa14](csa14) module"]
-pub type CSA14 = crate::Reg<u32, _CSA14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA14;
-#[doc = "`read()` method returns [csa14::R](csa14::R) reader structure"]
-impl crate::Readable for CSA14 {}
-#[doc = "`write(|w| ..)` method takes [csa14::W](csa14::W) writer structure"]
-impl crate::Writable for CSA14 {}
+#[doc = "CSA14 register accessor: an alias for `Reg<CSA14_SPEC>`"]
+pub type CSA14 = crate::Reg<csa14::CSA14_SPEC>;
 #[doc = "Channel Source Address Register (chid = 14)"]
 pub mod csa14;
-#[doc = "Channel Destination Address Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda14](cda14) module"]
-pub type CDA14 = crate::Reg<u32, _CDA14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA14;
-#[doc = "`read()` method returns [cda14::R](cda14::R) reader structure"]
-impl crate::Readable for CDA14 {}
-#[doc = "`write(|w| ..)` method takes [cda14::W](cda14::W) writer structure"]
-impl crate::Writable for CDA14 {}
+#[doc = "CDA14 register accessor: an alias for `Reg<CDA14_SPEC>`"]
+pub type CDA14 = crate::Reg<cda14::CDA14_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 14)"]
 pub mod cda14;
-#[doc = "Channel Next Descriptor Address Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda14](cnda14) module"]
-pub type CNDA14 = crate::Reg<u32, _CNDA14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA14;
-#[doc = "`read()` method returns [cnda14::R](cnda14::R) reader structure"]
-impl crate::Readable for CNDA14 {}
-#[doc = "`write(|w| ..)` method takes [cnda14::W](cnda14::W) writer structure"]
-impl crate::Writable for CNDA14 {}
+#[doc = "CNDA14 register accessor: an alias for `Reg<CNDA14_SPEC>`"]
+pub type CNDA14 = crate::Reg<cnda14::CNDA14_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 14)"]
 pub mod cnda14;
-#[doc = "Channel Next Descriptor Control Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc14](cndc14) module"]
-pub type CNDC14 = crate::Reg<u32, _CNDC14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC14;
-#[doc = "`read()` method returns [cndc14::R](cndc14::R) reader structure"]
-impl crate::Readable for CNDC14 {}
-#[doc = "`write(|w| ..)` method takes [cndc14::W](cndc14::W) writer structure"]
-impl crate::Writable for CNDC14 {}
+#[doc = "CNDC14 register accessor: an alias for `Reg<CNDC14_SPEC>`"]
+pub type CNDC14 = crate::Reg<cndc14::CNDC14_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 14)"]
 pub mod cndc14;
-#[doc = "Channel Microblock Control Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc14](cubc14) module"]
-pub type CUBC14 = crate::Reg<u32, _CUBC14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC14;
-#[doc = "`read()` method returns [cubc14::R](cubc14::R) reader structure"]
-impl crate::Readable for CUBC14 {}
-#[doc = "`write(|w| ..)` method takes [cubc14::W](cubc14::W) writer structure"]
-impl crate::Writable for CUBC14 {}
+#[doc = "CUBC14 register accessor: an alias for `Reg<CUBC14_SPEC>`"]
+pub type CUBC14 = crate::Reg<cubc14::CUBC14_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 14)"]
 pub mod cubc14;
-#[doc = "Channel Block Control Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc14](cbc14) module"]
-pub type CBC14 = crate::Reg<u32, _CBC14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC14;
-#[doc = "`read()` method returns [cbc14::R](cbc14::R) reader structure"]
-impl crate::Readable for CBC14 {}
-#[doc = "`write(|w| ..)` method takes [cbc14::W](cbc14::W) writer structure"]
-impl crate::Writable for CBC14 {}
+#[doc = "CBC14 register accessor: an alias for `Reg<CBC14_SPEC>`"]
+pub type CBC14 = crate::Reg<cbc14::CBC14_SPEC>;
 #[doc = "Channel Block Control Register (chid = 14)"]
 pub mod cbc14;
-#[doc = "Channel Configuration Register (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc14](cc14) module"]
-pub type CC14 = crate::Reg<u32, _CC14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC14;
-#[doc = "`read()` method returns [cc14::R](cc14::R) reader structure"]
-impl crate::Readable for CC14 {}
-#[doc = "`write(|w| ..)` method takes [cc14::W](cc14::W) writer structure"]
-impl crate::Writable for CC14 {}
+#[doc = "CC14 register accessor: an alias for `Reg<CC14_SPEC>`"]
+pub type CC14 = crate::Reg<cc14::CC14_SPEC>;
 #[doc = "Channel Configuration Register (chid = 14)"]
 pub mod cc14;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp14](cds_msp14) module"]
-pub type CDS_MSP14 = crate::Reg<u32, _CDS_MSP14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP14;
-#[doc = "`read()` method returns [cds_msp14::R](cds_msp14::R) reader structure"]
-impl crate::Readable for CDS_MSP14 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp14::W](cds_msp14::W) writer structure"]
-impl crate::Writable for CDS_MSP14 {}
+#[doc = "CDS_MSP14 register accessor: an alias for `Reg<CDS_MSP14_SPEC>`"]
+pub type CDS_MSP14 = crate::Reg<cds_msp14::CDS_MSP14_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 14)"]
 pub mod cds_msp14;
-#[doc = "Channel Source Microblock Stride (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus14](csus14) module"]
-pub type CSUS14 = crate::Reg<u32, _CSUS14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS14;
-#[doc = "`read()` method returns [csus14::R](csus14::R) reader structure"]
-impl crate::Readable for CSUS14 {}
-#[doc = "`write(|w| ..)` method takes [csus14::W](csus14::W) writer structure"]
-impl crate::Writable for CSUS14 {}
+#[doc = "CSUS14 register accessor: an alias for `Reg<CSUS14_SPEC>`"]
+pub type CSUS14 = crate::Reg<csus14::CSUS14_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 14)"]
 pub mod csus14;
-#[doc = "Channel Destination Microblock Stride (chid = 14)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus14](cdus14) module"]
-pub type CDUS14 = crate::Reg<u32, _CDUS14>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS14;
-#[doc = "`read()` method returns [cdus14::R](cdus14::R) reader structure"]
-impl crate::Readable for CDUS14 {}
-#[doc = "`write(|w| ..)` method takes [cdus14::W](cdus14::W) writer structure"]
-impl crate::Writable for CDUS14 {}
+#[doc = "CDUS14 register accessor: an alias for `Reg<CDUS14_SPEC>`"]
+pub type CDUS14 = crate::Reg<cdus14::CDUS14_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 14)"]
 pub mod cdus14;
-#[doc = "Channel Interrupt Enable Register (chid = 15)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie15](cie15) module"]
-pub type CIE15 = crate::Reg<u32, _CIE15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE15;
-#[doc = "`write(|w| ..)` method takes [cie15::W](cie15::W) writer structure"]
-impl crate::Writable for CIE15 {}
+#[doc = "CIE15 register accessor: an alias for `Reg<CIE15_SPEC>`"]
+pub type CIE15 = crate::Reg<cie15::CIE15_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 15)"]
 pub mod cie15;
-#[doc = "Channel Interrupt Disable Register (chid = 15)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid15](cid15) module"]
-pub type CID15 = crate::Reg<u32, _CID15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID15;
-#[doc = "`write(|w| ..)` method takes [cid15::W](cid15::W) writer structure"]
-impl crate::Writable for CID15 {}
+#[doc = "CID15 register accessor: an alias for `Reg<CID15_SPEC>`"]
+pub type CID15 = crate::Reg<cid15::CID15_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 15)"]
 pub mod cid15;
-#[doc = "Channel Interrupt Mask Register (chid = 15)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim15](cim15) module"]
-pub type CIM15 = crate::Reg<u32, _CIM15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM15;
-#[doc = "`write(|w| ..)` method takes [cim15::W](cim15::W) writer structure"]
-impl crate::Writable for CIM15 {}
+#[doc = "CIM15 register accessor: an alias for `Reg<CIM15_SPEC>`"]
+pub type CIM15 = crate::Reg<cim15::CIM15_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 15)"]
 pub mod cim15;
-#[doc = "Channel Interrupt Status Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis15](cis15) module"]
-pub type CIS15 = crate::Reg<u32, _CIS15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS15;
-#[doc = "`read()` method returns [cis15::R](cis15::R) reader structure"]
-impl crate::Readable for CIS15 {}
+#[doc = "CIS15 register accessor: an alias for `Reg<CIS15_SPEC>`"]
+pub type CIS15 = crate::Reg<cis15::CIS15_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 15)"]
 pub mod cis15;
-#[doc = "Channel Source Address Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa15](csa15) module"]
-pub type CSA15 = crate::Reg<u32, _CSA15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA15;
-#[doc = "`read()` method returns [csa15::R](csa15::R) reader structure"]
-impl crate::Readable for CSA15 {}
-#[doc = "`write(|w| ..)` method takes [csa15::W](csa15::W) writer structure"]
-impl crate::Writable for CSA15 {}
+#[doc = "CSA15 register accessor: an alias for `Reg<CSA15_SPEC>`"]
+pub type CSA15 = crate::Reg<csa15::CSA15_SPEC>;
 #[doc = "Channel Source Address Register (chid = 15)"]
 pub mod csa15;
-#[doc = "Channel Destination Address Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda15](cda15) module"]
-pub type CDA15 = crate::Reg<u32, _CDA15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA15;
-#[doc = "`read()` method returns [cda15::R](cda15::R) reader structure"]
-impl crate::Readable for CDA15 {}
-#[doc = "`write(|w| ..)` method takes [cda15::W](cda15::W) writer structure"]
-impl crate::Writable for CDA15 {}
+#[doc = "CDA15 register accessor: an alias for `Reg<CDA15_SPEC>`"]
+pub type CDA15 = crate::Reg<cda15::CDA15_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 15)"]
 pub mod cda15;
-#[doc = "Channel Next Descriptor Address Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda15](cnda15) module"]
-pub type CNDA15 = crate::Reg<u32, _CNDA15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA15;
-#[doc = "`read()` method returns [cnda15::R](cnda15::R) reader structure"]
-impl crate::Readable for CNDA15 {}
-#[doc = "`write(|w| ..)` method takes [cnda15::W](cnda15::W) writer structure"]
-impl crate::Writable for CNDA15 {}
+#[doc = "CNDA15 register accessor: an alias for `Reg<CNDA15_SPEC>`"]
+pub type CNDA15 = crate::Reg<cnda15::CNDA15_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 15)"]
 pub mod cnda15;
-#[doc = "Channel Next Descriptor Control Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc15](cndc15) module"]
-pub type CNDC15 = crate::Reg<u32, _CNDC15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC15;
-#[doc = "`read()` method returns [cndc15::R](cndc15::R) reader structure"]
-impl crate::Readable for CNDC15 {}
-#[doc = "`write(|w| ..)` method takes [cndc15::W](cndc15::W) writer structure"]
-impl crate::Writable for CNDC15 {}
+#[doc = "CNDC15 register accessor: an alias for `Reg<CNDC15_SPEC>`"]
+pub type CNDC15 = crate::Reg<cndc15::CNDC15_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 15)"]
 pub mod cndc15;
-#[doc = "Channel Microblock Control Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc15](cubc15) module"]
-pub type CUBC15 = crate::Reg<u32, _CUBC15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC15;
-#[doc = "`read()` method returns [cubc15::R](cubc15::R) reader structure"]
-impl crate::Readable for CUBC15 {}
-#[doc = "`write(|w| ..)` method takes [cubc15::W](cubc15::W) writer structure"]
-impl crate::Writable for CUBC15 {}
+#[doc = "CUBC15 register accessor: an alias for `Reg<CUBC15_SPEC>`"]
+pub type CUBC15 = crate::Reg<cubc15::CUBC15_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 15)"]
 pub mod cubc15;
-#[doc = "Channel Block Control Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc15](cbc15) module"]
-pub type CBC15 = crate::Reg<u32, _CBC15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC15;
-#[doc = "`read()` method returns [cbc15::R](cbc15::R) reader structure"]
-impl crate::Readable for CBC15 {}
-#[doc = "`write(|w| ..)` method takes [cbc15::W](cbc15::W) writer structure"]
-impl crate::Writable for CBC15 {}
+#[doc = "CBC15 register accessor: an alias for `Reg<CBC15_SPEC>`"]
+pub type CBC15 = crate::Reg<cbc15::CBC15_SPEC>;
 #[doc = "Channel Block Control Register (chid = 15)"]
 pub mod cbc15;
-#[doc = "Channel Configuration Register (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc15](cc15) module"]
-pub type CC15 = crate::Reg<u32, _CC15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC15;
-#[doc = "`read()` method returns [cc15::R](cc15::R) reader structure"]
-impl crate::Readable for CC15 {}
-#[doc = "`write(|w| ..)` method takes [cc15::W](cc15::W) writer structure"]
-impl crate::Writable for CC15 {}
+#[doc = "CC15 register accessor: an alias for `Reg<CC15_SPEC>`"]
+pub type CC15 = crate::Reg<cc15::CC15_SPEC>;
 #[doc = "Channel Configuration Register (chid = 15)"]
 pub mod cc15;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp15](cds_msp15) module"]
-pub type CDS_MSP15 = crate::Reg<u32, _CDS_MSP15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP15;
-#[doc = "`read()` method returns [cds_msp15::R](cds_msp15::R) reader structure"]
-impl crate::Readable for CDS_MSP15 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp15::W](cds_msp15::W) writer structure"]
-impl crate::Writable for CDS_MSP15 {}
+#[doc = "CDS_MSP15 register accessor: an alias for `Reg<CDS_MSP15_SPEC>`"]
+pub type CDS_MSP15 = crate::Reg<cds_msp15::CDS_MSP15_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 15)"]
 pub mod cds_msp15;
-#[doc = "Channel Source Microblock Stride (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus15](csus15) module"]
-pub type CSUS15 = crate::Reg<u32, _CSUS15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS15;
-#[doc = "`read()` method returns [csus15::R](csus15::R) reader structure"]
-impl crate::Readable for CSUS15 {}
-#[doc = "`write(|w| ..)` method takes [csus15::W](csus15::W) writer structure"]
-impl crate::Writable for CSUS15 {}
+#[doc = "CSUS15 register accessor: an alias for `Reg<CSUS15_SPEC>`"]
+pub type CSUS15 = crate::Reg<csus15::CSUS15_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 15)"]
 pub mod csus15;
-#[doc = "Channel Destination Microblock Stride (chid = 15)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus15](cdus15) module"]
-pub type CDUS15 = crate::Reg<u32, _CDUS15>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS15;
-#[doc = "`read()` method returns [cdus15::R](cdus15::R) reader structure"]
-impl crate::Readable for CDUS15 {}
-#[doc = "`write(|w| ..)` method takes [cdus15::W](cdus15::W) writer structure"]
-impl crate::Writable for CDUS15 {}
+#[doc = "CDUS15 register accessor: an alias for `Reg<CDUS15_SPEC>`"]
+pub type CDUS15 = crate::Reg<cdus15::CDUS15_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 15)"]
 pub mod cdus15;
-#[doc = "Channel Interrupt Enable Register (chid = 16)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie16](cie16) module"]
-pub type CIE16 = crate::Reg<u32, _CIE16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE16;
-#[doc = "`write(|w| ..)` method takes [cie16::W](cie16::W) writer structure"]
-impl crate::Writable for CIE16 {}
+#[doc = "CIE16 register accessor: an alias for `Reg<CIE16_SPEC>`"]
+pub type CIE16 = crate::Reg<cie16::CIE16_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 16)"]
 pub mod cie16;
-#[doc = "Channel Interrupt Disable Register (chid = 16)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid16](cid16) module"]
-pub type CID16 = crate::Reg<u32, _CID16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID16;
-#[doc = "`write(|w| ..)` method takes [cid16::W](cid16::W) writer structure"]
-impl crate::Writable for CID16 {}
+#[doc = "CID16 register accessor: an alias for `Reg<CID16_SPEC>`"]
+pub type CID16 = crate::Reg<cid16::CID16_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 16)"]
 pub mod cid16;
-#[doc = "Channel Interrupt Mask Register (chid = 16)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim16](cim16) module"]
-pub type CIM16 = crate::Reg<u32, _CIM16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM16;
-#[doc = "`write(|w| ..)` method takes [cim16::W](cim16::W) writer structure"]
-impl crate::Writable for CIM16 {}
+#[doc = "CIM16 register accessor: an alias for `Reg<CIM16_SPEC>`"]
+pub type CIM16 = crate::Reg<cim16::CIM16_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 16)"]
 pub mod cim16;
-#[doc = "Channel Interrupt Status Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis16](cis16) module"]
-pub type CIS16 = crate::Reg<u32, _CIS16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS16;
-#[doc = "`read()` method returns [cis16::R](cis16::R) reader structure"]
-impl crate::Readable for CIS16 {}
+#[doc = "CIS16 register accessor: an alias for `Reg<CIS16_SPEC>`"]
+pub type CIS16 = crate::Reg<cis16::CIS16_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 16)"]
 pub mod cis16;
-#[doc = "Channel Source Address Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa16](csa16) module"]
-pub type CSA16 = crate::Reg<u32, _CSA16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA16;
-#[doc = "`read()` method returns [csa16::R](csa16::R) reader structure"]
-impl crate::Readable for CSA16 {}
-#[doc = "`write(|w| ..)` method takes [csa16::W](csa16::W) writer structure"]
-impl crate::Writable for CSA16 {}
+#[doc = "CSA16 register accessor: an alias for `Reg<CSA16_SPEC>`"]
+pub type CSA16 = crate::Reg<csa16::CSA16_SPEC>;
 #[doc = "Channel Source Address Register (chid = 16)"]
 pub mod csa16;
-#[doc = "Channel Destination Address Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda16](cda16) module"]
-pub type CDA16 = crate::Reg<u32, _CDA16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA16;
-#[doc = "`read()` method returns [cda16::R](cda16::R) reader structure"]
-impl crate::Readable for CDA16 {}
-#[doc = "`write(|w| ..)` method takes [cda16::W](cda16::W) writer structure"]
-impl crate::Writable for CDA16 {}
+#[doc = "CDA16 register accessor: an alias for `Reg<CDA16_SPEC>`"]
+pub type CDA16 = crate::Reg<cda16::CDA16_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 16)"]
 pub mod cda16;
-#[doc = "Channel Next Descriptor Address Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda16](cnda16) module"]
-pub type CNDA16 = crate::Reg<u32, _CNDA16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA16;
-#[doc = "`read()` method returns [cnda16::R](cnda16::R) reader structure"]
-impl crate::Readable for CNDA16 {}
-#[doc = "`write(|w| ..)` method takes [cnda16::W](cnda16::W) writer structure"]
-impl crate::Writable for CNDA16 {}
+#[doc = "CNDA16 register accessor: an alias for `Reg<CNDA16_SPEC>`"]
+pub type CNDA16 = crate::Reg<cnda16::CNDA16_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 16)"]
 pub mod cnda16;
-#[doc = "Channel Next Descriptor Control Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc16](cndc16) module"]
-pub type CNDC16 = crate::Reg<u32, _CNDC16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC16;
-#[doc = "`read()` method returns [cndc16::R](cndc16::R) reader structure"]
-impl crate::Readable for CNDC16 {}
-#[doc = "`write(|w| ..)` method takes [cndc16::W](cndc16::W) writer structure"]
-impl crate::Writable for CNDC16 {}
+#[doc = "CNDC16 register accessor: an alias for `Reg<CNDC16_SPEC>`"]
+pub type CNDC16 = crate::Reg<cndc16::CNDC16_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 16)"]
 pub mod cndc16;
-#[doc = "Channel Microblock Control Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc16](cubc16) module"]
-pub type CUBC16 = crate::Reg<u32, _CUBC16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC16;
-#[doc = "`read()` method returns [cubc16::R](cubc16::R) reader structure"]
-impl crate::Readable for CUBC16 {}
-#[doc = "`write(|w| ..)` method takes [cubc16::W](cubc16::W) writer structure"]
-impl crate::Writable for CUBC16 {}
+#[doc = "CUBC16 register accessor: an alias for `Reg<CUBC16_SPEC>`"]
+pub type CUBC16 = crate::Reg<cubc16::CUBC16_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 16)"]
 pub mod cubc16;
-#[doc = "Channel Block Control Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc16](cbc16) module"]
-pub type CBC16 = crate::Reg<u32, _CBC16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC16;
-#[doc = "`read()` method returns [cbc16::R](cbc16::R) reader structure"]
-impl crate::Readable for CBC16 {}
-#[doc = "`write(|w| ..)` method takes [cbc16::W](cbc16::W) writer structure"]
-impl crate::Writable for CBC16 {}
+#[doc = "CBC16 register accessor: an alias for `Reg<CBC16_SPEC>`"]
+pub type CBC16 = crate::Reg<cbc16::CBC16_SPEC>;
 #[doc = "Channel Block Control Register (chid = 16)"]
 pub mod cbc16;
-#[doc = "Channel Configuration Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc16](cc16) module"]
-pub type CC16 = crate::Reg<u32, _CC16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC16;
-#[doc = "`read()` method returns [cc16::R](cc16::R) reader structure"]
-impl crate::Readable for CC16 {}
-#[doc = "`write(|w| ..)` method takes [cc16::W](cc16::W) writer structure"]
-impl crate::Writable for CC16 {}
+#[doc = "CC16 register accessor: an alias for `Reg<CC16_SPEC>`"]
+pub type CC16 = crate::Reg<cc16::CC16_SPEC>;
 #[doc = "Channel Configuration Register (chid = 16)"]
 pub mod cc16;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp16](cds_msp16) module"]
-pub type CDS_MSP16 = crate::Reg<u32, _CDS_MSP16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP16;
-#[doc = "`read()` method returns [cds_msp16::R](cds_msp16::R) reader structure"]
-impl crate::Readable for CDS_MSP16 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp16::W](cds_msp16::W) writer structure"]
-impl crate::Writable for CDS_MSP16 {}
+#[doc = "CDS_MSP16 register accessor: an alias for `Reg<CDS_MSP16_SPEC>`"]
+pub type CDS_MSP16 = crate::Reg<cds_msp16::CDS_MSP16_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 16)"]
 pub mod cds_msp16;
-#[doc = "Channel Source Microblock Stride (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus16](csus16) module"]
-pub type CSUS16 = crate::Reg<u32, _CSUS16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS16;
-#[doc = "`read()` method returns [csus16::R](csus16::R) reader structure"]
-impl crate::Readable for CSUS16 {}
-#[doc = "`write(|w| ..)` method takes [csus16::W](csus16::W) writer structure"]
-impl crate::Writable for CSUS16 {}
+#[doc = "CSUS16 register accessor: an alias for `Reg<CSUS16_SPEC>`"]
+pub type CSUS16 = crate::Reg<csus16::CSUS16_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 16)"]
 pub mod csus16;
-#[doc = "Channel Destination Microblock Stride (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus16](cdus16) module"]
-pub type CDUS16 = crate::Reg<u32, _CDUS16>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS16;
-#[doc = "`read()` method returns [cdus16::R](cdus16::R) reader structure"]
-impl crate::Readable for CDUS16 {}
-#[doc = "`write(|w| ..)` method takes [cdus16::W](cdus16::W) writer structure"]
-impl crate::Writable for CDUS16 {}
+#[doc = "CDUS16 register accessor: an alias for `Reg<CDUS16_SPEC>`"]
+pub type CDUS16 = crate::Reg<cdus16::CDUS16_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 16)"]
 pub mod cdus16;
-#[doc = "Channel Interrupt Enable Register (chid = 17)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie17](cie17) module"]
-pub type CIE17 = crate::Reg<u32, _CIE17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE17;
-#[doc = "`write(|w| ..)` method takes [cie17::W](cie17::W) writer structure"]
-impl crate::Writable for CIE17 {}
+#[doc = "CIE17 register accessor: an alias for `Reg<CIE17_SPEC>`"]
+pub type CIE17 = crate::Reg<cie17::CIE17_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 17)"]
 pub mod cie17;
-#[doc = "Channel Interrupt Disable Register (chid = 17)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid17](cid17) module"]
-pub type CID17 = crate::Reg<u32, _CID17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID17;
-#[doc = "`write(|w| ..)` method takes [cid17::W](cid17::W) writer structure"]
-impl crate::Writable for CID17 {}
+#[doc = "CID17 register accessor: an alias for `Reg<CID17_SPEC>`"]
+pub type CID17 = crate::Reg<cid17::CID17_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 17)"]
 pub mod cid17;
-#[doc = "Channel Interrupt Mask Register (chid = 17)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim17](cim17) module"]
-pub type CIM17 = crate::Reg<u32, _CIM17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM17;
-#[doc = "`write(|w| ..)` method takes [cim17::W](cim17::W) writer structure"]
-impl crate::Writable for CIM17 {}
+#[doc = "CIM17 register accessor: an alias for `Reg<CIM17_SPEC>`"]
+pub type CIM17 = crate::Reg<cim17::CIM17_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 17)"]
 pub mod cim17;
-#[doc = "Channel Interrupt Status Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis17](cis17) module"]
-pub type CIS17 = crate::Reg<u32, _CIS17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS17;
-#[doc = "`read()` method returns [cis17::R](cis17::R) reader structure"]
-impl crate::Readable for CIS17 {}
+#[doc = "CIS17 register accessor: an alias for `Reg<CIS17_SPEC>`"]
+pub type CIS17 = crate::Reg<cis17::CIS17_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 17)"]
 pub mod cis17;
-#[doc = "Channel Source Address Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa17](csa17) module"]
-pub type CSA17 = crate::Reg<u32, _CSA17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA17;
-#[doc = "`read()` method returns [csa17::R](csa17::R) reader structure"]
-impl crate::Readable for CSA17 {}
-#[doc = "`write(|w| ..)` method takes [csa17::W](csa17::W) writer structure"]
-impl crate::Writable for CSA17 {}
+#[doc = "CSA17 register accessor: an alias for `Reg<CSA17_SPEC>`"]
+pub type CSA17 = crate::Reg<csa17::CSA17_SPEC>;
 #[doc = "Channel Source Address Register (chid = 17)"]
 pub mod csa17;
-#[doc = "Channel Destination Address Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda17](cda17) module"]
-pub type CDA17 = crate::Reg<u32, _CDA17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA17;
-#[doc = "`read()` method returns [cda17::R](cda17::R) reader structure"]
-impl crate::Readable for CDA17 {}
-#[doc = "`write(|w| ..)` method takes [cda17::W](cda17::W) writer structure"]
-impl crate::Writable for CDA17 {}
+#[doc = "CDA17 register accessor: an alias for `Reg<CDA17_SPEC>`"]
+pub type CDA17 = crate::Reg<cda17::CDA17_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 17)"]
 pub mod cda17;
-#[doc = "Channel Next Descriptor Address Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda17](cnda17) module"]
-pub type CNDA17 = crate::Reg<u32, _CNDA17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA17;
-#[doc = "`read()` method returns [cnda17::R](cnda17::R) reader structure"]
-impl crate::Readable for CNDA17 {}
-#[doc = "`write(|w| ..)` method takes [cnda17::W](cnda17::W) writer structure"]
-impl crate::Writable for CNDA17 {}
+#[doc = "CNDA17 register accessor: an alias for `Reg<CNDA17_SPEC>`"]
+pub type CNDA17 = crate::Reg<cnda17::CNDA17_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 17)"]
 pub mod cnda17;
-#[doc = "Channel Next Descriptor Control Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc17](cndc17) module"]
-pub type CNDC17 = crate::Reg<u32, _CNDC17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC17;
-#[doc = "`read()` method returns [cndc17::R](cndc17::R) reader structure"]
-impl crate::Readable for CNDC17 {}
-#[doc = "`write(|w| ..)` method takes [cndc17::W](cndc17::W) writer structure"]
-impl crate::Writable for CNDC17 {}
+#[doc = "CNDC17 register accessor: an alias for `Reg<CNDC17_SPEC>`"]
+pub type CNDC17 = crate::Reg<cndc17::CNDC17_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 17)"]
 pub mod cndc17;
-#[doc = "Channel Microblock Control Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc17](cubc17) module"]
-pub type CUBC17 = crate::Reg<u32, _CUBC17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC17;
-#[doc = "`read()` method returns [cubc17::R](cubc17::R) reader structure"]
-impl crate::Readable for CUBC17 {}
-#[doc = "`write(|w| ..)` method takes [cubc17::W](cubc17::W) writer structure"]
-impl crate::Writable for CUBC17 {}
+#[doc = "CUBC17 register accessor: an alias for `Reg<CUBC17_SPEC>`"]
+pub type CUBC17 = crate::Reg<cubc17::CUBC17_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 17)"]
 pub mod cubc17;
-#[doc = "Channel Block Control Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc17](cbc17) module"]
-pub type CBC17 = crate::Reg<u32, _CBC17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC17;
-#[doc = "`read()` method returns [cbc17::R](cbc17::R) reader structure"]
-impl crate::Readable for CBC17 {}
-#[doc = "`write(|w| ..)` method takes [cbc17::W](cbc17::W) writer structure"]
-impl crate::Writable for CBC17 {}
+#[doc = "CBC17 register accessor: an alias for `Reg<CBC17_SPEC>`"]
+pub type CBC17 = crate::Reg<cbc17::CBC17_SPEC>;
 #[doc = "Channel Block Control Register (chid = 17)"]
 pub mod cbc17;
-#[doc = "Channel Configuration Register (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc17](cc17) module"]
-pub type CC17 = crate::Reg<u32, _CC17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC17;
-#[doc = "`read()` method returns [cc17::R](cc17::R) reader structure"]
-impl crate::Readable for CC17 {}
-#[doc = "`write(|w| ..)` method takes [cc17::W](cc17::W) writer structure"]
-impl crate::Writable for CC17 {}
+#[doc = "CC17 register accessor: an alias for `Reg<CC17_SPEC>`"]
+pub type CC17 = crate::Reg<cc17::CC17_SPEC>;
 #[doc = "Channel Configuration Register (chid = 17)"]
 pub mod cc17;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp17](cds_msp17) module"]
-pub type CDS_MSP17 = crate::Reg<u32, _CDS_MSP17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP17;
-#[doc = "`read()` method returns [cds_msp17::R](cds_msp17::R) reader structure"]
-impl crate::Readable for CDS_MSP17 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp17::W](cds_msp17::W) writer structure"]
-impl crate::Writable for CDS_MSP17 {}
+#[doc = "CDS_MSP17 register accessor: an alias for `Reg<CDS_MSP17_SPEC>`"]
+pub type CDS_MSP17 = crate::Reg<cds_msp17::CDS_MSP17_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 17)"]
 pub mod cds_msp17;
-#[doc = "Channel Source Microblock Stride (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus17](csus17) module"]
-pub type CSUS17 = crate::Reg<u32, _CSUS17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS17;
-#[doc = "`read()` method returns [csus17::R](csus17::R) reader structure"]
-impl crate::Readable for CSUS17 {}
-#[doc = "`write(|w| ..)` method takes [csus17::W](csus17::W) writer structure"]
-impl crate::Writable for CSUS17 {}
+#[doc = "CSUS17 register accessor: an alias for `Reg<CSUS17_SPEC>`"]
+pub type CSUS17 = crate::Reg<csus17::CSUS17_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 17)"]
 pub mod csus17;
-#[doc = "Channel Destination Microblock Stride (chid = 17)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus17](cdus17) module"]
-pub type CDUS17 = crate::Reg<u32, _CDUS17>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS17;
-#[doc = "`read()` method returns [cdus17::R](cdus17::R) reader structure"]
-impl crate::Readable for CDUS17 {}
-#[doc = "`write(|w| ..)` method takes [cdus17::W](cdus17::W) writer structure"]
-impl crate::Writable for CDUS17 {}
+#[doc = "CDUS17 register accessor: an alias for `Reg<CDUS17_SPEC>`"]
+pub type CDUS17 = crate::Reg<cdus17::CDUS17_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 17)"]
 pub mod cdus17;
-#[doc = "Channel Interrupt Enable Register (chid = 18)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie18](cie18) module"]
-pub type CIE18 = crate::Reg<u32, _CIE18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE18;
-#[doc = "`write(|w| ..)` method takes [cie18::W](cie18::W) writer structure"]
-impl crate::Writable for CIE18 {}
+#[doc = "CIE18 register accessor: an alias for `Reg<CIE18_SPEC>`"]
+pub type CIE18 = crate::Reg<cie18::CIE18_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 18)"]
 pub mod cie18;
-#[doc = "Channel Interrupt Disable Register (chid = 18)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid18](cid18) module"]
-pub type CID18 = crate::Reg<u32, _CID18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID18;
-#[doc = "`write(|w| ..)` method takes [cid18::W](cid18::W) writer structure"]
-impl crate::Writable for CID18 {}
+#[doc = "CID18 register accessor: an alias for `Reg<CID18_SPEC>`"]
+pub type CID18 = crate::Reg<cid18::CID18_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 18)"]
 pub mod cid18;
-#[doc = "Channel Interrupt Mask Register (chid = 18)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim18](cim18) module"]
-pub type CIM18 = crate::Reg<u32, _CIM18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM18;
-#[doc = "`write(|w| ..)` method takes [cim18::W](cim18::W) writer structure"]
-impl crate::Writable for CIM18 {}
+#[doc = "CIM18 register accessor: an alias for `Reg<CIM18_SPEC>`"]
+pub type CIM18 = crate::Reg<cim18::CIM18_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 18)"]
 pub mod cim18;
-#[doc = "Channel Interrupt Status Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis18](cis18) module"]
-pub type CIS18 = crate::Reg<u32, _CIS18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS18;
-#[doc = "`read()` method returns [cis18::R](cis18::R) reader structure"]
-impl crate::Readable for CIS18 {}
+#[doc = "CIS18 register accessor: an alias for `Reg<CIS18_SPEC>`"]
+pub type CIS18 = crate::Reg<cis18::CIS18_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 18)"]
 pub mod cis18;
-#[doc = "Channel Source Address Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa18](csa18) module"]
-pub type CSA18 = crate::Reg<u32, _CSA18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA18;
-#[doc = "`read()` method returns [csa18::R](csa18::R) reader structure"]
-impl crate::Readable for CSA18 {}
-#[doc = "`write(|w| ..)` method takes [csa18::W](csa18::W) writer structure"]
-impl crate::Writable for CSA18 {}
+#[doc = "CSA18 register accessor: an alias for `Reg<CSA18_SPEC>`"]
+pub type CSA18 = crate::Reg<csa18::CSA18_SPEC>;
 #[doc = "Channel Source Address Register (chid = 18)"]
 pub mod csa18;
-#[doc = "Channel Destination Address Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda18](cda18) module"]
-pub type CDA18 = crate::Reg<u32, _CDA18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA18;
-#[doc = "`read()` method returns [cda18::R](cda18::R) reader structure"]
-impl crate::Readable for CDA18 {}
-#[doc = "`write(|w| ..)` method takes [cda18::W](cda18::W) writer structure"]
-impl crate::Writable for CDA18 {}
+#[doc = "CDA18 register accessor: an alias for `Reg<CDA18_SPEC>`"]
+pub type CDA18 = crate::Reg<cda18::CDA18_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 18)"]
 pub mod cda18;
-#[doc = "Channel Next Descriptor Address Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda18](cnda18) module"]
-pub type CNDA18 = crate::Reg<u32, _CNDA18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA18;
-#[doc = "`read()` method returns [cnda18::R](cnda18::R) reader structure"]
-impl crate::Readable for CNDA18 {}
-#[doc = "`write(|w| ..)` method takes [cnda18::W](cnda18::W) writer structure"]
-impl crate::Writable for CNDA18 {}
+#[doc = "CNDA18 register accessor: an alias for `Reg<CNDA18_SPEC>`"]
+pub type CNDA18 = crate::Reg<cnda18::CNDA18_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 18)"]
 pub mod cnda18;
-#[doc = "Channel Next Descriptor Control Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc18](cndc18) module"]
-pub type CNDC18 = crate::Reg<u32, _CNDC18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC18;
-#[doc = "`read()` method returns [cndc18::R](cndc18::R) reader structure"]
-impl crate::Readable for CNDC18 {}
-#[doc = "`write(|w| ..)` method takes [cndc18::W](cndc18::W) writer structure"]
-impl crate::Writable for CNDC18 {}
+#[doc = "CNDC18 register accessor: an alias for `Reg<CNDC18_SPEC>`"]
+pub type CNDC18 = crate::Reg<cndc18::CNDC18_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 18)"]
 pub mod cndc18;
-#[doc = "Channel Microblock Control Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc18](cubc18) module"]
-pub type CUBC18 = crate::Reg<u32, _CUBC18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC18;
-#[doc = "`read()` method returns [cubc18::R](cubc18::R) reader structure"]
-impl crate::Readable for CUBC18 {}
-#[doc = "`write(|w| ..)` method takes [cubc18::W](cubc18::W) writer structure"]
-impl crate::Writable for CUBC18 {}
+#[doc = "CUBC18 register accessor: an alias for `Reg<CUBC18_SPEC>`"]
+pub type CUBC18 = crate::Reg<cubc18::CUBC18_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 18)"]
 pub mod cubc18;
-#[doc = "Channel Block Control Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc18](cbc18) module"]
-pub type CBC18 = crate::Reg<u32, _CBC18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC18;
-#[doc = "`read()` method returns [cbc18::R](cbc18::R) reader structure"]
-impl crate::Readable for CBC18 {}
-#[doc = "`write(|w| ..)` method takes [cbc18::W](cbc18::W) writer structure"]
-impl crate::Writable for CBC18 {}
+#[doc = "CBC18 register accessor: an alias for `Reg<CBC18_SPEC>`"]
+pub type CBC18 = crate::Reg<cbc18::CBC18_SPEC>;
 #[doc = "Channel Block Control Register (chid = 18)"]
 pub mod cbc18;
-#[doc = "Channel Configuration Register (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc18](cc18) module"]
-pub type CC18 = crate::Reg<u32, _CC18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC18;
-#[doc = "`read()` method returns [cc18::R](cc18::R) reader structure"]
-impl crate::Readable for CC18 {}
-#[doc = "`write(|w| ..)` method takes [cc18::W](cc18::W) writer structure"]
-impl crate::Writable for CC18 {}
+#[doc = "CC18 register accessor: an alias for `Reg<CC18_SPEC>`"]
+pub type CC18 = crate::Reg<cc18::CC18_SPEC>;
 #[doc = "Channel Configuration Register (chid = 18)"]
 pub mod cc18;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp18](cds_msp18) module"]
-pub type CDS_MSP18 = crate::Reg<u32, _CDS_MSP18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP18;
-#[doc = "`read()` method returns [cds_msp18::R](cds_msp18::R) reader structure"]
-impl crate::Readable for CDS_MSP18 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp18::W](cds_msp18::W) writer structure"]
-impl crate::Writable for CDS_MSP18 {}
+#[doc = "CDS_MSP18 register accessor: an alias for `Reg<CDS_MSP18_SPEC>`"]
+pub type CDS_MSP18 = crate::Reg<cds_msp18::CDS_MSP18_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 18)"]
 pub mod cds_msp18;
-#[doc = "Channel Source Microblock Stride (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus18](csus18) module"]
-pub type CSUS18 = crate::Reg<u32, _CSUS18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS18;
-#[doc = "`read()` method returns [csus18::R](csus18::R) reader structure"]
-impl crate::Readable for CSUS18 {}
-#[doc = "`write(|w| ..)` method takes [csus18::W](csus18::W) writer structure"]
-impl crate::Writable for CSUS18 {}
+#[doc = "CSUS18 register accessor: an alias for `Reg<CSUS18_SPEC>`"]
+pub type CSUS18 = crate::Reg<csus18::CSUS18_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 18)"]
 pub mod csus18;
-#[doc = "Channel Destination Microblock Stride (chid = 18)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus18](cdus18) module"]
-pub type CDUS18 = crate::Reg<u32, _CDUS18>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS18;
-#[doc = "`read()` method returns [cdus18::R](cdus18::R) reader structure"]
-impl crate::Readable for CDUS18 {}
-#[doc = "`write(|w| ..)` method takes [cdus18::W](cdus18::W) writer structure"]
-impl crate::Writable for CDUS18 {}
+#[doc = "CDUS18 register accessor: an alias for `Reg<CDUS18_SPEC>`"]
+pub type CDUS18 = crate::Reg<cdus18::CDUS18_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 18)"]
 pub mod cdus18;
-#[doc = "Channel Interrupt Enable Register (chid = 19)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie19](cie19) module"]
-pub type CIE19 = crate::Reg<u32, _CIE19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE19;
-#[doc = "`write(|w| ..)` method takes [cie19::W](cie19::W) writer structure"]
-impl crate::Writable for CIE19 {}
+#[doc = "CIE19 register accessor: an alias for `Reg<CIE19_SPEC>`"]
+pub type CIE19 = crate::Reg<cie19::CIE19_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 19)"]
 pub mod cie19;
-#[doc = "Channel Interrupt Disable Register (chid = 19)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid19](cid19) module"]
-pub type CID19 = crate::Reg<u32, _CID19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID19;
-#[doc = "`write(|w| ..)` method takes [cid19::W](cid19::W) writer structure"]
-impl crate::Writable for CID19 {}
+#[doc = "CID19 register accessor: an alias for `Reg<CID19_SPEC>`"]
+pub type CID19 = crate::Reg<cid19::CID19_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 19)"]
 pub mod cid19;
-#[doc = "Channel Interrupt Mask Register (chid = 19)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim19](cim19) module"]
-pub type CIM19 = crate::Reg<u32, _CIM19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM19;
-#[doc = "`write(|w| ..)` method takes [cim19::W](cim19::W) writer structure"]
-impl crate::Writable for CIM19 {}
+#[doc = "CIM19 register accessor: an alias for `Reg<CIM19_SPEC>`"]
+pub type CIM19 = crate::Reg<cim19::CIM19_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 19)"]
 pub mod cim19;
-#[doc = "Channel Interrupt Status Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis19](cis19) module"]
-pub type CIS19 = crate::Reg<u32, _CIS19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS19;
-#[doc = "`read()` method returns [cis19::R](cis19::R) reader structure"]
-impl crate::Readable for CIS19 {}
+#[doc = "CIS19 register accessor: an alias for `Reg<CIS19_SPEC>`"]
+pub type CIS19 = crate::Reg<cis19::CIS19_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 19)"]
 pub mod cis19;
-#[doc = "Channel Source Address Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa19](csa19) module"]
-pub type CSA19 = crate::Reg<u32, _CSA19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA19;
-#[doc = "`read()` method returns [csa19::R](csa19::R) reader structure"]
-impl crate::Readable for CSA19 {}
-#[doc = "`write(|w| ..)` method takes [csa19::W](csa19::W) writer structure"]
-impl crate::Writable for CSA19 {}
+#[doc = "CSA19 register accessor: an alias for `Reg<CSA19_SPEC>`"]
+pub type CSA19 = crate::Reg<csa19::CSA19_SPEC>;
 #[doc = "Channel Source Address Register (chid = 19)"]
 pub mod csa19;
-#[doc = "Channel Destination Address Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda19](cda19) module"]
-pub type CDA19 = crate::Reg<u32, _CDA19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA19;
-#[doc = "`read()` method returns [cda19::R](cda19::R) reader structure"]
-impl crate::Readable for CDA19 {}
-#[doc = "`write(|w| ..)` method takes [cda19::W](cda19::W) writer structure"]
-impl crate::Writable for CDA19 {}
+#[doc = "CDA19 register accessor: an alias for `Reg<CDA19_SPEC>`"]
+pub type CDA19 = crate::Reg<cda19::CDA19_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 19)"]
 pub mod cda19;
-#[doc = "Channel Next Descriptor Address Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda19](cnda19) module"]
-pub type CNDA19 = crate::Reg<u32, _CNDA19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA19;
-#[doc = "`read()` method returns [cnda19::R](cnda19::R) reader structure"]
-impl crate::Readable for CNDA19 {}
-#[doc = "`write(|w| ..)` method takes [cnda19::W](cnda19::W) writer structure"]
-impl crate::Writable for CNDA19 {}
+#[doc = "CNDA19 register accessor: an alias for `Reg<CNDA19_SPEC>`"]
+pub type CNDA19 = crate::Reg<cnda19::CNDA19_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 19)"]
 pub mod cnda19;
-#[doc = "Channel Next Descriptor Control Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc19](cndc19) module"]
-pub type CNDC19 = crate::Reg<u32, _CNDC19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC19;
-#[doc = "`read()` method returns [cndc19::R](cndc19::R) reader structure"]
-impl crate::Readable for CNDC19 {}
-#[doc = "`write(|w| ..)` method takes [cndc19::W](cndc19::W) writer structure"]
-impl crate::Writable for CNDC19 {}
+#[doc = "CNDC19 register accessor: an alias for `Reg<CNDC19_SPEC>`"]
+pub type CNDC19 = crate::Reg<cndc19::CNDC19_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 19)"]
 pub mod cndc19;
-#[doc = "Channel Microblock Control Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc19](cubc19) module"]
-pub type CUBC19 = crate::Reg<u32, _CUBC19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC19;
-#[doc = "`read()` method returns [cubc19::R](cubc19::R) reader structure"]
-impl crate::Readable for CUBC19 {}
-#[doc = "`write(|w| ..)` method takes [cubc19::W](cubc19::W) writer structure"]
-impl crate::Writable for CUBC19 {}
+#[doc = "CUBC19 register accessor: an alias for `Reg<CUBC19_SPEC>`"]
+pub type CUBC19 = crate::Reg<cubc19::CUBC19_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 19)"]
 pub mod cubc19;
-#[doc = "Channel Block Control Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc19](cbc19) module"]
-pub type CBC19 = crate::Reg<u32, _CBC19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC19;
-#[doc = "`read()` method returns [cbc19::R](cbc19::R) reader structure"]
-impl crate::Readable for CBC19 {}
-#[doc = "`write(|w| ..)` method takes [cbc19::W](cbc19::W) writer structure"]
-impl crate::Writable for CBC19 {}
+#[doc = "CBC19 register accessor: an alias for `Reg<CBC19_SPEC>`"]
+pub type CBC19 = crate::Reg<cbc19::CBC19_SPEC>;
 #[doc = "Channel Block Control Register (chid = 19)"]
 pub mod cbc19;
-#[doc = "Channel Configuration Register (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc19](cc19) module"]
-pub type CC19 = crate::Reg<u32, _CC19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC19;
-#[doc = "`read()` method returns [cc19::R](cc19::R) reader structure"]
-impl crate::Readable for CC19 {}
-#[doc = "`write(|w| ..)` method takes [cc19::W](cc19::W) writer structure"]
-impl crate::Writable for CC19 {}
+#[doc = "CC19 register accessor: an alias for `Reg<CC19_SPEC>`"]
+pub type CC19 = crate::Reg<cc19::CC19_SPEC>;
 #[doc = "Channel Configuration Register (chid = 19)"]
 pub mod cc19;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp19](cds_msp19) module"]
-pub type CDS_MSP19 = crate::Reg<u32, _CDS_MSP19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP19;
-#[doc = "`read()` method returns [cds_msp19::R](cds_msp19::R) reader structure"]
-impl crate::Readable for CDS_MSP19 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp19::W](cds_msp19::W) writer structure"]
-impl crate::Writable for CDS_MSP19 {}
+#[doc = "CDS_MSP19 register accessor: an alias for `Reg<CDS_MSP19_SPEC>`"]
+pub type CDS_MSP19 = crate::Reg<cds_msp19::CDS_MSP19_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 19)"]
 pub mod cds_msp19;
-#[doc = "Channel Source Microblock Stride (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus19](csus19) module"]
-pub type CSUS19 = crate::Reg<u32, _CSUS19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS19;
-#[doc = "`read()` method returns [csus19::R](csus19::R) reader structure"]
-impl crate::Readable for CSUS19 {}
-#[doc = "`write(|w| ..)` method takes [csus19::W](csus19::W) writer structure"]
-impl crate::Writable for CSUS19 {}
+#[doc = "CSUS19 register accessor: an alias for `Reg<CSUS19_SPEC>`"]
+pub type CSUS19 = crate::Reg<csus19::CSUS19_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 19)"]
 pub mod csus19;
-#[doc = "Channel Destination Microblock Stride (chid = 19)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus19](cdus19) module"]
-pub type CDUS19 = crate::Reg<u32, _CDUS19>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS19;
-#[doc = "`read()` method returns [cdus19::R](cdus19::R) reader structure"]
-impl crate::Readable for CDUS19 {}
-#[doc = "`write(|w| ..)` method takes [cdus19::W](cdus19::W) writer structure"]
-impl crate::Writable for CDUS19 {}
+#[doc = "CDUS19 register accessor: an alias for `Reg<CDUS19_SPEC>`"]
+pub type CDUS19 = crate::Reg<cdus19::CDUS19_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 19)"]
 pub mod cdus19;
-#[doc = "Channel Interrupt Enable Register (chid = 20)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie20](cie20) module"]
-pub type CIE20 = crate::Reg<u32, _CIE20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE20;
-#[doc = "`write(|w| ..)` method takes [cie20::W](cie20::W) writer structure"]
-impl crate::Writable for CIE20 {}
+#[doc = "CIE20 register accessor: an alias for `Reg<CIE20_SPEC>`"]
+pub type CIE20 = crate::Reg<cie20::CIE20_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 20)"]
 pub mod cie20;
-#[doc = "Channel Interrupt Disable Register (chid = 20)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid20](cid20) module"]
-pub type CID20 = crate::Reg<u32, _CID20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID20;
-#[doc = "`write(|w| ..)` method takes [cid20::W](cid20::W) writer structure"]
-impl crate::Writable for CID20 {}
+#[doc = "CID20 register accessor: an alias for `Reg<CID20_SPEC>`"]
+pub type CID20 = crate::Reg<cid20::CID20_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 20)"]
 pub mod cid20;
-#[doc = "Channel Interrupt Mask Register (chid = 20)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim20](cim20) module"]
-pub type CIM20 = crate::Reg<u32, _CIM20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM20;
-#[doc = "`write(|w| ..)` method takes [cim20::W](cim20::W) writer structure"]
-impl crate::Writable for CIM20 {}
+#[doc = "CIM20 register accessor: an alias for `Reg<CIM20_SPEC>`"]
+pub type CIM20 = crate::Reg<cim20::CIM20_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 20)"]
 pub mod cim20;
-#[doc = "Channel Interrupt Status Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis20](cis20) module"]
-pub type CIS20 = crate::Reg<u32, _CIS20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS20;
-#[doc = "`read()` method returns [cis20::R](cis20::R) reader structure"]
-impl crate::Readable for CIS20 {}
+#[doc = "CIS20 register accessor: an alias for `Reg<CIS20_SPEC>`"]
+pub type CIS20 = crate::Reg<cis20::CIS20_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 20)"]
 pub mod cis20;
-#[doc = "Channel Source Address Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa20](csa20) module"]
-pub type CSA20 = crate::Reg<u32, _CSA20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA20;
-#[doc = "`read()` method returns [csa20::R](csa20::R) reader structure"]
-impl crate::Readable for CSA20 {}
-#[doc = "`write(|w| ..)` method takes [csa20::W](csa20::W) writer structure"]
-impl crate::Writable for CSA20 {}
+#[doc = "CSA20 register accessor: an alias for `Reg<CSA20_SPEC>`"]
+pub type CSA20 = crate::Reg<csa20::CSA20_SPEC>;
 #[doc = "Channel Source Address Register (chid = 20)"]
 pub mod csa20;
-#[doc = "Channel Destination Address Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda20](cda20) module"]
-pub type CDA20 = crate::Reg<u32, _CDA20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA20;
-#[doc = "`read()` method returns [cda20::R](cda20::R) reader structure"]
-impl crate::Readable for CDA20 {}
-#[doc = "`write(|w| ..)` method takes [cda20::W](cda20::W) writer structure"]
-impl crate::Writable for CDA20 {}
+#[doc = "CDA20 register accessor: an alias for `Reg<CDA20_SPEC>`"]
+pub type CDA20 = crate::Reg<cda20::CDA20_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 20)"]
 pub mod cda20;
-#[doc = "Channel Next Descriptor Address Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda20](cnda20) module"]
-pub type CNDA20 = crate::Reg<u32, _CNDA20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA20;
-#[doc = "`read()` method returns [cnda20::R](cnda20::R) reader structure"]
-impl crate::Readable for CNDA20 {}
-#[doc = "`write(|w| ..)` method takes [cnda20::W](cnda20::W) writer structure"]
-impl crate::Writable for CNDA20 {}
+#[doc = "CNDA20 register accessor: an alias for `Reg<CNDA20_SPEC>`"]
+pub type CNDA20 = crate::Reg<cnda20::CNDA20_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 20)"]
 pub mod cnda20;
-#[doc = "Channel Next Descriptor Control Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc20](cndc20) module"]
-pub type CNDC20 = crate::Reg<u32, _CNDC20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC20;
-#[doc = "`read()` method returns [cndc20::R](cndc20::R) reader structure"]
-impl crate::Readable for CNDC20 {}
-#[doc = "`write(|w| ..)` method takes [cndc20::W](cndc20::W) writer structure"]
-impl crate::Writable for CNDC20 {}
+#[doc = "CNDC20 register accessor: an alias for `Reg<CNDC20_SPEC>`"]
+pub type CNDC20 = crate::Reg<cndc20::CNDC20_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 20)"]
 pub mod cndc20;
-#[doc = "Channel Microblock Control Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc20](cubc20) module"]
-pub type CUBC20 = crate::Reg<u32, _CUBC20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC20;
-#[doc = "`read()` method returns [cubc20::R](cubc20::R) reader structure"]
-impl crate::Readable for CUBC20 {}
-#[doc = "`write(|w| ..)` method takes [cubc20::W](cubc20::W) writer structure"]
-impl crate::Writable for CUBC20 {}
+#[doc = "CUBC20 register accessor: an alias for `Reg<CUBC20_SPEC>`"]
+pub type CUBC20 = crate::Reg<cubc20::CUBC20_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 20)"]
 pub mod cubc20;
-#[doc = "Channel Block Control Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc20](cbc20) module"]
-pub type CBC20 = crate::Reg<u32, _CBC20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC20;
-#[doc = "`read()` method returns [cbc20::R](cbc20::R) reader structure"]
-impl crate::Readable for CBC20 {}
-#[doc = "`write(|w| ..)` method takes [cbc20::W](cbc20::W) writer structure"]
-impl crate::Writable for CBC20 {}
+#[doc = "CBC20 register accessor: an alias for `Reg<CBC20_SPEC>`"]
+pub type CBC20 = crate::Reg<cbc20::CBC20_SPEC>;
 #[doc = "Channel Block Control Register (chid = 20)"]
 pub mod cbc20;
-#[doc = "Channel Configuration Register (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc20](cc20) module"]
-pub type CC20 = crate::Reg<u32, _CC20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC20;
-#[doc = "`read()` method returns [cc20::R](cc20::R) reader structure"]
-impl crate::Readable for CC20 {}
-#[doc = "`write(|w| ..)` method takes [cc20::W](cc20::W) writer structure"]
-impl crate::Writable for CC20 {}
+#[doc = "CC20 register accessor: an alias for `Reg<CC20_SPEC>`"]
+pub type CC20 = crate::Reg<cc20::CC20_SPEC>;
 #[doc = "Channel Configuration Register (chid = 20)"]
 pub mod cc20;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp20](cds_msp20) module"]
-pub type CDS_MSP20 = crate::Reg<u32, _CDS_MSP20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP20;
-#[doc = "`read()` method returns [cds_msp20::R](cds_msp20::R) reader structure"]
-impl crate::Readable for CDS_MSP20 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp20::W](cds_msp20::W) writer structure"]
-impl crate::Writable for CDS_MSP20 {}
+#[doc = "CDS_MSP20 register accessor: an alias for `Reg<CDS_MSP20_SPEC>`"]
+pub type CDS_MSP20 = crate::Reg<cds_msp20::CDS_MSP20_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 20)"]
 pub mod cds_msp20;
-#[doc = "Channel Source Microblock Stride (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus20](csus20) module"]
-pub type CSUS20 = crate::Reg<u32, _CSUS20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS20;
-#[doc = "`read()` method returns [csus20::R](csus20::R) reader structure"]
-impl crate::Readable for CSUS20 {}
-#[doc = "`write(|w| ..)` method takes [csus20::W](csus20::W) writer structure"]
-impl crate::Writable for CSUS20 {}
+#[doc = "CSUS20 register accessor: an alias for `Reg<CSUS20_SPEC>`"]
+pub type CSUS20 = crate::Reg<csus20::CSUS20_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 20)"]
 pub mod csus20;
-#[doc = "Channel Destination Microblock Stride (chid = 20)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus20](cdus20) module"]
-pub type CDUS20 = crate::Reg<u32, _CDUS20>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS20;
-#[doc = "`read()` method returns [cdus20::R](cdus20::R) reader structure"]
-impl crate::Readable for CDUS20 {}
-#[doc = "`write(|w| ..)` method takes [cdus20::W](cdus20::W) writer structure"]
-impl crate::Writable for CDUS20 {}
+#[doc = "CDUS20 register accessor: an alias for `Reg<CDUS20_SPEC>`"]
+pub type CDUS20 = crate::Reg<cdus20::CDUS20_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 20)"]
 pub mod cdus20;
-#[doc = "Channel Interrupt Enable Register (chid = 21)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie21](cie21) module"]
-pub type CIE21 = crate::Reg<u32, _CIE21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE21;
-#[doc = "`write(|w| ..)` method takes [cie21::W](cie21::W) writer structure"]
-impl crate::Writable for CIE21 {}
+#[doc = "CIE21 register accessor: an alias for `Reg<CIE21_SPEC>`"]
+pub type CIE21 = crate::Reg<cie21::CIE21_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 21)"]
 pub mod cie21;
-#[doc = "Channel Interrupt Disable Register (chid = 21)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid21](cid21) module"]
-pub type CID21 = crate::Reg<u32, _CID21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID21;
-#[doc = "`write(|w| ..)` method takes [cid21::W](cid21::W) writer structure"]
-impl crate::Writable for CID21 {}
+#[doc = "CID21 register accessor: an alias for `Reg<CID21_SPEC>`"]
+pub type CID21 = crate::Reg<cid21::CID21_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 21)"]
 pub mod cid21;
-#[doc = "Channel Interrupt Mask Register (chid = 21)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim21](cim21) module"]
-pub type CIM21 = crate::Reg<u32, _CIM21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM21;
-#[doc = "`write(|w| ..)` method takes [cim21::W](cim21::W) writer structure"]
-impl crate::Writable for CIM21 {}
+#[doc = "CIM21 register accessor: an alias for `Reg<CIM21_SPEC>`"]
+pub type CIM21 = crate::Reg<cim21::CIM21_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 21)"]
 pub mod cim21;
-#[doc = "Channel Interrupt Status Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis21](cis21) module"]
-pub type CIS21 = crate::Reg<u32, _CIS21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS21;
-#[doc = "`read()` method returns [cis21::R](cis21::R) reader structure"]
-impl crate::Readable for CIS21 {}
+#[doc = "CIS21 register accessor: an alias for `Reg<CIS21_SPEC>`"]
+pub type CIS21 = crate::Reg<cis21::CIS21_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 21)"]
 pub mod cis21;
-#[doc = "Channel Source Address Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa21](csa21) module"]
-pub type CSA21 = crate::Reg<u32, _CSA21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA21;
-#[doc = "`read()` method returns [csa21::R](csa21::R) reader structure"]
-impl crate::Readable for CSA21 {}
-#[doc = "`write(|w| ..)` method takes [csa21::W](csa21::W) writer structure"]
-impl crate::Writable for CSA21 {}
+#[doc = "CSA21 register accessor: an alias for `Reg<CSA21_SPEC>`"]
+pub type CSA21 = crate::Reg<csa21::CSA21_SPEC>;
 #[doc = "Channel Source Address Register (chid = 21)"]
 pub mod csa21;
-#[doc = "Channel Destination Address Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda21](cda21) module"]
-pub type CDA21 = crate::Reg<u32, _CDA21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA21;
-#[doc = "`read()` method returns [cda21::R](cda21::R) reader structure"]
-impl crate::Readable for CDA21 {}
-#[doc = "`write(|w| ..)` method takes [cda21::W](cda21::W) writer structure"]
-impl crate::Writable for CDA21 {}
+#[doc = "CDA21 register accessor: an alias for `Reg<CDA21_SPEC>`"]
+pub type CDA21 = crate::Reg<cda21::CDA21_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 21)"]
 pub mod cda21;
-#[doc = "Channel Next Descriptor Address Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda21](cnda21) module"]
-pub type CNDA21 = crate::Reg<u32, _CNDA21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA21;
-#[doc = "`read()` method returns [cnda21::R](cnda21::R) reader structure"]
-impl crate::Readable for CNDA21 {}
-#[doc = "`write(|w| ..)` method takes [cnda21::W](cnda21::W) writer structure"]
-impl crate::Writable for CNDA21 {}
+#[doc = "CNDA21 register accessor: an alias for `Reg<CNDA21_SPEC>`"]
+pub type CNDA21 = crate::Reg<cnda21::CNDA21_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 21)"]
 pub mod cnda21;
-#[doc = "Channel Next Descriptor Control Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc21](cndc21) module"]
-pub type CNDC21 = crate::Reg<u32, _CNDC21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC21;
-#[doc = "`read()` method returns [cndc21::R](cndc21::R) reader structure"]
-impl crate::Readable for CNDC21 {}
-#[doc = "`write(|w| ..)` method takes [cndc21::W](cndc21::W) writer structure"]
-impl crate::Writable for CNDC21 {}
+#[doc = "CNDC21 register accessor: an alias for `Reg<CNDC21_SPEC>`"]
+pub type CNDC21 = crate::Reg<cndc21::CNDC21_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 21)"]
 pub mod cndc21;
-#[doc = "Channel Microblock Control Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc21](cubc21) module"]
-pub type CUBC21 = crate::Reg<u32, _CUBC21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC21;
-#[doc = "`read()` method returns [cubc21::R](cubc21::R) reader structure"]
-impl crate::Readable for CUBC21 {}
-#[doc = "`write(|w| ..)` method takes [cubc21::W](cubc21::W) writer structure"]
-impl crate::Writable for CUBC21 {}
+#[doc = "CUBC21 register accessor: an alias for `Reg<CUBC21_SPEC>`"]
+pub type CUBC21 = crate::Reg<cubc21::CUBC21_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 21)"]
 pub mod cubc21;
-#[doc = "Channel Block Control Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc21](cbc21) module"]
-pub type CBC21 = crate::Reg<u32, _CBC21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC21;
-#[doc = "`read()` method returns [cbc21::R](cbc21::R) reader structure"]
-impl crate::Readable for CBC21 {}
-#[doc = "`write(|w| ..)` method takes [cbc21::W](cbc21::W) writer structure"]
-impl crate::Writable for CBC21 {}
+#[doc = "CBC21 register accessor: an alias for `Reg<CBC21_SPEC>`"]
+pub type CBC21 = crate::Reg<cbc21::CBC21_SPEC>;
 #[doc = "Channel Block Control Register (chid = 21)"]
 pub mod cbc21;
-#[doc = "Channel Configuration Register (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc21](cc21) module"]
-pub type CC21 = crate::Reg<u32, _CC21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC21;
-#[doc = "`read()` method returns [cc21::R](cc21::R) reader structure"]
-impl crate::Readable for CC21 {}
-#[doc = "`write(|w| ..)` method takes [cc21::W](cc21::W) writer structure"]
-impl crate::Writable for CC21 {}
+#[doc = "CC21 register accessor: an alias for `Reg<CC21_SPEC>`"]
+pub type CC21 = crate::Reg<cc21::CC21_SPEC>;
 #[doc = "Channel Configuration Register (chid = 21)"]
 pub mod cc21;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp21](cds_msp21) module"]
-pub type CDS_MSP21 = crate::Reg<u32, _CDS_MSP21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP21;
-#[doc = "`read()` method returns [cds_msp21::R](cds_msp21::R) reader structure"]
-impl crate::Readable for CDS_MSP21 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp21::W](cds_msp21::W) writer structure"]
-impl crate::Writable for CDS_MSP21 {}
+#[doc = "CDS_MSP21 register accessor: an alias for `Reg<CDS_MSP21_SPEC>`"]
+pub type CDS_MSP21 = crate::Reg<cds_msp21::CDS_MSP21_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 21)"]
 pub mod cds_msp21;
-#[doc = "Channel Source Microblock Stride (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus21](csus21) module"]
-pub type CSUS21 = crate::Reg<u32, _CSUS21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS21;
-#[doc = "`read()` method returns [csus21::R](csus21::R) reader structure"]
-impl crate::Readable for CSUS21 {}
-#[doc = "`write(|w| ..)` method takes [csus21::W](csus21::W) writer structure"]
-impl crate::Writable for CSUS21 {}
+#[doc = "CSUS21 register accessor: an alias for `Reg<CSUS21_SPEC>`"]
+pub type CSUS21 = crate::Reg<csus21::CSUS21_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 21)"]
 pub mod csus21;
-#[doc = "Channel Destination Microblock Stride (chid = 21)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus21](cdus21) module"]
-pub type CDUS21 = crate::Reg<u32, _CDUS21>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS21;
-#[doc = "`read()` method returns [cdus21::R](cdus21::R) reader structure"]
-impl crate::Readable for CDUS21 {}
-#[doc = "`write(|w| ..)` method takes [cdus21::W](cdus21::W) writer structure"]
-impl crate::Writable for CDUS21 {}
+#[doc = "CDUS21 register accessor: an alias for `Reg<CDUS21_SPEC>`"]
+pub type CDUS21 = crate::Reg<cdus21::CDUS21_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 21)"]
 pub mod cdus21;
-#[doc = "Channel Interrupt Enable Register (chid = 22)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie22](cie22) module"]
-pub type CIE22 = crate::Reg<u32, _CIE22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE22;
-#[doc = "`write(|w| ..)` method takes [cie22::W](cie22::W) writer structure"]
-impl crate::Writable for CIE22 {}
+#[doc = "CIE22 register accessor: an alias for `Reg<CIE22_SPEC>`"]
+pub type CIE22 = crate::Reg<cie22::CIE22_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 22)"]
 pub mod cie22;
-#[doc = "Channel Interrupt Disable Register (chid = 22)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid22](cid22) module"]
-pub type CID22 = crate::Reg<u32, _CID22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID22;
-#[doc = "`write(|w| ..)` method takes [cid22::W](cid22::W) writer structure"]
-impl crate::Writable for CID22 {}
+#[doc = "CID22 register accessor: an alias for `Reg<CID22_SPEC>`"]
+pub type CID22 = crate::Reg<cid22::CID22_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 22)"]
 pub mod cid22;
-#[doc = "Channel Interrupt Mask Register (chid = 22)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim22](cim22) module"]
-pub type CIM22 = crate::Reg<u32, _CIM22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM22;
-#[doc = "`write(|w| ..)` method takes [cim22::W](cim22::W) writer structure"]
-impl crate::Writable for CIM22 {}
+#[doc = "CIM22 register accessor: an alias for `Reg<CIM22_SPEC>`"]
+pub type CIM22 = crate::Reg<cim22::CIM22_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 22)"]
 pub mod cim22;
-#[doc = "Channel Interrupt Status Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis22](cis22) module"]
-pub type CIS22 = crate::Reg<u32, _CIS22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS22;
-#[doc = "`read()` method returns [cis22::R](cis22::R) reader structure"]
-impl crate::Readable for CIS22 {}
+#[doc = "CIS22 register accessor: an alias for `Reg<CIS22_SPEC>`"]
+pub type CIS22 = crate::Reg<cis22::CIS22_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 22)"]
 pub mod cis22;
-#[doc = "Channel Source Address Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa22](csa22) module"]
-pub type CSA22 = crate::Reg<u32, _CSA22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA22;
-#[doc = "`read()` method returns [csa22::R](csa22::R) reader structure"]
-impl crate::Readable for CSA22 {}
-#[doc = "`write(|w| ..)` method takes [csa22::W](csa22::W) writer structure"]
-impl crate::Writable for CSA22 {}
+#[doc = "CSA22 register accessor: an alias for `Reg<CSA22_SPEC>`"]
+pub type CSA22 = crate::Reg<csa22::CSA22_SPEC>;
 #[doc = "Channel Source Address Register (chid = 22)"]
 pub mod csa22;
-#[doc = "Channel Destination Address Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda22](cda22) module"]
-pub type CDA22 = crate::Reg<u32, _CDA22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA22;
-#[doc = "`read()` method returns [cda22::R](cda22::R) reader structure"]
-impl crate::Readable for CDA22 {}
-#[doc = "`write(|w| ..)` method takes [cda22::W](cda22::W) writer structure"]
-impl crate::Writable for CDA22 {}
+#[doc = "CDA22 register accessor: an alias for `Reg<CDA22_SPEC>`"]
+pub type CDA22 = crate::Reg<cda22::CDA22_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 22)"]
 pub mod cda22;
-#[doc = "Channel Next Descriptor Address Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda22](cnda22) module"]
-pub type CNDA22 = crate::Reg<u32, _CNDA22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA22;
-#[doc = "`read()` method returns [cnda22::R](cnda22::R) reader structure"]
-impl crate::Readable for CNDA22 {}
-#[doc = "`write(|w| ..)` method takes [cnda22::W](cnda22::W) writer structure"]
-impl crate::Writable for CNDA22 {}
+#[doc = "CNDA22 register accessor: an alias for `Reg<CNDA22_SPEC>`"]
+pub type CNDA22 = crate::Reg<cnda22::CNDA22_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 22)"]
 pub mod cnda22;
-#[doc = "Channel Next Descriptor Control Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc22](cndc22) module"]
-pub type CNDC22 = crate::Reg<u32, _CNDC22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC22;
-#[doc = "`read()` method returns [cndc22::R](cndc22::R) reader structure"]
-impl crate::Readable for CNDC22 {}
-#[doc = "`write(|w| ..)` method takes [cndc22::W](cndc22::W) writer structure"]
-impl crate::Writable for CNDC22 {}
+#[doc = "CNDC22 register accessor: an alias for `Reg<CNDC22_SPEC>`"]
+pub type CNDC22 = crate::Reg<cndc22::CNDC22_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 22)"]
 pub mod cndc22;
-#[doc = "Channel Microblock Control Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc22](cubc22) module"]
-pub type CUBC22 = crate::Reg<u32, _CUBC22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC22;
-#[doc = "`read()` method returns [cubc22::R](cubc22::R) reader structure"]
-impl crate::Readable for CUBC22 {}
-#[doc = "`write(|w| ..)` method takes [cubc22::W](cubc22::W) writer structure"]
-impl crate::Writable for CUBC22 {}
+#[doc = "CUBC22 register accessor: an alias for `Reg<CUBC22_SPEC>`"]
+pub type CUBC22 = crate::Reg<cubc22::CUBC22_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 22)"]
 pub mod cubc22;
-#[doc = "Channel Block Control Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc22](cbc22) module"]
-pub type CBC22 = crate::Reg<u32, _CBC22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC22;
-#[doc = "`read()` method returns [cbc22::R](cbc22::R) reader structure"]
-impl crate::Readable for CBC22 {}
-#[doc = "`write(|w| ..)` method takes [cbc22::W](cbc22::W) writer structure"]
-impl crate::Writable for CBC22 {}
+#[doc = "CBC22 register accessor: an alias for `Reg<CBC22_SPEC>`"]
+pub type CBC22 = crate::Reg<cbc22::CBC22_SPEC>;
 #[doc = "Channel Block Control Register (chid = 22)"]
 pub mod cbc22;
-#[doc = "Channel Configuration Register (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc22](cc22) module"]
-pub type CC22 = crate::Reg<u32, _CC22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC22;
-#[doc = "`read()` method returns [cc22::R](cc22::R) reader structure"]
-impl crate::Readable for CC22 {}
-#[doc = "`write(|w| ..)` method takes [cc22::W](cc22::W) writer structure"]
-impl crate::Writable for CC22 {}
+#[doc = "CC22 register accessor: an alias for `Reg<CC22_SPEC>`"]
+pub type CC22 = crate::Reg<cc22::CC22_SPEC>;
 #[doc = "Channel Configuration Register (chid = 22)"]
 pub mod cc22;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp22](cds_msp22) module"]
-pub type CDS_MSP22 = crate::Reg<u32, _CDS_MSP22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP22;
-#[doc = "`read()` method returns [cds_msp22::R](cds_msp22::R) reader structure"]
-impl crate::Readable for CDS_MSP22 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp22::W](cds_msp22::W) writer structure"]
-impl crate::Writable for CDS_MSP22 {}
+#[doc = "CDS_MSP22 register accessor: an alias for `Reg<CDS_MSP22_SPEC>`"]
+pub type CDS_MSP22 = crate::Reg<cds_msp22::CDS_MSP22_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 22)"]
 pub mod cds_msp22;
-#[doc = "Channel Source Microblock Stride (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus22](csus22) module"]
-pub type CSUS22 = crate::Reg<u32, _CSUS22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS22;
-#[doc = "`read()` method returns [csus22::R](csus22::R) reader structure"]
-impl crate::Readable for CSUS22 {}
-#[doc = "`write(|w| ..)` method takes [csus22::W](csus22::W) writer structure"]
-impl crate::Writable for CSUS22 {}
+#[doc = "CSUS22 register accessor: an alias for `Reg<CSUS22_SPEC>`"]
+pub type CSUS22 = crate::Reg<csus22::CSUS22_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 22)"]
 pub mod csus22;
-#[doc = "Channel Destination Microblock Stride (chid = 22)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus22](cdus22) module"]
-pub type CDUS22 = crate::Reg<u32, _CDUS22>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS22;
-#[doc = "`read()` method returns [cdus22::R](cdus22::R) reader structure"]
-impl crate::Readable for CDUS22 {}
-#[doc = "`write(|w| ..)` method takes [cdus22::W](cdus22::W) writer structure"]
-impl crate::Writable for CDUS22 {}
+#[doc = "CDUS22 register accessor: an alias for `Reg<CDUS22_SPEC>`"]
+pub type CDUS22 = crate::Reg<cdus22::CDUS22_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 22)"]
 pub mod cdus22;
-#[doc = "Channel Interrupt Enable Register (chid = 23)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cie23](cie23) module"]
-pub type CIE23 = crate::Reg<u32, _CIE23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIE23;
-#[doc = "`write(|w| ..)` method takes [cie23::W](cie23::W) writer structure"]
-impl crate::Writable for CIE23 {}
+#[doc = "CIE23 register accessor: an alias for `Reg<CIE23_SPEC>`"]
+pub type CIE23 = crate::Reg<cie23::CIE23_SPEC>;
 #[doc = "Channel Interrupt Enable Register (chid = 23)"]
 pub mod cie23;
-#[doc = "Channel Interrupt Disable Register (chid = 23)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid23](cid23) module"]
-pub type CID23 = crate::Reg<u32, _CID23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CID23;
-#[doc = "`write(|w| ..)` method takes [cid23::W](cid23::W) writer structure"]
-impl crate::Writable for CID23 {}
+#[doc = "CID23 register accessor: an alias for `Reg<CID23_SPEC>`"]
+pub type CID23 = crate::Reg<cid23::CID23_SPEC>;
 #[doc = "Channel Interrupt Disable Register (chid = 23)"]
 pub mod cid23;
-#[doc = "Channel Interrupt Mask Register (chid = 23)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cim23](cim23) module"]
-pub type CIM23 = crate::Reg<u32, _CIM23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIM23;
-#[doc = "`write(|w| ..)` method takes [cim23::W](cim23::W) writer structure"]
-impl crate::Writable for CIM23 {}
+#[doc = "CIM23 register accessor: an alias for `Reg<CIM23_SPEC>`"]
+pub type CIM23 = crate::Reg<cim23::CIM23_SPEC>;
 #[doc = "Channel Interrupt Mask Register (chid = 23)"]
 pub mod cim23;
-#[doc = "Channel Interrupt Status Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis23](cis23) module"]
-pub type CIS23 = crate::Reg<u32, _CIS23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CIS23;
-#[doc = "`read()` method returns [cis23::R](cis23::R) reader structure"]
-impl crate::Readable for CIS23 {}
+#[doc = "CIS23 register accessor: an alias for `Reg<CIS23_SPEC>`"]
+pub type CIS23 = crate::Reg<cis23::CIS23_SPEC>;
 #[doc = "Channel Interrupt Status Register (chid = 23)"]
 pub mod cis23;
-#[doc = "Channel Source Address Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csa23](csa23) module"]
-pub type CSA23 = crate::Reg<u32, _CSA23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSA23;
-#[doc = "`read()` method returns [csa23::R](csa23::R) reader structure"]
-impl crate::Readable for CSA23 {}
-#[doc = "`write(|w| ..)` method takes [csa23::W](csa23::W) writer structure"]
-impl crate::Writable for CSA23 {}
+#[doc = "CSA23 register accessor: an alias for `Reg<CSA23_SPEC>`"]
+pub type CSA23 = crate::Reg<csa23::CSA23_SPEC>;
 #[doc = "Channel Source Address Register (chid = 23)"]
 pub mod csa23;
-#[doc = "Channel Destination Address Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cda23](cda23) module"]
-pub type CDA23 = crate::Reg<u32, _CDA23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDA23;
-#[doc = "`read()` method returns [cda23::R](cda23::R) reader structure"]
-impl crate::Readable for CDA23 {}
-#[doc = "`write(|w| ..)` method takes [cda23::W](cda23::W) writer structure"]
-impl crate::Writable for CDA23 {}
+#[doc = "CDA23 register accessor: an alias for `Reg<CDA23_SPEC>`"]
+pub type CDA23 = crate::Reg<cda23::CDA23_SPEC>;
 #[doc = "Channel Destination Address Register (chid = 23)"]
 pub mod cda23;
-#[doc = "Channel Next Descriptor Address Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnda23](cnda23) module"]
-pub type CNDA23 = crate::Reg<u32, _CNDA23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDA23;
-#[doc = "`read()` method returns [cnda23::R](cnda23::R) reader structure"]
-impl crate::Readable for CNDA23 {}
-#[doc = "`write(|w| ..)` method takes [cnda23::W](cnda23::W) writer structure"]
-impl crate::Writable for CNDA23 {}
+#[doc = "CNDA23 register accessor: an alias for `Reg<CNDA23_SPEC>`"]
+pub type CNDA23 = crate::Reg<cnda23::CNDA23_SPEC>;
 #[doc = "Channel Next Descriptor Address Register (chid = 23)"]
 pub mod cnda23;
-#[doc = "Channel Next Descriptor Control Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cndc23](cndc23) module"]
-pub type CNDC23 = crate::Reg<u32, _CNDC23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNDC23;
-#[doc = "`read()` method returns [cndc23::R](cndc23::R) reader structure"]
-impl crate::Readable for CNDC23 {}
-#[doc = "`write(|w| ..)` method takes [cndc23::W](cndc23::W) writer structure"]
-impl crate::Writable for CNDC23 {}
+#[doc = "CNDC23 register accessor: an alias for `Reg<CNDC23_SPEC>`"]
+pub type CNDC23 = crate::Reg<cndc23::CNDC23_SPEC>;
 #[doc = "Channel Next Descriptor Control Register (chid = 23)"]
 pub mod cndc23;
-#[doc = "Channel Microblock Control Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cubc23](cubc23) module"]
-pub type CUBC23 = crate::Reg<u32, _CUBC23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CUBC23;
-#[doc = "`read()` method returns [cubc23::R](cubc23::R) reader structure"]
-impl crate::Readable for CUBC23 {}
-#[doc = "`write(|w| ..)` method takes [cubc23::W](cubc23::W) writer structure"]
-impl crate::Writable for CUBC23 {}
+#[doc = "CUBC23 register accessor: an alias for `Reg<CUBC23_SPEC>`"]
+pub type CUBC23 = crate::Reg<cubc23::CUBC23_SPEC>;
 #[doc = "Channel Microblock Control Register (chid = 23)"]
 pub mod cubc23;
-#[doc = "Channel Block Control Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbc23](cbc23) module"]
-pub type CBC23 = crate::Reg<u32, _CBC23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CBC23;
-#[doc = "`read()` method returns [cbc23::R](cbc23::R) reader structure"]
-impl crate::Readable for CBC23 {}
-#[doc = "`write(|w| ..)` method takes [cbc23::W](cbc23::W) writer structure"]
-impl crate::Writable for CBC23 {}
+#[doc = "CBC23 register accessor: an alias for `Reg<CBC23_SPEC>`"]
+pub type CBC23 = crate::Reg<cbc23::CBC23_SPEC>;
 #[doc = "Channel Block Control Register (chid = 23)"]
 pub mod cbc23;
-#[doc = "Channel Configuration Register (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc23](cc23) module"]
-pub type CC23 = crate::Reg<u32, _CC23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CC23;
-#[doc = "`read()` method returns [cc23::R](cc23::R) reader structure"]
-impl crate::Readable for CC23 {}
-#[doc = "`write(|w| ..)` method takes [cc23::W](cc23::W) writer structure"]
-impl crate::Writable for CC23 {}
+#[doc = "CC23 register accessor: an alias for `Reg<CC23_SPEC>`"]
+pub type CC23 = crate::Reg<cc23::CC23_SPEC>;
 #[doc = "Channel Configuration Register (chid = 23)"]
 pub mod cc23;
-#[doc = "Channel Data Stride Memory Set Pattern (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cds_msp23](cds_msp23) module"]
-pub type CDS_MSP23 = crate::Reg<u32, _CDS_MSP23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDS_MSP23;
-#[doc = "`read()` method returns [cds_msp23::R](cds_msp23::R) reader structure"]
-impl crate::Readable for CDS_MSP23 {}
-#[doc = "`write(|w| ..)` method takes [cds_msp23::W](cds_msp23::W) writer structure"]
-impl crate::Writable for CDS_MSP23 {}
+#[doc = "CDS_MSP23 register accessor: an alias for `Reg<CDS_MSP23_SPEC>`"]
+pub type CDS_MSP23 = crate::Reg<cds_msp23::CDS_MSP23_SPEC>;
 #[doc = "Channel Data Stride Memory Set Pattern (chid = 23)"]
 pub mod cds_msp23;
-#[doc = "Channel Source Microblock Stride (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csus23](csus23) module"]
-pub type CSUS23 = crate::Reg<u32, _CSUS23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CSUS23;
-#[doc = "`read()` method returns [csus23::R](csus23::R) reader structure"]
-impl crate::Readable for CSUS23 {}
-#[doc = "`write(|w| ..)` method takes [csus23::W](csus23::W) writer structure"]
-impl crate::Writable for CSUS23 {}
+#[doc = "CSUS23 register accessor: an alias for `Reg<CSUS23_SPEC>`"]
+pub type CSUS23 = crate::Reg<csus23::CSUS23_SPEC>;
 #[doc = "Channel Source Microblock Stride (chid = 23)"]
 pub mod csus23;
-#[doc = "Channel Destination Microblock Stride (chid = 23)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cdus23](cdus23) module"]
-pub type CDUS23 = crate::Reg<u32, _CDUS23>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CDUS23;
-#[doc = "`read()` method returns [cdus23::R](cdus23::R) reader structure"]
-impl crate::Readable for CDUS23 {}
-#[doc = "`write(|w| ..)` method takes [cdus23::W](cdus23::W) writer structure"]
-impl crate::Writable for CDUS23 {}
+#[doc = "CDUS23 register accessor: an alias for `Reg<CDUS23_SPEC>`"]
+pub type CDUS23 = crate::Reg<cdus23::CDUS23_SPEC>;
 #[doc = "Channel Destination Microblock Stride (chid = 23)"]
 pub mod cdus23;

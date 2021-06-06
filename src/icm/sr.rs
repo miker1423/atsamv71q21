@@ -1,6 +1,24 @@
-#[doc = "Writer for register SR"]
-pub type W = crate::W<u32, super::SR>;
-#[doc = "Write proxy for field `ENABLE`"]
+#[doc = "Register `SR` writer"]
+pub struct W(crate::W<SR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<SR_SPEC>> for W {
+    fn from(writer: crate::W<SR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ENABLE` writer - ICM Controller Enable Register"]
 pub struct ENABLE_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +36,11 @@ impl<'a> ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `RAWRMDIS`"]
+#[doc = "Field `RAWRMDIS` writer - RAW Region Monitoring Disabled Status"]
 pub struct RAWRMDIS_W<'a> {
     w: &'a mut W,
 }
@@ -30,11 +48,11 @@ impl<'a> RAWRMDIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `RMDIS`"]
+#[doc = "Field `RMDIS` writer - Region Monitoring Disabled Status"]
 pub struct RMDIS_W<'a> {
     w: &'a mut W,
 }
@@ -42,7 +60,7 @@ impl<'a> RMDIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
         self.w
     }
 }
@@ -62,4 +80,18 @@ impl W {
     pub fn rmdis(&mut self) -> RMDIS_W {
         RMDIS_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Status Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]
+pub struct SR_SPEC;
+impl crate::RegisterSpec for SR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [sr::W](W) writer structure"]
+impl crate::Writable for SR_SPEC {
+    type Writer = W;
 }

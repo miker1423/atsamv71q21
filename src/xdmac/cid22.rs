@@ -1,6 +1,24 @@
-#[doc = "Writer for register CID22"]
-pub type W = crate::W<u32, super::CID22>;
-#[doc = "Write proxy for field `BID`"]
+#[doc = "Register `CID22` writer"]
+pub struct W(crate::W<CID22_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CID22_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<CID22_SPEC>> for W {
+    fn from(writer: crate::W<CID22_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `BID` writer - End of Block Interrupt Disable Bit"]
 pub struct BID_W<'a> {
     w: &'a mut W,
 }
@@ -18,11 +36,11 @@ impl<'a> BID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
-#[doc = "Write proxy for field `LID`"]
+#[doc = "Field `LID` writer - End of Linked List Interrupt Disable Bit"]
 pub struct LID_W<'a> {
     w: &'a mut W,
 }
@@ -40,11 +58,11 @@ impl<'a> LID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Write proxy for field `DID`"]
+#[doc = "Field `DID` writer - End of Disable Interrupt Disable Bit"]
 pub struct DID_W<'a> {
     w: &'a mut W,
 }
@@ -62,11 +80,11 @@ impl<'a> DID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Write proxy for field `FID`"]
+#[doc = "Field `FID` writer - End of Flush Interrupt Disable Bit"]
 pub struct FID_W<'a> {
     w: &'a mut W,
 }
@@ -84,11 +102,11 @@ impl<'a> FID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Write proxy for field `RBEID`"]
+#[doc = "Field `RBEID` writer - Read Bus Error Interrupt Disable Bit"]
 pub struct RBEID_W<'a> {
     w: &'a mut W,
 }
@@ -106,11 +124,11 @@ impl<'a> RBEID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `WBEID`"]
+#[doc = "Field `WBEID` writer - Write Bus Error Interrupt Disable Bit"]
 pub struct WBEID_W<'a> {
     w: &'a mut W,
 }
@@ -128,11 +146,11 @@ impl<'a> WBEID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Write proxy for field `ROID`"]
+#[doc = "Field `ROID` writer - Request Overflow Error Interrupt Disable Bit"]
 pub struct ROID_W<'a> {
     w: &'a mut W,
 }
@@ -150,7 +168,7 @@ impl<'a> ROID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
@@ -190,4 +208,18 @@ impl W {
     pub fn roid(&mut self) -> ROID_W {
         ROID_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Channel Interrupt Disable Register (chid = 22)\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cid22](index.html) module"]
+pub struct CID22_SPEC;
+impl crate::RegisterSpec for CID22_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [cid22::W](W) writer structure"]
+impl crate::Writable for CID22_SPEC {
+    type Writer = W;
 }

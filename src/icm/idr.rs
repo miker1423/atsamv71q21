@@ -1,6 +1,24 @@
-#[doc = "Writer for register IDR"]
-pub type W = crate::W<u32, super::IDR>;
-#[doc = "Write proxy for field `RHC`"]
+#[doc = "Register `IDR` writer"]
+pub struct W(crate::W<IDR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<IDR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<IDR_SPEC>> for W {
+    fn from(writer: crate::W<IDR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `RHC` writer - Region Hash Completed Interrupt Disable"]
 pub struct RHC_W<'a> {
     w: &'a mut W,
 }
@@ -8,11 +26,11 @@ impl<'a> RHC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
         self.w
     }
 }
-#[doc = "Write proxy for field `RDM`"]
+#[doc = "Field `RDM` writer - Region Digest Mismatch Interrupt Disable"]
 pub struct RDM_W<'a> {
     w: &'a mut W,
 }
@@ -20,11 +38,11 @@ impl<'a> RDM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
         self.w
     }
 }
-#[doc = "Write proxy for field `RBE`"]
+#[doc = "Field `RBE` writer - Region Bus Error Interrupt Disable"]
 pub struct RBE_W<'a> {
     w: &'a mut W,
 }
@@ -32,11 +50,11 @@ impl<'a> RBE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Write proxy for field `RWC`"]
+#[doc = "Field `RWC` writer - Region Wrap Condition Detected Interrupt Disable"]
 pub struct RWC_W<'a> {
     w: &'a mut W,
 }
@@ -44,11 +62,11 @@ impl<'a> RWC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
         self.w
     }
 }
-#[doc = "Write proxy for field `REC`"]
+#[doc = "Field `REC` writer - Region End bit Condition detected Interrupt Disable"]
 pub struct REC_W<'a> {
     w: &'a mut W,
 }
@@ -56,11 +74,11 @@ impl<'a> REC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
         self.w
     }
 }
-#[doc = "Write proxy for field `RSU`"]
+#[doc = "Field `RSU` writer - Region Status Updated Interrupt Disable"]
 pub struct RSU_W<'a> {
     w: &'a mut W,
 }
@@ -68,11 +86,11 @@ impl<'a> RSU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | (((value as u32) & 0x0f) << 20);
+        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
         self.w
     }
 }
-#[doc = "Write proxy for field `URAD`"]
+#[doc = "Field `URAD` writer - Undefined Register Access Detection Interrupt Disable"]
 pub struct URAD_W<'a> {
     w: &'a mut W,
 }
@@ -90,7 +108,7 @@ impl<'a> URAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
         self.w
     }
 }
@@ -130,4 +148,18 @@ impl W {
     pub fn urad(&mut self) -> URAD_W {
         URAD_W { w: self }
     }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Interrupt Disable Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idr](index.html) module"]
+pub struct IDR_SPEC;
+impl crate::RegisterSpec for IDR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [idr::W](W) writer structure"]
+impl crate::Writable for IDR_SPEC {
+    type Writer = W;
 }

@@ -1,19 +1,115 @@
-#[doc = "Reader of register CIS16"]
-pub type R = crate::R<u32, super::CIS16>;
-#[doc = "Reader of field `BIS`"]
-pub type BIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `LIS`"]
-pub type LIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `DIS`"]
-pub type DIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `FIS`"]
-pub type FIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RBEIS`"]
-pub type RBEIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `WBEIS`"]
-pub type WBEIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ROIS`"]
-pub type ROIS_R = crate::R<bool, bool>;
+#[doc = "Register `CIS16` reader"]
+pub struct R(crate::R<CIS16_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CIS16_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::convert::From<crate::R<CIS16_SPEC>> for R {
+    fn from(reader: crate::R<CIS16_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `BIS` reader - End of Block Interrupt Status Bit"]
+pub struct BIS_R(crate::FieldReader<bool, bool>);
+impl BIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LIS` reader - End of Linked List Interrupt Status Bit"]
+pub struct LIS_R(crate::FieldReader<bool, bool>);
+impl LIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DIS` reader - End of Disable Interrupt Status Bit"]
+pub struct DIS_R(crate::FieldReader<bool, bool>);
+impl DIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FIS` reader - End of Flush Interrupt Status Bit"]
+pub struct FIS_R(crate::FieldReader<bool, bool>);
+impl FIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RBEIS` reader - Read Bus Error Interrupt Status Bit"]
+pub struct RBEIS_R(crate::FieldReader<bool, bool>);
+impl RBEIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RBEIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RBEIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WBEIS` reader - Write Bus Error Interrupt Status Bit"]
+pub struct WBEIS_R(crate::FieldReader<bool, bool>);
+impl WBEIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        WBEIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WBEIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ROIS` reader - Request Overflow Error Interrupt Status Bit"]
+pub struct ROIS_R(crate::FieldReader<bool, bool>);
+impl ROIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ROIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ROIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 0 - End of Block Interrupt Status Bit"]
     #[inline(always)]
@@ -49,5 +145,21 @@ impl R {
     #[inline(always)]
     pub fn rois(&self) -> ROIS_R {
         ROIS_R::new(((self.bits >> 6) & 0x01) != 0)
+    }
+}
+#[doc = "Channel Interrupt Status Register (chid = 16)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cis16](index.html) module"]
+pub struct CIS16_SPEC;
+impl crate::RegisterSpec for CIS16_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cis16::R](R) reader structure"]
+impl crate::Readable for CIS16_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets CIS16 to value 0"]
+impl crate::Resettable for CIS16_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
